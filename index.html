@@ -114,8 +114,15 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
 .empty{text-align:center;color:var(--sub);padding:28px 10px;font-size:13.5px}
 .hidden{display:none!important}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 84px);transform:translateX(-50%);background:var(--text);color:var(--bg);
-  padding:9px 16px;border-radius:99px;font-size:13px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30;white-space:nowrap}
+  padding:9px 16px;border-radius:18px;font-size:13px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30;
+  max-width:88vw;width:max-content;text-align:center;word-break:keep-all}
 .toast.show{opacity:1}
+.region{margin-top:14px}
+.region-seg button{padding:9px 4px;font-size:13px}
+.region-status{font-size:12px;color:var(--sub);margin:8px 4px 0;line-height:1.7;word-break:keep-all}
+.linkbtn{border:none;background:none;color:var(--accent);font-weight:700;font-size:12px;padding:0;font-family:inherit;cursor:pointer;text-decoration:underline}
+.update{display:block;background:var(--accent);color:#fff;border-radius:12px;padding:11px 12px;font-size:13px;margin-top:12px;font-weight:700;
+  border:none;width:100%;text-align:left;font-family:inherit;cursor:pointer}
 </style>
 </head>
 <body>
@@ -132,7 +139,9 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
       <button class="refresh" id="refresh-btn">↻ 새로고침</button>
     </div>
   </header>
+  <button id="update-banner" class="update hidden">✨ 새 버전이 나왔어요. 눌러서 바로 업데이트</button>
   <div id="load-banner" class="banner hidden"></div>
+  <div class="region" id="deals-region"></div>
   <div class="chips" id="deal-chips"></div>
   <div id="deals-list"></div>
   <div class="note">이벤트는 예고 없이 바뀌거나 일찍 끝날 수 있어요. 참여 전에 <b>출처 페이지</b>에서 조건을 한 번 더 확인해 주세요.</div>
@@ -144,6 +153,7 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
     <h1>매일 챙기기</h1>
     <p id="today-label"></p>
   </header>
+  <div class="region" id="daily-region"></div>
   <div class="progress">
     <div class="row"><span>오늘 챙긴 보상</span><strong id="prog-num">0 / 0</strong></div>
     <div class="bar"><i id="prog-bar" style="width:0"></i></div>
@@ -170,6 +180,10 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
     <h1>설정</h1>
     <p>내 방식대로 바꾸기</p>
   </header>
+  <h2>보는 지역</h2>
+  <div id="settings-region"></div>
+  <div class="note">자동으로 두면 아이폰 시간대를 보고 한국이나 싱가포르를 골라줘요. 여행 가서 시간대가 바뀌면 지역도 같이 바뀌어요. <b>현재 위치로 다시 확인</b>을 누르면 GPS로 한 번 더 확인하는데, 위치는 어느 나라인지 판단하는 데만 쓰고 저장하거나 어디로 보내지 않아요.</div>
+
   <h2>앱이나 페이지로 이동할 때</h2>
   <div class="seg" id="seg-mode">
     <button data-mode="direct">바로 이동</button>
@@ -270,6 +284,12 @@ const TYPES = {
   cond:  {label:"조건 있음", cls:"t-cond"},
   info:  {label:"소식",      cls:"t-info"}
 };
+const REGIONS = {
+  kr:  {name:"한국",     flag:"🇰🇷"},
+  sg:  {name:"싱가포르", flag:"🇸🇬"},
+  all: {name:"전체",     flag:"🌏"}
+};
+const APP_VERSION = "3";
 const WALLET_PRESETS = [
   {name:"직접 입력", unit:""},
   {name:"대한항공 스카이패스", unit:"마일"},
@@ -297,12 +317,15 @@ const state = {
   custom: store.get("custom", []),
   wallet: store.get("wallet", []),
   freeOnly: store.get("freeOnly", false),
+  region: store.get("region", null),            // kr | sg | all
+  regionAuto: store.get("regionAuto", true),    // 위치 따라 자동
+  regionVia: store.get("regionVia", null),      // tz | gps | unknown | manual
   dealFilter: "all",
   dailyFilter: "all",
   loadStatus: "loading",              // loading | ok | cached | error
   lastFetch: 0
 };
-function save(){ ["mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly"].forEach(k=>store.set(k, state[k])); }
+function save(){ ["mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly","region","regionAuto","regionVia"].forEach(k=>store.set(k, state[k])); }
 
 /* ======================= 데이터 ======================= */
 function normalize(j){
@@ -362,6 +385,79 @@ function safeUrl(u){
 }
 function targetAttr(url){ return isWeb(url) ? 'target="_blank" rel="noopener"' : ""; }
 
+/* ======================= 지역 ======================= */
+function regionFromTZ(){
+  let tz = "";
+  try{ tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; }catch(e){}
+  if(tz==="Asia/Seoul") return "kr";
+  if(tz==="Asia/Singapore") return "sg";
+  return null;
+}
+function regionFromCoords(lat, lng){
+  if(lat>=33 && lat<=38.9 && lng>=124 && lng<=132) return "kr";
+  if(lat>=1.13 && lat<=1.48 && lng>=103.55 && lng<=104.1) return "sg";
+  return null;
+}
+function applyAutoRegion(){
+  const gps = store.get("gps", null);   // {region, at} 나라만 저장하고 좌표는 저장 안 함
+  const tz = regionFromTZ();
+  if(gps && gps.region && Date.now()-gps.at < 12*3600*1000){ state.region = gps.region; state.regionVia = "gps"; }
+  else if(tz){ state.region = tz; state.regionVia = "tz"; }
+  else { state.region = "all"; state.regionVia = "unknown"; }
+  save();
+}
+function itemRegion(x){ return x.region || (x.cat==="sg" ? "sg" : "kr"); }
+function inRegion(x){ const r = itemRegion(x); return state.region==="all" || r==="global" || r===state.region; }
+function locate(){
+  if(!navigator.geolocation){ toast("이 기기에서는 위치를 확인할 수 없어요"); return; }
+  toast("위치 확인 중…");
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const r = regionFromCoords(pos.coords.latitude, pos.coords.longitude);
+    store.set("gps", {region: r || "all", at: Date.now()});
+    state.regionAuto = true; state.region = r || "all"; state.regionVia = "gps";
+    save(); render();
+    toast(r ? `지금 ${REGIONS[r].name}에 있어요. ${REGIONS[r].name} 혜택으로 맞췄어요` : "한국이나 싱가포르 밖이라 전체를 보여줄게요");
+  }, err=>{
+    toast(err && err.code===1
+      ? "위치 권한이 꺼져 있어요. 설정 > 개인정보 보호 > 위치 서비스에서 Safari 웹 사이트를 허용해 주세요"
+      : "위치를 확인하지 못했어요. 잠시 후 다시 해주세요");
+  }, {enableHighAccuracy:false, timeout:10000, maximumAge:10*60*1000});
+}
+function regionBar(){
+  const segs = ["kr","sg","all"].map(r=>`<button class="${state.region===r?"on":""}" data-region="${r}">${REGIONS[r].flag} ${REGIONS[r].name}</button>`).join("");
+  let status;
+  if(state.regionAuto){
+    const via = state.regionVia==="gps" ? "현재 위치 기준" : state.regionVia==="unknown" ? "한국·싱가포르 밖이라" : "아이폰 시간대 기준";
+    status = `📍 자동 · ${via} ${REGIONS[state.region]?REGIONS[state.region].name:""} · <button class="linkbtn" data-locate>현재 위치로 다시 확인</button>`;
+  } else {
+    status = `✋ 직접 고른 지역이에요 · <button class="linkbtn" data-autoregion>위치 따라 자동으로 바꾸기</button>`;
+  }
+  return `<div class="seg region-seg">${segs}</div><div class="region-status">${status}</div>`;
+}
+function renderRegion(){
+  const html = regionBar();
+  ["#deals-region","#daily-region","#settings-region"].forEach(id=>{ const el=$(id); if(el) el.innerHTML = html; });
+}
+
+/* ======================= 새 버전 확인 ======================= */
+async function checkVersion(){
+  try{
+    const r = await fetch("version.json?t="+Date.now(), {cache:"no-store"});
+    if(!r.ok) return;
+    const v = await r.json();
+    if(!v || !v.app || String(v.app)===APP_VERSION) return;
+    let tried = null;
+    try{ tried = sessionStorage.getItem("jupjup:reloadFor"); }catch(e){}
+    if(tried!==String(v.app)){
+      try{ sessionStorage.setItem("jupjup:reloadFor", String(v.app)); }catch(e){}
+      location.replace(location.pathname+"?v="+encodeURIComponent(v.app));
+    } else {
+      $("#update-banner").classList.remove("hidden");
+    }
+  }catch(e){}
+}
+$("#update-banner").addEventListener("click", ()=>{ location.replace(location.pathname+"?v="+Date.now()); });
+
 /* ======================= 한정 혜택 ======================= */
 function activeDeals(){
   return DATA.deals.filter(d=>{
@@ -418,7 +514,7 @@ function renderDeals(){
   else if(state.loadStatus==="error"){ b.textContent="목록을 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침을 눌러주세요"; b.classList.remove("hidden"); }
   else b.classList.add("hidden");
 
-  const all = activeDeals();
+  const all = activeDeals().filter(inRegion);
   const cats = [...new Set(all.map(d=>d.cat))].filter(c=>CATS[c]);
   if(state.dealFilter!=="all" && !cats.includes(state.dealFilter)) state.dealFilter="all";
   const freeCount = all.filter(d=>d.type==="free").length;
@@ -441,6 +537,7 @@ function renderDeals(){
   if(!list.length){
     if(state.freeOnly) html = `<div class="empty">지금은 조건 없이 받는 무료 혜택이 없어요.<br>무료만 보기를 끄면 다른 혜택도 볼 수 있어요.</div>`;
     else if(state.loadStatus==="loading") html = `<div class="empty">불러오는 중…</div>`;
+    else if(state.region!=="all") html = `<div class="empty">지금은 ${REGIONS[state.region].name} 혜택이 없어요.<br>매일 자정에 새로 채워지니까 내일 다시 확인해 주세요.</div>`;
     else html = `<div class="empty">보여줄 혜택이 없어요</div>`;
   } else {
     if(fresh.length) html += `<div class="sec">🆕 <b>오늘 새로 올라온 혜택</b> ${fresh.length}개</div>` + fresh.map(dealCard).join("");
@@ -452,7 +549,7 @@ function renderDeals(){
 
 /* ======================= 매일 챙기기 ======================= */
 function allDaily(){
-  const custom = state.custom.map(c=>({id:c.id, cat:"mine", title:c.title, reward:c.reward||"", freq:"daily",
+  const custom = state.custom.map(c=>({id:c.id, cat:"mine", region:"global", title:c.title, reward:c.reward||"", freq:"daily",
     desc:"", url:c.url, linkKind:c.url?(isWeb(c.url)?"web":"app"):"none", custom:true}));
   return DATA.daily.concat(custom);
 }
@@ -476,7 +573,7 @@ function renderDaily(){
   const d = new Date();
   const wk = ["일","월","화","수","목","금","토"][d.getDay()];
   $("#today-label").textContent = (d.getMonth()+1)+"월 "+d.getDate()+"일 "+wk+"요일 · 매일 받을 수 있는 소소한 보상";
-  const items = allDaily().filter(it=>!state.hidden.includes(it.id));
+  const items = allDaily().filter(it=>!state.hidden.includes(it.id)).filter(inRegion);
   const cats = [...new Set(items.map(i=>i.cat))].filter(c=>CATS[c]);
   if(state.dailyFilter!=="all" && !cats.includes(state.dailyFilter)) state.dailyFilter="all";
   $("#daily-chips").innerHTML = [`<button class="chip ${state.dailyFilter==="all"?"on":""}" data-filter="all">전체</button>`]
@@ -517,7 +614,7 @@ function renderDaily(){
         </div>
       </div>
     </div>`;
-  }).join("") : `<div class="empty">이 분류에는 항목이 없어요</div>`;
+  }).join("") : `<div class="empty">${state.region!=="all"&&!items.length ? REGIONS[state.region].name+"에서 매일 챙길 항목이 아직 없어요.<br>설정에서 직접 추가할 수 있어요." : "이 분류에는 항목이 없어요"}</div>`;
 }
 
 /* ======================= 내 포인트 ======================= */
@@ -557,7 +654,7 @@ function renderSettings(){
   $("#data-date").textContent = DATA.updated ? fmtUpdated(DATA.updated) : "–";
 }
 
-function render(){ renderDeals(); renderDaily(); renderWallet(); renderSettings(); }
+function render(){ renderRegion(); renderDeals(); renderDaily(); renderWallet(); renderSettings(); }
 
 /* ======================= 시트 ======================= */
 function openSheet(id){ $(id).classList.add("open"); }
@@ -588,11 +685,24 @@ function switchTab(name){
 
 /* ======================= 이벤트 ======================= */
 document.addEventListener("click", e=>{
-  const t = e.target.closest("[data-tab],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
+  const t = e.target.closest("[data-tab],[data-region],[data-locate],[data-autoregion],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
   if(!t) return;
   const ds = t.dataset;
 
   if(ds.tab!==undefined){ switchTab(ds.tab); return; }
+  if(ds.region!==undefined){
+    const wasAuto = state.regionAuto;
+    state.region = ds.region; state.regionAuto = false; state.regionVia = "manual";
+    save(); render();
+    toast(wasAuto ? `${REGIONS[ds.region].name} 혜택만 볼게요. 자동 맞춤은 꺼졌어요` : `${REGIONS[ds.region].name} 혜택만 볼게요`);
+    return;
+  }
+  if(ds.locate!==undefined){ locate(); return; }
+  if(ds.autoregion!==undefined){
+    state.regionAuto = true; applyAutoRegion(); render();
+    toast(`위치 따라 자동으로 맞출게요. 지금은 ${REGIONS[state.region].name}`);
+    return;
+  }
   if(ds.dfilter!==undefined){ state.dealFilter = ds.dfilter; renderDeals(); return; }
   if(ds.freeonly!==undefined){ state.freeOnly = !state.freeOnly; save(); renderDeals(); return; }
   if(ds.filter!==undefined){ state.dailyFilter = ds.filter; renderDaily(); return; }
@@ -689,11 +799,14 @@ let lastDay = todayKey();
 setInterval(()=>{ if(todayKey()!==lastDay){ lastDay = todayKey(); loadData(); } }, 60000);
 document.addEventListener("visibilitychange", ()=>{
   if(document.hidden) return;
+  if(state.regionAuto) applyAutoRegion();   // 여행 가서 시간대가 바뀌면 지역도 따라감
   const dayChanged = todayKey()!==lastDay; lastDay = todayKey();
-  if(dayChanged || Date.now()-state.lastFetch > 10*60*1000) loadData(); else render();
+  if(dayChanged || Date.now()-state.lastFetch > 10*60*1000){ loadData(); checkVersion(); } else render();
 });
+if(state.regionAuto || !REGIONS[state.region]) applyAutoRegion();
 render();
 loadData();
+checkVersion();
 </script>
 </body>
 </html>

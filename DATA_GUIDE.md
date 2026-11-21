@@ -1,7 +1,7 @@
 # 줍줍 데이터 업데이트 가이드
 
 매일 자정(Asia/Singapore) 예약 작업이 이 문서를 따라 `data.json`을 갱신한다.
-이 작업에서 고치는 파일은 `data.json` 하나뿐이다. `index.html` 등 다른 파일은 건드리지 않는다.
+이 작업에서 고치는 파일은 `data.json` 하나뿐이다. `index.html`, `version.json` 등 다른 파일은 건드리지 않는다.
 사람이 지켜보지 않는 작업이므로 질문하지 말고, 애매하면 이 문서 기준으로 보수적으로 판단해서 끝까지 진행한다.
 
 ## 1. 날짜 기준
@@ -23,6 +23,14 @@
 
 카테고리 `cat` 값: `air`, `toss`, `npay`, `kakao`, `card`, `shop`, `gov`, `sg`, `etc`
 
+지역 `region` 값 (모든 항목에 반드시 넣는다. 앱에서 한국/싱가포르 버튼으로 거르는 기준이다)
+- `kr` 한국 계정이나 한국 매장·사이트에서만 받을 수 있는 것 (토스, 네이버페이, 한국 카드사, 대한항공 한국 프로모션 등)
+- `sg` 싱가포르 거주자나 싱가포르 계정 대상 (gov.sg 바우처, Shopee·Lazada SG, KrisFlyer, 싱가포르 은행·카드 등)
+- `global` 어느 나라에서든 받을 수 있는 것 (드물다. 확실할 때만)
+
+지역 균형
+- 한국 항목만 몰리지 않게, 매일 싱가포르 항목도 따로 찾아본다 (있으면 1~3개 목표).
+
 매번 훑을 곳
 - 토스: toss.im/notices, toss.im/tossfeed, "토스 이벤트 포인트"
 - 네이버페이: "네이버페이 이벤트", "네이버페이 포인트 적립 이벤트"
@@ -30,8 +38,8 @@
 - 항공: 대한항공 프로모션(koreanair.com/contents/promotion), 아시아나 이벤트, KrisFlyer 프로모션(singaporeair.com)
 - 카드사: 신한, 현대, 삼성, KB국민, 하나, 우리, 롯데, BC의 "응모 이벤트"
 - 쇼핑: 올리브영, 쿠팡, 무신사, 지마켓, 11번가의 무료 쿠폰·포인트 이벤트
-- 정부: 한국 정부·지자체 지원금이나 환급 신청 마감, 싱가포르 gov.sg 바우처·지원금
-- 싱가포르: Grab, ShopBack, FairPrice, 통신사·은행의 무료 리워드
+- 정부: 한국 정부·지자체 지원금이나 환급 신청 마감, 싱가포르 gov.sg·ask.gov.sg 바우처·지원금
+- 싱가포르: KrisFlyer 프로모션(singaporeair.com의 kf-promotions, kf-miles-paradise), Shopee SG·Lazada SG 이벤트(help.shopee.sg 등), Grab, ShopBack, FairPrice, DBS·OCBC·UOB 같은 은행과 통신사의 무료 리워드, Mothership·TheSmartLocal·MoneySmart 같은 현지 매체의 무료 혜택 기사
 
 규칙
 - 공식 출처(회사 공지, 프로모션 페이지, 보도자료, 정부 사이트)를 우선한다. 커뮤니티 글은 단서로만 쓰고, 공식 페이지에서 기간과 조건을 확인한 뒤 넣는다. 확인이 안 되면 넣지 않는다.
@@ -49,6 +57,7 @@
 {
   "id": "kal-cashandmiles-2611",
   "cat": "air",
+  "region": "kr | sg | global",
   "type": "free | entry | cond | info",
   "title": "짧은 제목",
   "reward": "받는 것 한 줄 (info면 생략 가능)",

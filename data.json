@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-21T11:40:00+08:00",
+  "updated": "2026-11-21T12:50:00+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -14,7 +14,8 @@
       "end": "2026-11-30",
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/cashandmiles3",
-      "cta": "이벤트 보기"
+      "cta": "이벤트 보기",
+      "region": "kr"
     },
     {
       "id": "kal-aviationday-2026",
@@ -28,7 +29,8 @@
       "end": "2026-11-30",
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/46th_aviationday1027",
-      "cta": "응모하러 가기"
+      "cta": "응모하러 가기",
+      "region": "kr"
     },
     {
       "id": "kal-hotpick-sea-2611",
@@ -42,7 +44,8 @@
       "end": "2026-11-30",
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/26winterhotpick",
-      "cta": "노선 보기"
+      "cta": "노선 보기",
+      "region": "kr"
     },
     {
       "id": "npay-facesign-10-2611",
@@ -55,7 +58,8 @@
       "end": "2026-11-30",
       "added": "2026-11-21",
       "url": "https://biz.sbs.co.kr/amp/article/20000339581",
-      "cta": "자세히 보기"
+      "cta": "자세히 보기",
+      "region": "kr"
     },
     {
       "id": "gmarket-ggok-hyundai-2611",
@@ -69,20 +73,23 @@
       "end": "2026-11-30",
       "added": "2026-11-21",
       "url": "https://m.gmarket.co.kr/n/showroom/ggokcard?eventCode=CEG6R",
-      "cta": "이벤트 보기"
+      "cta": "이벤트 보기",
+      "region": "kr"
     },
     {
       "id": "sg-cdc-jan2026-expiry",
       "cat": "sg",
       "type": "free",
-      "title": "CDC 바우처 2026년 1월분, 올해 말 만료",
-      "reward": "가구당 S$300",
-      "desc": "1월에 나온 CDC 바우처는 12월 31일까지만 쓸 수 있어요. 6월에 나온 S$500은 2027년 말까지라서 1월분부터 먼저 쓰는 게 좋아요.",
-      "condition": "싱가포르 국적 가구 대상이고, 가구원 한 명이 Singpass로 받으면 돼요",
+      "title": "CDC 1월분·SG60 바우처 12월 31일 만료",
+      "reward": "CDC 1월분 가구당 S$300, SG60 1인 S$600~800",
+      "desc": "CDC 바우처 2026년 1월분과 SG60 바우처는 12월 31일이 지나면 못 써요. 6월에 나온 CDC S$500은 2027년 말까지라서 1월분부터 먼저 쓰는 게 좋아요.",
+      "condition": "싱가포르 국민 대상이고, Singpass로 로그인해서 받아요",
       "end": "2026-12-31",
       "added": "2026-11-21",
       "url": "https://vouchers.cdc.gov.sg/residents/how-to-claim-and-spend/",
-      "cta": "받는 법 보기"
+      "cta": "받는 법 보기",
+      "region": "sg",
+      "source_url": "https://ask.gov.sg/kampungspirit/questions/cmuou0g9m00br4g01b0tkbd2x"
     },
     {
       "id": "oz-staralliance-exit",
@@ -93,7 +100,8 @@
       "end": "2026-12-16",
       "added": "2026-11-21",
       "url": "https://flyasiana.com",
-      "cta": "아시아나에서 확인"
+      "cta": "아시아나에서 확인",
+      "region": "kr"
     },
     {
       "id": "kal-oz-merge",
@@ -109,7 +117,8 @@
       "end": "2026-12-17",
       "added": "2026-11-21",
       "url": "https://www.koreanair.com",
-      "cta": "대한항공에서 확인"
+      "cta": "대한항공에서 확인",
+      "region": "kr"
     },
     {
       "id": "toss-facepay-change-1113",
@@ -120,7 +129,8 @@
       "badge": "11/13부터",
       "added": "2026-11-21",
       "url": "https://toss.im/notices/25870",
-      "cta": "공지 보기"
+      "cta": "공지 보기",
+      "region": "kr"
     },
     {
       "id": "toss-phishing-1105",
@@ -131,7 +141,23 @@
       "badge": "주의",
       "added": "2026-11-21",
       "url": "https://toss.im/notices/25904",
-      "cta": "공지 보기"
+      "cta": "공지 보기",
+      "region": "kr"
+    },
+    {
+      "id": "sg-krisflyer-milesparadise-2611",
+      "cat": "air",
+      "region": "sg",
+      "type": "cond",
+      "title": "KrisFlyer 마일리지 항공권 최대 15% 할인",
+      "reward": "Economy Saver 보상 항공권 15% 할인 (Scoot은 10%)",
+      "desc": "싱가포르항공 일부 노선의 Economy Saver, Premium Economy Saver 마일리지 항공권이 15% 싸져요. Scoot 노선은 10% 할인이에요.",
+      "condition": "2026년 11월 1일부터 2027년 5월 31일 사이에 여행하는 일부 노선만 해당돼요",
+      "start": "2026-11-01",
+      "end": "2027-05-31",
+      "added": "2026-11-21",
+      "url": "https://www.singaporeair.com/en_UK/at/ppsclub-krisflyer/kf-miles-paradise/",
+      "cta": "할인 노선 보기"
     }
   ],
   "daily": [
@@ -143,7 +169,8 @@
       "freq": "daily",
       "desc": "정해진 걸음 수(최대 1만 보)를 채울 때마다 포인트와 복권을 줘요. 걸은 날 저녁에 한 번 열어서 받기.",
       "url": "supertoss://",
-      "linkKind": "app"
+      "linkKind": "app",
+      "region": "kr"
     },
     {
       "id": "toss-together",
@@ -153,7 +180,8 @@
       "freq": "daily",
       "desc": "주변에 토스를 켠 사람이 있으면 포인트를 받아요. 사람 많은 카페나 지하철에서 켜면 유리해요.",
       "url": "supertoss://",
-      "linkKind": "app"
+      "linkKind": "app",
+      "region": "kr"
     },
     {
       "id": "toss-benefit",
@@ -163,7 +191,8 @@
       "freq": "daily",
       "desc": "토스 하단 혜택 메뉴에 매일 새 혜택이 추가돼요. 바로 참여형 이벤트만 빠르게 훑기.",
       "url": "supertoss://",
-      "linkKind": "app"
+      "linkKind": "app",
+      "region": "kr"
     },
     {
       "id": "npay-home",
@@ -173,7 +202,8 @@
       "freq": "daily",
       "desc": "결제홈 화면 가운데쯤 적립 버튼을 누르면 돼요. 계정에 따라 안 뜨는 날도 있어요.",
       "url": "https://home.pay.naver.com/?from=main_pay_icon",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "npay-random",
@@ -183,7 +213,8 @@
       "freq": "daily",
       "desc": "포인트 페이지에서 초록색 N클릭 버튼이 있는 곳들을 차례로 눌러요.",
       "url": "https://point.pay.naver.com/",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "npay-insurance",
@@ -193,7 +224,8 @@
       "freq": "daily",
       "desc": "이벤트 기간 중에는 하루 세 번까지 참여할 수 있어요.",
       "url": "https://insurance.pay.naver.com/?inflow=point_category",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "npay-scroll",
@@ -203,7 +235,8 @@
       "freq": "monthly5",
       "desc": "결제 혜택 페이지를 15초 정도 위아래로 둘러보면 적립돼요. 계정당 한 달 5회까지.",
       "url": "https://new-m.pay.naver.com/historybenefit/home",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "naver-mycar",
@@ -213,7 +246,8 @@
       "freq": "daily",
       "desc": "화면 중간 배너들을 눌러서 적립해요. 날마다 열리는 배너가 달라요.",
       "url": "https://mycar.naver.com/",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "naver-shopping",
@@ -223,7 +257,8 @@
       "freq": "daily",
       "desc": "매일 한 번 쇼핑지원금을 뽑을 수 있어요.",
       "url": "https://mkt.naver.com/store_discovery",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "naver-paypet",
@@ -233,7 +268,8 @@
       "freq": "daily",
       "desc": "펫을 키우면서 포인트를 모으는 이벤트예요.",
       "url": "https://new-m.pay.naver.com/public/sharing/paypet",
-      "linkKind": "deep"
+      "linkKind": "deep",
+      "region": "kr"
     },
     {
       "id": "npay-clicklinks",
@@ -243,7 +279,8 @@
       "freq": "daily",
       "desc": "네이버페이 클릭 적립 링크는 매일 바뀌어서 커뮤니티에 그날 링크가 모여 올라와요. 경제 게시판에서 오늘 날짜 글을 열면 돼요.",
       "url": "https://damoang.net/economy",
-      "linkKind": "web"
+      "linkKind": "web",
+      "region": "kr"
     },
     {
       "id": "cashwalk",
@@ -253,7 +290,30 @@
       "freq": "daily",
       "desc": "100걸음당 1캐시, 1만 보까지 적립돼요. 앱에서 버튼을 눌러야 받아지니까 자기 전에 한 번 열기.",
       "url": "",
-      "linkKind": "none"
+      "linkKind": "none",
+      "region": "kr"
+    },
+    {
+      "id": "sg-shopee-checkin",
+      "cat": "shop",
+      "region": "sg",
+      "title": "Shopee 코인 출석체크",
+      "reward": "매일 코인 · 연속 출석 보너스",
+      "freq": "daily",
+      "desc": "Shopee 앱 홈에서 코인 잔액을 누르고 오늘 출석을 누르면 돼요. 연속으로 출석할수록 더 주고, 코인은 적립한 달부터 3개월째 말에 사라져요.",
+      "url": "https://shopee.sg/",
+      "linkKind": "app"
+    },
+    {
+      "id": "sg-lazada-checkin",
+      "cat": "shop",
+      "region": "sg",
+      "title": "Lazada 코인 출석체크",
+      "reward": "매일 코인",
+      "freq": "daily",
+      "desc": "Lazada 앱의 코인 페이지에서 출석 버튼을 누르면 돼요. 연속으로 출석할수록 보상이 커져요.",
+      "url": "https://www.lazada.sg/",
+      "linkKind": "app"
     }
   ]
 }
