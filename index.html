@@ -123,6 +123,20 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
 .linkbtn{border:none;background:none;color:var(--accent);font-weight:700;font-size:12px;padding:0;font-family:inherit;cursor:pointer;text-decoration:underline}
 .update{display:block;background:var(--accent);color:#fff;border-radius:12px;padding:11px 12px;font-size:13px;margin-top:12px;font-weight:700;
   border:none;width:100%;text-align:left;font-family:inherit;cursor:pointer}
+.gicon{flex:none;width:44px;height:44px;border-radius:12px;background:var(--bg);display:grid;place-items:center;font-size:22px}
+.tagline{color:var(--text);font-weight:600;font-size:13.5px;margin-top:2px;word-break:keep-all}
+ol.how{margin:8px 0 0;padding-left:20px;color:var(--sub);font-size:13px}
+ol.how li{margin:2px 0}
+.trow{display:flex;align-items:center;gap:12px;width:100%;background:var(--card);border:none;border-radius:var(--radius);
+  padding:14px;margin-bottom:10px;text-align:left;font-family:inherit;color:var(--text);cursor:pointer}
+.trow .tt{flex:1;min-width:0}
+.trow b{display:block;font-size:14.5px}
+.trow small{display:block;color:var(--sub);font-size:12.5px;margin-top:2px;word-break:keep-all}
+.sw{flex:none;width:46px;height:28px;border-radius:99px;background:var(--line);position:relative;transition:background .2s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .2s}
+.sw.on{background:var(--good)}
+.sw.on::after{left:21px}
+nav.tabs button{font-size:10.5px}
 </style>
 </head>
 <body>
@@ -163,6 +177,18 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
   <div class="note">체크는 매일 자정에 초기화돼요. 링크가 앱 첫 화면까지만 열리는 항목은 <b>내 링크로 바꾸기</b>로 원하는 화면 링크를 넣어둘 수 있어요.</div>
 </section>
 
+<!-- 생활 혜택 탭 -->
+<section id="view-guides" class="hidden">
+  <header>
+    <h1>생활 혜택</h1>
+    <p id="guides-sub">늘 쓸 수 있는 할인 앱과 제도</p>
+  </header>
+  <div class="region" id="guides-region"></div>
+  <div class="chips" id="guide-chips"></div>
+  <div id="guides-list"></div>
+  <div class="note">가격이나 조건은 바뀔 수 있어요. 가입하기 전에 앱이나 공식 페이지에서 한 번 더 확인해 주세요.</div>
+</section>
+
 <!-- 내 포인트 탭 -->
 <section id="view-wallet" class="hidden">
   <header>
@@ -183,6 +209,9 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
   <h2>보는 지역</h2>
   <div id="settings-region"></div>
   <div class="note">자동으로 두면 아이폰 시간대를 보고 한국이나 싱가포르를 골라줘요. 여행 가서 시간대가 바뀌면 지역도 같이 바뀌어요. <b>현재 위치로 다시 확인</b>을 누르면 GPS로 한 번 더 확인하는데, 위치는 어느 나라인지 판단하는 데만 쓰고 저장하거나 어디로 보내지 않아요.</div>
+
+  <h2>싱가포르에 있을 때 보여줄 것</h2>
+  <div id="settings-toggles"></div>
 
   <h2>앱이나 페이지로 이동할 때</h2>
   <div class="seg" id="seg-mode">
@@ -208,6 +237,7 @@ input,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid va
 <nav class="tabs"><div class="in">
   <button data-tab="deals" class="on"><span>🎁</span>한정 혜택</button>
   <button data-tab="daily"><span>✅</span>매일</button>
+  <button data-tab="guides"><span>🧭</span>생활 혜택</button>
   <button data-tab="wallet"><span>💳</span>내 포인트</button>
   <button data-tab="settings"><span>⚙️</span>설정</button>
 </div></nav>
@@ -289,7 +319,14 @@ const REGIONS = {
   sg:  {name:"싱가포르", flag:"🇸🇬"},
   all: {name:"전체",     flag:"🌏"}
 };
-const APP_VERSION = "3";
+const APP_VERSION = "4";
+const GROUPS = {
+  dining:    {name:"외식 할인", icon:"🍽️"},
+  leftover:  {name:"마감 할인", icon:"🥡"},
+  cashback:  {name:"캐시백",   icon:"💸"},
+  transport: {name:"교통",     icon:"🚇"},
+  life:      {name:"생활",     icon:"🏠"}
+};
 const WALLET_PRESETS = [
   {name:"직접 입력", unit:""},
   {name:"대한항공 스카이패스", unit:"마일"},
@@ -320,21 +357,25 @@ const state = {
   region: store.get("region", null),            // kr | sg | all
   regionAuto: store.get("regionAuto", true),    // 위치 따라 자동
   regionVia: store.get("regionVia", null),      // tz | gps | unknown | manual
+  showKrAbroad: store.get("showKrAbroad", true),// 싱가포르에서도 되는 한국 혜택 같이 보기
+  showCitizen: store.get("showCitizen", false), // 싱가포르 국민 전용 혜택도 보기
   dealFilter: "all",
+  guideFilter: "all",
   dailyFilter: "all",
   loadStatus: "loading",              // loading | ok | cached | error
   lastFetch: 0
 };
-function save(){ ["mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly","region","regionAuto","regionVia"].forEach(k=>store.set(k, state[k])); }
+function save(){ ["mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly","region","regionAuto","regionVia","showKrAbroad","showCitizen"].forEach(k=>store.set(k, state[k])); }
 
 /* ======================= 데이터 ======================= */
 function normalize(j){
-  const out = {updated:null, deals:[], daily:[]};
+  const out = {updated:null, deals:[], daily:[], guides:[]};
   if(!j || typeof j!=="object") return out;
   const ok = x => x && typeof x==="object" && typeof x.id==="string" && typeof x.title==="string";
   out.updated = typeof j.updated==="string" ? j.updated : null;
   out.deals = Array.isArray(j.deals) ? j.deals.filter(ok) : [];
   out.daily = Array.isArray(j.daily) ? j.daily.filter(ok) : [];
+  out.guides = Array.isArray(j.guides) ? j.guides.filter(ok) : [];
   return out;
 }
 let DATA = normalize(store.get("data", null));
@@ -407,7 +448,22 @@ function applyAutoRegion(){
   save();
 }
 function itemRegion(x){ return x.region || (x.cat==="sg" ? "sg" : "kr"); }
-function inRegion(x){ const r = itemRegion(x); return state.region==="all" || r==="global" || r===state.region; }
+// 한국인 사용자 기준으로 지금 지역에서 받을 수 있는지
+function inRegion(x){
+  const r = itemRegion(x);
+  if(r==="sg" && x.citizen_only && !state.showCitizen) return false;
+  if(state.region==="all" || r==="global") return true;
+  if(state.region==="kr") return r==="kr";
+  if(state.region==="sg") return r==="sg" || (r==="kr" && x.abroad!==false && state.showKrAbroad);
+  return false;
+}
+function eligTag(x){
+  if(state.region==="kr") return "";
+  const r = itemRegion(x);
+  if(r==="kr") return x.abroad===false ? `<span class="tag bad">🇰🇷 한국에 있어야 해요</span>` : `<span class="tag">🇰🇷 해외에서도 OK</span>`;
+  if(r==="sg") return x.citizen_only ? `<span class="tag warn">🇸🇬 싱가포르 국민 전용</span>` : `<span class="tag">🇸🇬 외국인도 OK</span>`;
+  return "";
+}
 function locate(){
   if(!navigator.geolocation){ toast("이 기기에서는 위치를 확인할 수 없어요"); return; }
   toast("위치 확인 중…");
@@ -426,17 +482,18 @@ function locate(){
 function regionBar(){
   const segs = ["kr","sg","all"].map(r=>`<button class="${state.region===r?"on":""}" data-region="${r}">${REGIONS[r].flag} ${REGIONS[r].name}</button>`).join("");
   let status;
+  const extra = state.region==="sg" ? (state.showKrAbroad ? " · 한국인이 받을 수 있는 것만, 해외에서 되는 한국 혜택 포함" : " · 한국인이 받을 수 있는 싱가포르 혜택만") : "";
   if(state.regionAuto){
     const via = state.regionVia==="gps" ? "현재 위치 기준" : state.regionVia==="unknown" ? "한국·싱가포르 밖이라" : "아이폰 시간대 기준";
-    status = `📍 자동 · ${via} ${REGIONS[state.region]?REGIONS[state.region].name:""} · <button class="linkbtn" data-locate>현재 위치로 다시 확인</button>`;
+    status = `📍 자동 · ${via} ${REGIONS[state.region]?REGIONS[state.region].name:""}${extra} · <button class="linkbtn" data-locate>현재 위치로 다시 확인</button>`;
   } else {
-    status = `✋ 직접 고른 지역이에요 · <button class="linkbtn" data-autoregion>위치 따라 자동으로 바꾸기</button>`;
+    status = `✋ 직접 고른 지역이에요${extra} · <button class="linkbtn" data-autoregion>위치 따라 자동으로 바꾸기</button>`;
   }
   return `<div class="seg region-seg">${segs}</div><div class="region-status">${status}</div>`;
 }
 function renderRegion(){
   const html = regionBar();
-  ["#deals-region","#daily-region","#settings-region"].forEach(id=>{ const el=$(id); if(el) el.innerHTML = html; });
+  ["#deals-region","#daily-region","#guides-region","#settings-region"].forEach(id=>{ const el=$(id); if(el) el.innerHTML = html; });
 }
 
 /* ======================= 새 버전 확인 ======================= */
@@ -490,6 +547,7 @@ function dealCard(d){
       <div class="meta">
         <span class="tag ${type.cls}">${type.label}</span>
         <span class="tag plain">${esc(cat.name)}</span>
+        ${eligTag(d)}
         ${period?`<span class="tag plain">${period}</span>`:""}
       </div>
       ${d.reward?`<div class="reward">${esc(d.reward)}</div>`:""}
@@ -604,7 +662,7 @@ function renderDaily(){
         <div class="meta">
           <span class="tag plain">${esc(cat.name)}</span>
           ${it.reward?`<span class="tag reward">${esc(it.reward)}</span>`:""}
-          ${freqTag}${kindTag}
+          ${it.custom?"":eligTag(it)}${freqTag}${kindTag}
         </div>
         ${it.desc?`<div class="desc">${esc(it.desc)}</div>`:""}
         <div class="actions">
@@ -615,6 +673,50 @@ function renderDaily(){
       </div>
     </div>`;
   }).join("") : `<div class="empty">${state.region!=="all"&&!items.length ? REGIONS[state.region].name+"에서 매일 챙길 항목이 아직 없어요.<br>설정에서 직접 추가할 수 있어요." : "이 분류에는 항목이 없어요"}</div>`;
+}
+
+/* ======================= 생활 혜택 ======================= */
+function guideCard(g){
+  const url = safeUrl(g.url), src = safeUrl(g.source_url);
+  return `<div class="card">
+    <div class="gicon">${esc(g.icon||"✨")}</div>
+    <div class="body">
+      <div class="title">${esc(g.title)}${g.added===todayKey()?'<span class="badge-new">NEW</span>':""}</div>
+      ${g.tagline?`<div class="tagline">${esc(g.tagline)}</div>`:""}
+      <div class="meta">
+        ${g.saving?`<span class="tag reward">${esc(g.saving)}</span>`:""}
+        ${g.cost?`<span class="tag plain">${esc(g.cost)}</span>`:""}
+        ${eligTag(g)}
+      </div>
+      ${g.desc?`<div class="desc">${esc(g.desc)}</div>`:""}
+      ${Array.isArray(g.how)&&g.how.length?`<ol class="how">${g.how.map(s=>`<li>${esc(s)}</li>`).join("")}</ol>`:""}
+      ${g.tip?`<div class="cond"><b>팁</b> ${esc(g.tip)}</div>`:""}
+      <div class="actions">
+        ${url?`<a class="btn go small" data-goguide="${esc(g.id)}" href="${esc(url)}" ${targetAttr(url)}>${esc(g.cta||"열기")} ↗</a>`:""}
+        <button class="btn ghost small" data-hide="${esc(g.id)}">숨기기</button>
+      </div>
+      ${src && src!==url?`<a class="src" href="${esc(src)}" target="_blank" rel="noopener">출처 보기 ↗</a>`:""}
+    </div>
+  </div>`;
+}
+function renderGuides(){
+  const r = state.region;
+  $("#guides-sub").textContent = r==="sg" ? "싱가포르에서 늘 쓸 수 있는 할인 앱과 제도예요"
+    : r==="kr" ? "한국에서 늘 쓸 수 있는 할인 앱과 제도예요" : "늘 쓸 수 있는 할인 앱과 제도예요";
+  const all = DATA.guides.filter(g=>!state.hidden.includes(g.id)).filter(inRegion);
+  const order = Object.keys(GROUPS);
+  const groups = [...new Set(all.map(g=>g.group))].filter(k=>GROUPS[k]).sort((a,b)=>order.indexOf(a)-order.indexOf(b));
+  if(state.guideFilter!=="all" && !groups.includes(state.guideFilter)) state.guideFilter="all";
+  $("#guide-chips").innerHTML = `<button class="chip ${state.guideFilter==="all"?"on":""}" data-gfilter="all">전체</button>`+
+    groups.map(k=>`<button class="chip ${state.guideFilter===k?"on":""}" data-gfilter="${k}">${GROUPS[k].icon} ${GROUPS[k].name}</button>`).join("");
+  const list = all.filter(g=>state.guideFilter==="all"||g.group===state.guideFilter)
+    .sort((a,b)=>{ const ia=order.indexOf(a.group), ib=order.indexOf(b.group); return (ia<0?99:ia)-(ib<0?99:ib); });
+  let html = "", cur = null;
+  list.forEach(g=>{
+    if(g.group!==cur){ cur = g.group; const G = GROUPS[cur] || {name:"기타", icon:"✨"}; html += `<div class="sec">${G.icon} <b>${G.name}</b></div>`; }
+    html += guideCard(g);
+  });
+  $("#guides-list").innerHTML = html || `<div class="empty">${r==="kr" ? "한국 생활 혜택은 곧 채울게요.<br>지금은 싱가포르 정보만 있어요." : "보여줄 항목이 없어요"}</div>`;
 }
 
 /* ======================= 내 포인트 ======================= */
@@ -647,14 +749,18 @@ function renderSettings(){
   $("#custom-list").innerHTML = state.custom.length
     ? state.custom.map(c=>`<div class="card"><div class="body"><div class="title">${esc(c.title)}</div><div class="desc">${esc(c.url||"링크 없음")}</div></div><button class="btn ghost small" data-delcustom="${esc(c.id)}">삭제</button></div>`).join("")
     : `<div class="empty" style="padding:12px">아직 없어요</div>`;
-  const hid = DATA.deals.concat(allDaily()).filter(i=>state.hidden.includes(i.id));
+  const trow = (key, title, desc)=>`<button class="trow" data-toggle="${key}"><span class="tt"><b>${title}</b><small>${desc}</small></span><span class="sw ${state[key]?"on":""}"></span></button>`;
+  $("#settings-toggles").innerHTML =
+    trow("showKrAbroad", "해외에서 되는 한국 혜택도 같이 보기", "토스, 네이버페이처럼 싱가포르에 있어도 받을 수 있는 한국 혜택을 같이 보여줘요. 한국 매장이나 국내 거주 조건이 있는 건 빼요.")+
+    trow("showCitizen", "싱가포르 국민 전용 혜택도 보기", "CDC 바우처처럼 싱가포르 국민만 받을 수 있는 혜택이에요. 시민권자 가족이 있으면 켜두세요.");
+  const hid = DATA.deals.concat(allDaily(), DATA.guides).filter(i=>state.hidden.includes(i.id));
   $("#hidden-list").innerHTML = hid.length
     ? hid.map(i=>`<div class="card"><div class="body"><div class="title">${esc(i.title)}</div></div><button class="btn ghost small" data-unhide="${esc(i.id)}">다시 보이기</button></div>`).join("")
     : `<div class="empty" style="padding:12px">숨긴 항목이 없어요</div>`;
   $("#data-date").textContent = DATA.updated ? fmtUpdated(DATA.updated) : "–";
 }
 
-function render(){ renderRegion(); renderDeals(); renderDaily(); renderWallet(); renderSettings(); }
+function render(){ renderRegion(); renderDeals(); renderDaily(); renderGuides(); renderWallet(); renderSettings(); }
 
 /* ======================= 시트 ======================= */
 function openSheet(id){ $(id).classList.add("open"); }
@@ -679,17 +785,28 @@ let editingLinkId = null, editingWalletId = null;
 
 function switchTab(name){
   document.querySelectorAll("nav.tabs button").forEach(b=>b.classList.toggle("on", b.dataset.tab===name));
-  ["deals","daily","wallet","settings"].forEach(v=>$("#view-"+v).classList.toggle("hidden", v!==name));
+  ["deals","daily","guides","wallet","settings"].forEach(v=>$("#view-"+v).classList.toggle("hidden", v!==name));
   try{ window.scrollTo(0,0); }catch(e){}
 }
 
 /* ======================= 이벤트 ======================= */
 document.addEventListener("click", e=>{
-  const t = e.target.closest("[data-tab],[data-region],[data-locate],[data-autoregion],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
+  const t = e.target.closest("[data-tab],[data-region],[data-locate],[data-autoregion],[data-toggle],[data-gfilter],[data-goguide],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
   if(!t) return;
   const ds = t.dataset;
 
   if(ds.tab!==undefined){ switchTab(ds.tab); return; }
+  if(ds.toggle!==undefined){
+    const k = ds.toggle; if(!(k in state)) return;
+    state[k] = !state[k]; save(); render();
+    toast(state[k] ? "켰어요" : "껐어요");
+    return;
+  }
+  if(ds.gfilter!==undefined){ state.guideFilter = ds.gfilter; renderGuides(); return; }
+  if(ds.goguide!==undefined){
+    const g = DATA.guides.find(x=>x.id===ds.goguide); if(!g) return;
+    handleGo(e, g.title, safeUrl(g.url), null); return;
+  }
   if(ds.region!==undefined){
     const wasAuto = state.regionAuto;
     state.region = ds.region; state.regionAuto = false; state.regionVia = "manual";

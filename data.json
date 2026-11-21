@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-22T00:24:51+08:00",
+  "updated": "2026-11-22T01:30:00+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -15,7 +15,8 @@
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/cashandmiles3",
       "cta": "이벤트 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "kal-aviationday-2026",
@@ -30,7 +31,8 @@
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/46th_aviationday1027",
       "cta": "응모하러 가기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "kal-hotpick-sea-2611",
@@ -45,7 +47,8 @@
       "added": "2026-11-21",
       "url": "https://www.koreanair.com/contents/promotion/list/2026/26winterhotpick",
       "cta": "노선 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-facesign-10-2611",
@@ -59,7 +62,8 @@
       "added": "2026-11-21",
       "url": "https://biz.sbs.co.kr/amp/article/20000339581",
       "cta": "자세히 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": false
     },
     {
       "id": "gmarket-ggok-hyundai-2611",
@@ -74,7 +78,8 @@
       "added": "2026-11-21",
       "url": "https://m.gmarket.co.kr/n/showroom/ggokcard?eventCode=CEG6R",
       "cta": "이벤트 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "sg-cdc-jan2026-expiry",
@@ -89,7 +94,8 @@
       "url": "https://vouchers.cdc.gov.sg/residents/how-to-claim-and-spend/",
       "cta": "받는 법 보기",
       "region": "sg",
-      "source_url": "https://ask.gov.sg/kampungspirit/questions/cmuou0g9m00br4g01b0tkbd2x"
+      "source_url": "https://ask.gov.sg/kampungspirit/questions/cmuou0g9m00br4g01b0tkbd2x",
+      "citizen_only": true
     },
     {
       "id": "oz-staralliance-exit",
@@ -101,7 +107,8 @@
       "added": "2026-11-21",
       "url": "https://flyasiana.com",
       "cta": "아시아나에서 확인",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "kal-oz-merge",
@@ -118,7 +125,8 @@
       "added": "2026-11-21",
       "url": "https://www.koreanair.com",
       "cta": "대한항공에서 확인",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "toss-facepay-change-1113",
@@ -130,7 +138,8 @@
       "added": "2026-11-21",
       "url": "https://toss.im/notices/25870",
       "cta": "공지 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "toss-phishing-1105",
@@ -142,7 +151,8 @@
       "added": "2026-11-21",
       "url": "https://toss.im/notices/25904",
       "cta": "공지 보기",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-clicks-20261122",
@@ -155,7 +165,8 @@
       "end": "2026-11-22",
       "added": "2026-11-22",
       "url": "https://eomisae.co.kr/ec/212059267",
-      "cta": "모음 글 보기"
+      "cta": "모음 글 보기",
+      "abroad": true
     },
     {
       "id": "nts-eitc-late-2611",
@@ -171,7 +182,8 @@
       "added": "2026-11-22",
       "url": "https://www.hometax.go.kr",
       "source_url": "https://www.korea.kr/multi/visualNewsView.do?newsId=148974865",
-      "cta": "신청하러 가기"
+      "cta": "신청하러 가기",
+      "abroad": false
     },
     {
       "id": "musinsa-offline-checkin-2611",
@@ -187,7 +199,8 @@
       "added": "2026-11-22",
       "url": "https://www.musinsa.com/events/checkin/3/onboarding",
       "source_url": "https://www.musinsa.com/content/1566699932019111639",
-      "cta": "이벤트 보기"
+      "cta": "이벤트 보기",
+      "abroad": false
     },
     {
       "id": "kosaf-scholarship-2027-1-2611",
@@ -203,7 +216,8 @@
       "added": "2026-11-22",
       "url": "https://www.kosaf.go.kr",
       "source_url": "https://vet.snu.ac.kr/33955/",
-      "cta": "신청하러 가기"
+      "cta": "신청하러 가기",
+      "abroad": false
     },
     {
       "id": "mnuri-card-deadline-2611",
@@ -219,7 +233,8 @@
       "added": "2026-11-22",
       "url": "https://www.mnuri.kr",
       "source_url": "https://www.mcst.go.kr/kor/s_policy/subPolicy/cultureart/cultureart06.jsp",
-      "cta": "신청하러 가기"
+      "cta": "신청하러 가기",
+      "abroad": false
     },
     {
       "id": "energy-voucher-2026-2611",
@@ -235,7 +250,8 @@
       "added": "2026-11-22",
       "url": "https://www.energyv.or.kr",
       "source_url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/customer/notice/1309896_1141.html",
-      "cta": "신청하러 가기"
+      "cta": "신청하러 가기",
+      "abroad": false
     },
     {
       "id": "hana-1q-stamp-2611",
@@ -250,7 +266,8 @@
       "end": "2026-11-30",
       "added": "2026-11-22",
       "url": "https://www.kebhana.com/cont/news/news02/1529258_115431.jsp",
-      "cta": "이벤트 보기"
+      "cta": "이벤트 보기",
+      "abroad": true
     },
     {
       "id": "sg-mof-ap-cash-2611",
@@ -264,7 +281,8 @@
       "end": "2026-11-30",
       "added": "2026-11-22",
       "url": "https://www.mof.gov.sg/news-resources/newsroom/about-3-million-adult-singaporeans-to-receive---100-to--250-of-assurance-package-cash-in-december-2026/",
-      "cta": "받는 법 보기"
+      "cta": "받는 법 보기",
+      "citizen_only": true
     },
     {
       "id": "sg-krisflyer-spontaneous-escapes-2611",
@@ -279,7 +297,8 @@
       "end": "2026-11-30",
       "added": "2026-11-22",
       "url": "https://www.singaporeair.com/en_UK/gb/plan-travel/promotions/global/kf/kf-promo/kfescapes/",
-      "cta": "노선 보기"
+      "cta": "노선 보기",
+      "citizen_only": false
     },
     {
       "id": "sg-activesg-sg60-credits-2611",
@@ -294,7 +313,8 @@
       "added": "2026-11-22",
       "url": "https://ask.gov.sg/activesg/questions/cm82zqf5m00952v9vemzctz75",
       "source_url": "https://ask.gov.sg/activesg/questions/cm82zr7jc009a2v9vv6040tod",
-      "cta": "확인하기"
+      "cta": "확인하기",
+      "citizen_only": true
     }
   ],
   "daily": [
@@ -307,7 +327,8 @@
       "desc": "정해진 걸음 수(최대 1만 보)를 채울 때마다 포인트와 복권을 줘요. 걸은 날 저녁에 한 번 열어서 받기.",
       "url": "supertoss://",
       "linkKind": "app",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "toss-together",
@@ -318,7 +339,8 @@
       "desc": "주변에 토스를 켠 사람이 있으면 포인트를 받아요. 사람 많은 카페나 지하철에서 켜면 유리해요.",
       "url": "supertoss://",
       "linkKind": "app",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "toss-benefit",
@@ -329,7 +351,8 @@
       "desc": "토스 하단 혜택 메뉴에 매일 새 혜택이 추가돼요. 바로 참여형 이벤트만 빠르게 훑기.",
       "url": "supertoss://",
       "linkKind": "app",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-home",
@@ -340,7 +363,8 @@
       "desc": "결제홈 화면 가운데쯤 적립 버튼을 누르면 돼요. 계정에 따라 안 뜨는 날도 있어요.",
       "url": "https://home.pay.naver.com/?from=main_pay_icon",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-random",
@@ -351,7 +375,8 @@
       "desc": "포인트 페이지에서 초록색 N클릭 버튼이 있는 곳들을 차례로 눌러요.",
       "url": "https://point.pay.naver.com/",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-insurance",
@@ -362,7 +387,8 @@
       "desc": "이벤트 기간 중에는 하루 세 번까지 참여할 수 있어요.",
       "url": "https://insurance.pay.naver.com/?inflow=point_category",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-scroll",
@@ -373,7 +399,8 @@
       "desc": "결제 혜택 페이지를 15초 정도 위아래로 둘러보면 적립돼요. 계정당 한 달 5회까지.",
       "url": "https://new-m.pay.naver.com/historybenefit/home",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "naver-mycar",
@@ -384,7 +411,8 @@
       "desc": "화면 중간 배너들을 눌러서 적립해요. 날마다 열리는 배너가 달라요.",
       "url": "https://mycar.naver.com/",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "naver-shopping",
@@ -395,7 +423,8 @@
       "desc": "매일 한 번 쇼핑지원금을 뽑을 수 있어요.",
       "url": "https://mkt.naver.com/store_discovery",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "naver-paypet",
@@ -406,7 +435,8 @@
       "desc": "펫을 키우면서 포인트를 모으는 이벤트예요.",
       "url": "https://new-m.pay.naver.com/public/sharing/paypet",
       "linkKind": "deep",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "npay-clicklinks",
@@ -417,7 +447,8 @@
       "desc": "네이버페이 클릭 적립 링크는 매일 바뀌어서 커뮤니티에 그날 링크가 모여 올라와요. 경제 게시판에서 오늘 날짜 글을 열면 돼요.",
       "url": "https://damoang.net/economy",
       "linkKind": "web",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "cashwalk",
@@ -428,7 +459,8 @@
       "desc": "100걸음당 1캐시, 1만 보까지 적립돼요. 앱에서 버튼을 눌러야 받아지니까 자기 전에 한 번 열기.",
       "url": "",
       "linkKind": "none",
-      "region": "kr"
+      "region": "kr",
+      "abroad": true
     },
     {
       "id": "sg-shopee-checkin",
@@ -439,7 +471,8 @@
       "freq": "daily",
       "desc": "Shopee 앱 홈에서 코인 잔액을 누르고 오늘 출석을 누르면 돼요. 연속으로 출석할수록 더 주고, 코인은 적립한 달부터 3개월째 말에 사라져요.",
       "url": "https://shopee.sg/",
-      "linkKind": "app"
+      "linkKind": "app",
+      "citizen_only": false
     },
     {
       "id": "sg-lazada-checkin",
@@ -450,7 +483,221 @@
       "freq": "daily",
       "desc": "Lazada 앱의 코인 페이지에서 출석 버튼을 누르면 돼요. 연속으로 출석할수록 보상이 커져요.",
       "url": "https://www.lazada.sg/",
-      "linkKind": "app"
+      "linkKind": "app",
+      "citizen_only": false
+    }
+  ],
+  "guides": [
+    {
+      "id": "sg-eatigo",
+      "region": "sg",
+      "group": "dining",
+      "icon": "⏰",
+      "title": "Eatigo",
+      "tagline": "한가한 시간에 예약하면 최대 50% 할인",
+      "saving": "음식값 최대 50%",
+      "cost": "무료, 회원비 없음",
+      "desc": "식당이 한가한 시간대일수록 할인율이 올라가는 예약 앱이에요. 호텔 뷔페나 레스토랑도 많이 들어가 있어요.",
+      "how": [
+        "앱에서 식당을 고르고 시간대별 할인율을 확인해요",
+        "할인율이 높은 시간대로 예약해요",
+        "식당에서 예약했다고 말하면 계산할 때 할인돼요"
+      ],
+      "tip": "늦은 점심(오후 1시 반 이후)이나 늦은 저녁(9시 이후)이 제일 많이 깎여요. 할인은 음식값 기준이에요.",
+      "url": "https://apps.apple.com/app/id879030389",
+      "cta": "앱 받기",
+      "source_url": "https://blog.eatigo.com/singapore/trending-restaurants-in-singapore/",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-chope",
+      "region": "sg",
+      "group": "dining",
+      "icon": "📅",
+      "title": "Chope",
+      "tagline": "식당 예약, 할인 바우처, 적립금까지",
+      "saving": "오프피크 바우처 최대 50%",
+      "cost": "무료",
+      "desc": "싱가포르에서 제일 많이 쓰는 식당 예약 앱이에요. Chope Deals에서 바우처를 미리 사면 할인되고, 예약할 때마다 Chope-Dollars가 쌓여요.",
+      "how": [
+        "앱으로 식당을 예약해요",
+        "Deals에서 오프피크 바우처를 사면 더 싸요",
+        "계산할 때 바우처를 보여줘요"
+      ],
+      "tip": "오프피크 바우처는 쓸 수 있는 요일과 시간이 정해져 있으니 꼭 확인하세요.",
+      "url": "https://apps.apple.com/app/id517872650",
+      "cta": "앱 받기",
+      "source_url": "https://eatbook.sg/supper-deals-chope/amp/",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-burpple-beyond",
+      "region": "sg",
+      "group": "dining",
+      "icon": "🍽️",
+      "title": "Burpple Beyond",
+      "tagline": "500곳 넘는 식당 1+1",
+      "saving": "메인 메뉴 1+1",
+      "cost": "유료, 연 S$99부터",
+      "desc": "식당 리뷰 앱 Burpple의 유료 멤버십이에요. 카페와 캐주얼 다이닝 위주로 1+1이나 % 할인을 줘요.",
+      "how": [
+        "Burpple 앱에서 Beyond 멤버십에 가입해요",
+        "1-for-1 표시가 있는 식당을 골라서 가요",
+        "주문할 때 Burpple 딜을 쓴다고 말하고 앱에서 사용 처리해요"
+      ],
+      "tip": "둘이 자주 외식하면 몇 번만 써도 회비가 빠져요. 혼밥이 많으면 잘 안 맞아요.",
+      "url": "https://apps.apple.com/sg/app/burpple/id511999255",
+      "cta": "앱 받기",
+      "source_url": "https://www.burpple.com/beyond",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-entertainer",
+      "region": "sg",
+      "group": "dining",
+      "icon": "🎟️",
+      "title": "The ENTERTAINER",
+      "tagline": "식당, 액티비티, 스파 1+1 쿠폰북",
+      "saving": "1+1 딜 2,000개 이상",
+      "cost": "유료, 연 S$80~95 정도",
+      "desc": "식당뿐 아니라 호텔 다이닝, 관광지, 헬스장, 스파까지 1+1이 들어 있는 쿠폰 앱이에요. 2026년판에는 조호바루 가게도 들어 있어요.",
+      "how": [
+        "앱에서 올해 멤버십을 사요",
+        "가게에서 주문할 때 앱 쿠폰을 써요",
+        "가족과 멤버십을 나눠 쓸 수 있어요"
+      ],
+      "tip": "외식보다 액티비티나 스파를 자주 하면 Burpple보다 이쪽이 나아요.",
+      "url": "https://www.theentertainerme.com/",
+      "cta": "웹사이트",
+      "source_url": "https://expatliving.sg/the-entertainer-app-savings-to-explore-singapore",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-fave",
+      "region": "sg",
+      "group": "cashback",
+      "icon": "💳",
+      "title": "Fave",
+      "tagline": "할인 바우처와 결제 캐시백",
+      "saving": "바우처 할인, 결제 캐시백",
+      "cost": "무료",
+      "desc": "식당, 카페, 미용실 같은 가게의 할인 바우처를 사거나 FavePay로 결제하면 캐시백을 받는 앱이에요.",
+      "how": [
+        "앱에서 가게 바우처를 사거나",
+        "가게에서 FavePay QR로 결제해요",
+        "캐시백은 보통 같은 가게에서 다음 결제 때 써요"
+      ],
+      "url": "https://myfave.com/",
+      "cta": "웹사이트",
+      "source_url": "https://blog.moneysmart.sg/dining/burpple-entertainer-chope-fave-eatigo",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-shopback",
+      "region": "sg",
+      "group": "cashback",
+      "icon": "💸",
+      "title": "ShopBack · ShopBack GO",
+      "tagline": "온라인 쇼핑, 오프라인 결제 캐시백",
+      "saving": "구매액 일부 캐시백",
+      "cost": "무료",
+      "desc": "ShopBack을 거쳐 온라인 쇼핑몰에서 사면 캐시백이 쌓이고, ShopBack GO로는 식당이나 가게에서 결제해도 캐시백을 받아요.",
+      "how": [
+        "ShopBack 앱을 설치해요",
+        "온라인 쇼핑은 앱을 거쳐서 쇼핑몰로 들어가요",
+        "오프라인은 GO 가맹점에서 앱 안내대로 결제해요"
+      ],
+      "url": "https://www.shopback.sg/",
+      "cta": "웹사이트",
+      "source_url": "https://blog.seedly.sg/mobile-apps-singaporean-foodie-should-have",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-treatsure",
+      "region": "sg",
+      "group": "leftover",
+      "icon": "🍱",
+      "title": "treatsure",
+      "tagline": "호텔 뷔페 남은 음식을 싸게",
+      "saving": "정가보다 훨씬 싸게",
+      "cost": "무료",
+      "desc": "호텔 뷔페, 식당, 마트에서 남은 음식을 싸게 사는 앱이에요. 뷔페 마감 무렵 통에 담아 가는 Buffet in a Box가 유명해요.",
+      "how": [
+        "앱에서 근처 호텔이나 가게를 확인해요",
+        "앱으로 미리 결제해요",
+        "정해진 시간에 가서 받아 와요"
+      ],
+      "url": "https://apps.apple.com/app/id1273827294",
+      "cta": "앱 받기",
+      "source_url": "https://www.gov.sg/profile-stories/mts-preston/",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-yindii",
+      "region": "sg",
+      "group": "leftover",
+      "icon": "🥐",
+      "title": "Yindii",
+      "tagline": "빵집·카페 마감 떨이 서프라이즈 백",
+      "saving": "최대 80% 할인",
+      "cost": "무료",
+      "desc": "문 닫기 전에 남은 빵이나 음식을 서프라이즈 백으로 싸게 파는 앱이에요. Paul, Baker & Cook, SaladStop! 같은 곳이 들어가 있어요.",
+      "how": [
+        "앱에서 근처 가게의 서프라이즈 백을 예약해요",
+        "가게마다 정해진 픽업 시간을 확인해요",
+        "시간 맞춰 가서 받아요"
+      ],
+      "tip": "밤늦게 30분만 픽업할 수 있는 곳도 있어서 시간을 꼭 확인하세요.",
+      "url": "https://mothership.sg/2025/01/yindii-app-reduce-food-waste/",
+      "cta": "자세히 보기",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-mrt-prepeak",
+      "region": "sg",
+      "group": "transport",
+      "icon": "🚇",
+      "title": "아침 7시 45분 전 MRT 할인",
+      "tagline": "평일 아침 일찍 타면 최대 50센트 할인",
+      "saving": "한 번에 최대 S$0.50",
+      "cost": "자동 적용",
+      "desc": "평일(공휴일 제외) 아침 7시 45분 전에 MRT 역에서 카드를 찍고 들어가면 요금이 최대 50센트 깎여요. 따로 신청할 필요 없어요.",
+      "how": [
+        "교통카드나 컨택리스 카드로 평일 7시 45분 전에 찍고 들어가요",
+        "할인은 자동으로 돼요"
+      ],
+      "url": "https://www.ptc.gov.sg/fares/morning-pre-peak-fares/",
+      "cta": "자세히 보기",
+      "added": "2026-11-22",
+      "citizen_only": false
+    },
+    {
+      "id": "sg-nel-free-morning",
+      "region": "sg",
+      "group": "transport",
+      "icon": "🆓",
+      "title": "북동선 아침 무료 탑승",
+      "tagline": "펑골 쪽 역에서 아침 시간대에 타면 공짜",
+      "saving": "첫 탑승 무료",
+      "cost": "자동 적용",
+      "desc": "북동선 펑골코스트역부터 코반역까지 6개 역이나 셍캉·펑골 LRT 역에서 평일 아침 7시 30분 전, 또는 9시부터 9시 45분 사이에 타면 무료예요. 2027년 12월 26일까지 이어져요.",
+      "how": [
+        "해당 역에서 평일 정해진 시간에 찍고 들어가요",
+        "요금은 자동으로 안 빠져요"
+      ],
+      "url": "https://www.lta.gov.sg/travelsmart",
+      "cta": "자세히 보기",
+      "source_url": "https://thesmartlocal.com/read/free-discounted-mrt-rides/",
+      "added": "2026-11-22",
+      "citizen_only": false
     }
   ]
 }

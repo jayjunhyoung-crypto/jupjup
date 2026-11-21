@@ -28,8 +28,13 @@
 - `sg` 싱가포르 거주자나 싱가포르 계정 대상 (gov.sg 바우처, Shopee·Lazada SG, KrisFlyer, 싱가포르 은행·카드 등)
 - `global` 어느 나라에서든 받을 수 있는 것 (드물다. 확실할 때만)
 
+받을 수 있는 사람 (앱 사용자는 한국인이고, 지금은 주로 싱가포르에 사는 한국인이다)
+- `region`이 `kr`인 항목에는 `abroad`를 넣는다. 해외(싱가포르)에 있어도 앱이나 온라인으로 받을 수 있으면 `true`, 한국 오프라인 매장에 가야 하거나 국내 거주·소득·학생·수급자 요건이 있으면 `false`.
+- `region`이 `sg`인 항목에는 `citizen_only`를 넣는다. 싱가포르 국민만 받을 수 있으면(CDC 바우처, SG60, Assurance Package 등) `true`, 외국인(EP·DP 등 거주자)도 받을 수 있으면 `false`. 영주권자 조건 같은 세부 내용은 `condition`에 쓴다.
+- 앱은 싱가포르에 있을 때 `citizen_only: true`와 `abroad: false` 항목을 기본으로 숨긴다. 그래서 이 두 값은 정확하게 넣는다.
+
 지역 균형
-- 한국 항목만 몰리지 않게, 매일 싱가포르 항목도 따로 찾아본다 (있으면 1~3개 목표).
+- 한국 항목만 몰리지 않게, 매일 싱가포르 항목도 따로 찾아본다 (있으면 1~3개 목표). 특히 외국인도 받을 수 있는 싱가포르 혜택을 우선한다.
 
 매번 훑을 곳
 - 토스: toss.im/notices, toss.im/tossfeed, "토스 이벤트 포인트"
@@ -76,6 +81,34 @@
 
 - `id`는 영문 소문자, 숫자, 하이픈만 쓴다. 날짜나 연월을 붙여서 겹치지 않게 한다.
 - `url`은 반드시 `https://`로 시작해야 한다.
+- `kr` 항목은 `"abroad": true | false`, `sg` 항목은 `"citizen_only": true | false`를 같이 넣는다.
+
+## 4-1. 생활 혜택 (`guides`)
+기간 한정이 아니라 늘 쓸 수 있는 할인 앱과 제도다 (Eatigo, Chope, Burpple Beyond, MRT 아침 할인 등). 한국인이 잘 모르는 현지 혜택을 쉽게 알려주는 게 목적이다.
+- 매일 새로 채울 필요는 없다. 서비스가 끝났거나 가격·조건이 크게 바뀐 게 확인되면 고치거나 지운다.
+- 한국인에게 확실히 쓸모 있는 상시 혜택을 새로 찾으면 하루 최대 1개까지 추가할 수 있다 (공식 링크 필수).
+- `group` 값: `dining`(외식 할인), `leftover`(마감·잉여 음식), `cashback`(캐시백), `transport`(교통), `life`(그 밖의 생활)
+
+```json
+{
+  "id": "sg-eatigo",
+  "region": "sg",
+  "citizen_only": false,
+  "group": "dining",
+  "icon": "⏰",
+  "title": "서비스 이름",
+  "tagline": "한 줄 설명",
+  "saving": "얼마나 아끼는지",
+  "cost": "무료 또는 유료 금액",
+  "desc": "두 문장 이내 설명",
+  "how": ["쓰는 법 1", "쓰는 법 2"],
+  "tip": "알아두면 좋은 점 (선택)",
+  "url": "앱스토어나 공식 사이트 https 링크",
+  "cta": "버튼 문구",
+  "source_url": "참고한 기사 (선택)",
+  "added": "YYYY-MM-DD"
+}
+```
 
 ## 5. 저장
 1. `python3 -m json.tool data.json > /dev/null` 로 유효성을 확인한다.
