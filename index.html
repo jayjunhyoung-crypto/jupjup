@@ -137,206 +137,300 @@ ol.how li{margin:2px 0}
 .sw.on{background:var(--good)}
 .sw.on::after{left:21px}
 nav.tabs button{font-size:10.5px}
+nav.tabs em{font-style:normal}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- 한정 혜택 탭 -->
 <section id="view-deals">
   <header>
     <div class="head-row">
       <div>
-        <h1>오늘의 한정 혜택</h1>
-        <p id="deals-updated">불러오는 중…</p>
+        <h1 data-t="dealsTitle"></h1>
+        <p id="deals-updated"></p>
       </div>
-      <button class="refresh" id="refresh-btn">↻ 새로고침</button>
+      <div style="display:flex;gap:6px;flex:none">
+        <button class="refresh" id="lang-btn"></button>
+        <button class="refresh" id="refresh-btn"></button>
+      </div>
     </div>
   </header>
-  <button id="update-banner" class="update hidden">✨ 새 버전이 나왔어요. 눌러서 바로 업데이트</button>
+  <button id="update-banner" class="update hidden" data-t="updateBanner"></button>
   <div id="load-banner" class="banner hidden"></div>
   <div class="region" id="deals-region"></div>
   <div class="chips" id="deal-chips"></div>
   <div id="deals-list"></div>
-  <div class="note">이벤트는 예고 없이 바뀌거나 일찍 끝날 수 있어요. 참여 전에 <b>출처 페이지</b>에서 조건을 한 번 더 확인해 주세요.</div>
+  <div class="note" data-th="dealsNote"></div>
 </section>
 
-<!-- 매일 챙기기 탭 -->
 <section id="view-daily" class="hidden">
   <header>
-    <h1>매일 챙기기</h1>
+    <h1 data-t="dailyTitle"></h1>
     <p id="today-label"></p>
   </header>
   <div class="region" id="daily-region"></div>
   <div class="progress">
-    <div class="row"><span>오늘 챙긴 보상</span><strong id="prog-num">0 / 0</strong></div>
+    <div class="row"><span data-t="claimedToday"></span><strong id="prog-num">0 / 0</strong></div>
     <div class="bar"><i id="prog-bar" style="width:0"></i></div>
   </div>
   <div class="chips" id="daily-chips"></div>
   <div id="daily-list"></div>
-  <div class="note">체크는 매일 자정에 초기화돼요. 링크가 앱 첫 화면까지만 열리는 항목은 <b>내 링크로 바꾸기</b>로 원하는 화면 링크를 넣어둘 수 있어요.</div>
+  <div class="note" data-th="dailyNote"></div>
 </section>
 
-<!-- 생활 혜택 탭 -->
 <section id="view-guides" class="hidden">
   <header>
-    <h1>생활 혜택</h1>
-    <p id="guides-sub">늘 쓸 수 있는 할인 앱과 제도</p>
+    <h1 data-t="guidesTitle"></h1>
+    <p id="guides-sub"></p>
   </header>
   <div class="region" id="guides-region"></div>
   <div class="chips" id="guide-chips"></div>
   <div id="guides-list"></div>
-  <div class="note">가격이나 조건은 바뀔 수 있어요. 가입하기 전에 앱이나 공식 페이지에서 한 번 더 확인해 주세요.</div>
+  <div class="note" data-th="guidesNote"></div>
 </section>
 
-<!-- 내 포인트 탭 -->
 <section id="view-wallet" class="hidden">
   <header>
-    <h1>내 포인트·마일리지</h1>
-    <p>잔액이랑 소멸일을 적어두면 임박한 순서로 보여줘요</p>
+    <h1 data-t="walletTitle"></h1>
+    <p data-t="walletSub"></p>
   </header>
   <div id="wallet-list" style="margin-top:16px"></div>
-  <button class="btn go" style="width:100%;justify-content:center;padding:13px" id="add-wallet-btn">+ 포인트 추가</button>
-  <div class="note">이 화면의 정보는 이 기기에만 저장돼요. 카드사나 항공사 계정에 자동으로 연결되지는 않아요.</div>
+  <button class="btn go" style="width:100%;justify-content:center;padding:13px" id="add-wallet-btn" data-t="walletAdd"></button>
+  <div class="note" data-th="walletNote"></div>
 </section>
 
-<!-- 설정 탭 -->
 <section id="view-settings" class="hidden">
   <header>
-    <h1>설정</h1>
-    <p>내 방식대로 바꾸기</p>
+    <h1 data-t="settingsTitle"></h1>
+    <p data-t="settingsSub"></p>
   </header>
-  <h2>보는 지역</h2>
-  <div id="settings-region"></div>
-  <div class="note">자동으로 두면 아이폰 시간대를 보고 한국이나 싱가포르를 골라줘요. 여행 가서 시간대가 바뀌면 지역도 같이 바뀌어요. <b>현재 위치로 다시 확인</b>을 누르면 GPS로 한 번 더 확인하는데, 위치는 어느 나라인지 판단하는 데만 쓰고 저장하거나 어디로 보내지 않아요.</div>
+  <h2 data-t="langHead"></h2>
+  <div class="seg" id="seg-lang">
+    <button data-lang="ko">한국어</button>
+    <button data-lang="en">English</button>
+  </div>
 
-  <h2>싱가포르에 있을 때 보여줄 것</h2>
+  <h2 data-t="regionHead"></h2>
+  <div id="settings-region"></div>
+  <div class="note" data-th="regionNote"></div>
+
+  <h2 data-t="sgHead"></h2>
   <div id="settings-toggles"></div>
 
-  <h2>앱이나 페이지로 이동할 때</h2>
+  <h2 data-t="modeHead"></h2>
   <div class="seg" id="seg-mode">
-    <button data-mode="direct">바로 이동</button>
-    <button data-mode="confirm">확인 후 이동</button>
+    <button data-mode="direct" data-t="modeDirect"></button>
+    <button data-mode="confirm" data-t="modeConfirm"></button>
   </div>
   <div class="note" id="mode-note"></div>
 
-  <h2>내가 추가한 매일 항목</h2>
+  <h2 data-t="customHead"></h2>
   <div id="custom-list"></div>
-  <button class="btn ghost" style="width:100%;justify-content:center;padding:13px;background:var(--card)" id="add-custom-btn">+ 직접 보상 항목 추가</button>
+  <button class="btn ghost" style="width:100%;justify-content:center;padding:13px;background:var(--card)" id="add-custom-btn" data-t="customAdd"></button>
 
-  <h2>숨긴 항목</h2>
+  <h2 data-t="hiddenHead"></h2>
   <div id="hidden-list"></div>
 
-  <h2>기타</h2>
-  <button class="btn ghost" style="width:100%;justify-content:center;padding:13px;background:var(--card)" id="reset-today">오늘 매일 체크 전부 해제</button>
-  <div class="note">혜택 목록은 매일 자정(싱가포르 시간)에 AI가 새로 조사해서 채워요. 마지막 업데이트 <b id="data-date">–</b></div>
+  <h2 data-t="etcHead"></h2>
+  <button class="btn ghost" style="width:100%;justify-content:center;padding:13px;background:var(--card)" id="reset-today" data-t="resetToday"></button>
+  <div class="note"><span data-t="dataNote"></span> <b id="data-date">–</b></div>
 </section>
 
 </div>
 
 <nav class="tabs"><div class="in">
-  <button data-tab="deals" class="on"><span>🎁</span>한정 혜택</button>
-  <button data-tab="daily"><span>✅</span>매일</button>
-  <button data-tab="guides"><span>🧭</span>생활 혜택</button>
-  <button data-tab="wallet"><span>💳</span>내 포인트</button>
-  <button data-tab="settings"><span>⚙️</span>설정</button>
+  <button data-tab="deals" class="on"><span>🎁</span><em data-t="tabDeals"></em></button>
+  <button data-tab="daily"><span>✅</span><em data-t="tabDaily"></em></button>
+  <button data-tab="guides"><span>🧭</span><em data-t="tabGuides"></em></button>
+  <button data-tab="wallet"><span>💳</span><em data-t="tabWallet"></em></button>
+  <button data-tab="settings"><span>⚙️</span><em data-t="tabSettings"></em></button>
 </div></nav>
 
-<!-- 이동 확인 시트 -->
 <div class="sheet-bg" id="go-sheet"><div class="sheet">
   <h3 id="go-title"></h3>
   <p id="go-desc"></p>
-  <a class="btn go" id="go-link" href="#">이동하기</a>
-  <button class="btn ghost" data-close>취소</button>
+  <a class="btn go" id="go-link" href="#" data-t="go"></a>
+  <button class="btn ghost" data-close data-t="cancel"></button>
 </div></div>
 
-<!-- 링크 바꾸기 시트 -->
 <div class="sheet-bg" id="link-sheet"><div class="sheet">
-  <h3>내 링크로 바꾸기</h3>
-  <p>앱 안에서 공유 버튼으로 복사한 링크를 붙여넣으면 그 화면으로 바로 열려요. 비워두고 저장하면 기본 링크로 돌아가요.</p>
-  <label class="f">링크</label>
-  <input id="link-input" placeholder="https://toss.im/... 또는 supertoss://..." autocomplete="off" autocapitalize="off">
-  <button class="btn go" id="link-save">저장</button>
-  <button class="btn ghost" data-close>취소</button>
+  <h3 data-t="linkTitle"></h3>
+  <p data-t="linkDesc"></p>
+  <label class="f" data-t="linkLabel"></label>
+  <input id="link-input" data-tp="linkPh" autocomplete="off" autocapitalize="off">
+  <button class="btn go" id="link-save" data-t="save"></button>
+  <button class="btn ghost" data-close data-t="cancel"></button>
 </div></div>
 
-<!-- 포인트 추가 시트 -->
 <div class="sheet-bg" id="wallet-sheet"><div class="sheet">
-  <h3 id="wallet-sheet-title">포인트 추가</h3>
-  <label class="f">종류</label>
+  <h3 id="wallet-sheet-title"></h3>
+  <label class="f" data-t="wType"></label>
   <select id="w-preset"></select>
-  <label class="f">이름</label>
-  <input id="w-name" placeholder="예: 대한항공 스카이패스">
-  <label class="f">잔액</label>
-  <input id="w-balance" inputmode="numeric" placeholder="예: 32000">
-  <label class="f">단위</label>
-  <input id="w-unit" placeholder="마일, P, 원">
-  <label class="f">가장 가까운 소멸일 (모르면 비워두기)</label>
+  <label class="f" data-t="wName"></label>
+  <input id="w-name" data-tp="wNamePh">
+  <label class="f" data-t="wBalance"></label>
+  <input id="w-balance" inputmode="numeric" data-tp="wBalancePh">
+  <label class="f" data-t="wUnit"></label>
+  <input id="w-unit" data-tp="wUnitPh">
+  <label class="f" data-t="wExpiry"></label>
   <input id="w-expiry" type="date">
-  <button class="btn go" id="w-save">저장</button>
-  <button class="btn ghost hidden" id="w-delete" style="color:var(--bad)">삭제</button>
-  <button class="btn ghost" data-close>취소</button>
+  <button class="btn go" id="w-save" data-t="save"></button>
+  <button class="btn ghost hidden" id="w-delete" style="color:var(--bad)" data-t="delete"></button>
+  <button class="btn ghost" data-close data-t="cancel"></button>
 </div></div>
 
-<!-- 직접 항목 추가 시트 -->
 <div class="sheet-bg" id="custom-sheet"><div class="sheet">
-  <h3>매일 항목 직접 추가</h3>
-  <label class="f">이름</label>
-  <input id="c-title" placeholder="예: 올리브영 출석체크">
-  <label class="f">링크 (선택)</label>
-  <input id="c-url" placeholder="https://... 또는 앱 링크" autocomplete="off" autocapitalize="off">
-  <label class="f">보상 메모 (선택)</label>
-  <input id="c-reward" placeholder="예: 매일 10P">
-  <button class="btn go" id="c-save">추가</button>
-  <button class="btn ghost" data-close>취소</button>
+  <h3 data-t="cTitle"></h3>
+  <label class="f" data-t="wName"></label>
+  <input id="c-title" data-tp="cTitlePh">
+  <label class="f" data-t="cUrl"></label>
+  <input id="c-url" data-tp="cUrlPh" autocomplete="off" autocapitalize="off">
+  <label class="f" data-t="cReward"></label>
+  <input id="c-reward" data-tp="cRewardPh">
+  <button class="btn go" id="c-save" data-t="add"></button>
+  <button class="btn ghost" data-close data-t="cancel"></button>
 </div></div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-/* ======================= 분류 ======================= */
+const APP_VERSION = "5";
+
+/* ======================= 글자 (한국어 / English) ======================= */
+const I18N = {
+ko:{
+  appTitle:"줍줍 무료 보상 모음",
+  dealsTitle:"오늘의 한정 혜택", updated:"{d} 업데이트 · 매일 자정에 새로 채워요", loading:"불러오는 중…", noData:"아직 받아온 목록이 없어요",
+  refresh:"↻ 새로고침", langBtn:"🌐 EN", updateBanner:"✨ 새 버전이 나왔어요. 눌러서 바로 업데이트",
+  cached:"최신 목록을 못 불러와서 마지막으로 받아둔 목록을 보여주고 있어요", loadError:"목록을 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침을 눌러주세요",
+  freeOnly:"🎁 무료만 {n}", all:"전체",
+  secNew:"🆕 <b>오늘 새로 올라온 혜택</b> {n}개", secOngoing:"⏰ <b>진행 중</b> 마감 임박순", secDone:"✓ <b>참여 완료</b> {n}개",
+  emptyFree:"지금은 조건 없이 받는 무료 혜택이 없어요.<br>무료만 보기를 끄면 다른 혜택도 볼 수 있어요.",
+  emptyRegion:"지금은 {r} 혜택이 없어요.<br>매일 자정에 새로 채워지니까 내일 다시 확인해 주세요.", emptyAll:"보여줄 혜택이 없어요",
+  dealsNote:"이벤트는 예고 없이 바뀌거나 일찍 끝날 수 있어요. 참여 전에 <b>출처 페이지</b>에서 조건을 한 번 더 확인해 주세요.",
+  until:"{d}까지", badgeInfo:"소식", badgeAlways:"상시", join:"참여하기", joinDone:"참여했어요", joinDoneOn:"✓ 참여했어요",
+  infoDone:"확인했어요", infoDoneOn:"✓ 확인했어요", hide:"숨기기", source:"출처 보기 ↗", terms:"조건", tip:"팁", toastJoined:"참여 완료로 옮겼어요",
+  dailyTitle:"매일 챙기기", todayLabel:"{M}월 {D}일 {W}요일 · 매일 받을 수 있는 소소한 보상", claimedToday:"오늘 챙긴 보상",
+  dailyNote:"체크는 매일 자정에 초기화돼요. 링크가 앱 첫 화면까지만 열리는 항목은 <b>내 링크로 바꾸기</b>로 원하는 화면 링크를 넣어둘 수 있어요.",
+  myLink:"내 링크", appHome:"앱 첫 화면까지", noLink:"링크 없음", monthCount:"이번 달 {n}/5", open:"열기 ↗", openYourself:"앱에서 직접 열기", useMyLink:"내 링크로 바꾸기",
+  emptyDailyRegion:"{r}에서 매일 챙길 항목이 아직 없어요.<br>설정에서 직접 추가할 수 있어요.", emptyCat:"이 분류에는 항목이 없어요",
+  guidesTitle:"생활 혜택", guidesSubSg:"싱가포르에서 늘 쓸 수 있는 할인 앱과 제도예요", guidesSubKr:"한국에서 늘 쓸 수 있는 할인 앱과 제도예요", guidesSubAll:"늘 쓸 수 있는 할인 앱과 제도예요",
+  guidesNote:"가격이나 조건은 바뀔 수 있어요. 가입하기 전에 앱이나 공식 페이지에서 한 번 더 확인해 주세요.",
+  guidesEmptyKr:"한국 생활 혜택은 곧 채울게요.<br>지금은 싱가포르 정보만 있어요.", guidesEmpty:"보여줄 항목이 없어요", openDefault:"열기",
+  walletTitle:"내 포인트·마일리지", walletSub:"잔액이랑 소멸일을 적어두면 임박한 순서로 보여줘요", walletAdd:"+ 포인트 추가",
+  walletNote:"이 화면의 정보는 이 기기에만 저장돼요. 카드사나 항공사 계정에 자동으로 연결되지는 않아요.",
+  noBalance:"잔액 미입력", expSoon:"곧 소멸돼요. 이번 달 안에 쓰는 걸 추천해요", expPast:"소멸일이 지났어요. 날짜를 업데이트해 주세요", noExpiry:"소멸일<br>없음",
+  walletEmpty:"아직 등록한 포인트가 없어요.<br>마일리지나 카드 포인트를 추가해 보세요.",
+  wAddTitle:"포인트 추가", wEditTitle:"포인트 수정", wType:"종류", wName:"이름", wNamePh:"예: 대한항공 스카이패스", wBalance:"잔액", wBalancePh:"예: 32000",
+  wUnit:"단위", wUnitPh:"마일, P, 원", wExpiry:"가장 가까운 소멸일 (모르면 비워두기)", save:"저장", delete:"삭제", cancel:"취소", add:"추가",
+  settingsTitle:"설정", settingsSub:"내 방식대로 바꾸기", langHead:"언어", regionHead:"보는 지역",
+  regionNote:"자동으로 두면 아이폰 시간대를 보고 한국이나 싱가포르를 골라줘요. 여행 가서 시간대가 바뀌면 지역도 같이 바뀌어요. <b>현재 위치로 다시 확인</b>을 누르면 GPS로 한 번 더 확인하는데, 위치는 어느 나라인지 판단하는 데만 쓰고 저장하거나 어디로 보내지 않아요.",
+  sgHead:"싱가포르에 있을 때 보여줄 것",
+  tKrAbroad:"해외에서 되는 한국 혜택도 같이 보기", tKrAbroadD:"토스, 네이버페이처럼 싱가포르에 있어도 받을 수 있는 한국 혜택을 같이 보여줘요. 한국 매장이나 국내 거주 조건이 있는 건 빼요.",
+  tCitizen:"싱가포르 국민 전용 혜택도 보기", tCitizenD:"CDC 바우처처럼 싱가포르 국민만 받을 수 있는 혜택이에요. 시민권자 가족이 있으면 켜두세요.",
+  modeHead:"앱이나 페이지로 이동할 때", modeDirect:"바로 이동", modeConfirm:"확인 후 이동",
+  modeNoteDirect:"누르면 바로 넘어가요. 웹페이지는 새 창으로 열리고, 토스 같은 앱 링크는 그 앱이 열려요. 앱 링크는 아이폰이 \"○○에서 열겠습니까?\"를 한 번 물어볼 수 있는데, 이건 iOS가 띄우는 창이라 웹앱에서 끌 수 없어요.",
+  modeNoteConfirm:"누르면 먼저 확인 창을 보여주고, 이동하기를 눌러야 넘어가요. 웹페이지는 새 창으로 열려요.",
+  customHead:"내가 추가한 매일 항목", customAdd:"+ 직접 보상 항목 추가", nothingYet:"아직 없어요", del:"삭제",
+  hiddenHead:"숨긴 항목", noHidden:"숨긴 항목이 없어요", unhide:"다시 보이기",
+  etcHead:"기타", resetToday:"오늘 매일 체크 전부 해제", dataNote:"혜택 목록은 매일 자정(싱가포르 시간)에 AI가 새로 조사해서 채워요. 마지막 업데이트",
+  tabDeals:"한정 혜택", tabDaily:"매일", tabGuides:"생활 혜택", tabWallet:"내 포인트", tabSettings:"설정",
+  go:"이동하기", goWeb:"새 창으로 페이지를 열게요. 다 보고 닫으면 줍줍으로 돌아와요.", goApp:"해당 앱으로 이동할게요.",
+  linkTitle:"내 링크로 바꾸기", linkDesc:"앱 안에서 공유 버튼으로 복사한 링크를 붙여넣으면 그 화면으로 바로 열려요. 비워두고 저장하면 기본 링크로 돌아가요.",
+  linkLabel:"링크", linkPh:"https://toss.im/... 또는 supertoss://...",
+  cTitle:"매일 항목 직접 추가", cTitlePh:"예: 올리브영 출석체크", cUrl:"링크 (선택)", cUrlPh:"https://... 또는 앱 링크", cReward:"보상 메모 (선택)", cRewardPh:"예: 매일 10P",
+  rAuto:"📍 자동", viaGps:"현재 위치 기준", viaTz:"아이폰 시간대 기준", viaUnknown:"한국·싱가포르 밖이라", locateBtn:"현재 위치로 다시 확인",
+  rManual:"✋ 직접 고른 지역이에요", autoBtn:"위치 따라 자동으로 바꾸기",
+  sgExtraKr:"한국인이 받을 수 있는 것만, 해외에서 되는 한국 혜택 포함", sgExtraSg:"한국인이 받을 수 있는 싱가포르 혜택만",
+  eKrAbroad:"🇰🇷 해외에서도 OK", eKrOnly:"🇰🇷 한국에 있어야 해요", eSgCitizen:"🇸🇬 싱가포르 국민 전용", eSgOpen:"🇸🇬 외국인도 OK",
+  toastRegionAutoOff:"{r} 혜택만 볼게요. 자동 맞춤은 꺼졌어요", toastRegion:"{r} 혜택만 볼게요", toastAuto:"위치 따라 자동으로 맞출게요. 지금은 {r}",
+  locNo:"이 기기에서는 위치를 확인할 수 없어요", locating:"위치 확인 중…", locFound:"지금 {r}에 있어요. {r} 혜택으로 맞췄어요", locOutside:"한국이나 싱가포르 밖이라 전체를 보여줄게요",
+  locDenied:"위치 권한이 꺼져 있어요. 설정 > 개인정보 보호 > 위치 서비스에서 Safari 웹 사이트를 허용해 주세요", locFail:"위치를 확인하지 못했어요. 잠시 후 다시 해주세요",
+  on:"켰어요", off:"껐어요", toastHidden:"숨겼어요. 설정에서 다시 볼 수 있어요", latest:"최신 목록이에요", loadFail:"불러오지 못했어요",
+  toastModeDirect:"바로 이동으로 바꿨어요", toastModeConfirm:"확인 후 이동으로 바꿨어요", toastMyLink:"내 링크로 저장했어요", toastDefaultLink:"기본 링크로 돌렸어요",
+  needName:"이름을 적어주세요", toastCustom:"매일 목록에 추가했어요", toastReset:"오늘 체크를 해제했어요", saved:"저장했어요", deleted:"삭제했어요",
+  toastLang:"한국어로 바꿨어요", markDone:"완료 표시"
+},
+en:{
+  appTitle:"JupJup · Free rewards",
+  dealsTitle:"Today's limited deals", updated:"Updated {d} · refreshed every midnight", loading:"Loading…", noData:"Nothing loaded yet",
+  refresh:"↻ Refresh", langBtn:"🌐 한국어", updateBanner:"✨ A new version is ready. Tap to update",
+  cached:"Couldn't load the latest list, showing the last saved one", loadError:"Couldn't load the list. Check your connection and tap Refresh",
+  freeOnly:"🎁 Free only {n}", all:"All",
+  secNew:"🆕 <b>New today</b> {n}", secOngoing:"⏰ <b>Ongoing</b> ending soonest first", secDone:"✓ <b>Done</b> {n}",
+  emptyFree:"No no-strings-attached freebies right now.<br>Turn off Free only to see other deals.",
+  emptyRegion:"No {r} deals right now.<br>New ones are added every midnight, so check back tomorrow.", emptyAll:"Nothing to show",
+  dealsNote:"Promotions can change or end early. Please check the terms on the <b>source page</b> before joining.",
+  until:"until {d}", badgeInfo:"News", badgeAlways:"Ongoing", join:"Join", joinDone:"Mark done", joinDoneOn:"✓ Done",
+  infoDone:"Got it", infoDoneOn:"✓ Got it", hide:"Hide", source:"Source ↗", terms:"Terms", tip:"Tip", toastJoined:"Moved to Done",
+  dailyTitle:"Daily check-ins", todayLabel:"{W}, {D} {MON} · small rewards you can claim every day", claimedToday:"Claimed today",
+  dailyNote:"Checks reset every midnight. If a link only opens the app's home screen, use <b>Use my link</b> to save a link to the exact page.",
+  myLink:"My link", appHome:"Opens app home", noLink:"No link", monthCount:"This month {n}/5", open:"Open ↗", openYourself:"Open the app yourself", useMyLink:"Use my link",
+  emptyDailyRegion:"No daily items for {r} yet.<br>You can add your own in Settings.", emptyCat:"Nothing in this category",
+  guidesTitle:"Everyday savings", guidesSubSg:"Discount apps and schemes you can use anytime in Singapore", guidesSubKr:"Discount apps and schemes you can use anytime in Korea", guidesSubAll:"Discount apps and schemes you can use anytime",
+  guidesNote:"Prices and terms can change. Please double-check in the app or on the official site before signing up.",
+  guidesEmptyKr:"Korea guides are coming soon.<br>Only Singapore for now.", guidesEmpty:"Nothing to show", openDefault:"Open",
+  walletTitle:"My points & miles", walletSub:"Add balances and expiry dates and we'll sort by what expires first", walletAdd:"+ Add points",
+  walletNote:"This is saved on this device only. It isn't connected to your card or airline accounts.",
+  noBalance:"No balance", expSoon:"Expiring soon. Try to use it this month", expPast:"Past the expiry date. Please update it", noExpiry:"No<br>expiry",
+  walletEmpty:"No points added yet.<br>Add your miles or card points.",
+  wAddTitle:"Add points", wEditTitle:"Edit points", wType:"Type", wName:"Name", wNamePh:"e.g. KrisFlyer", wBalance:"Balance", wBalancePh:"e.g. 32000",
+  wUnit:"Unit", wUnitPh:"miles, pts, $", wExpiry:"Nearest expiry date (leave blank if unsure)", save:"Save", delete:"Delete", cancel:"Cancel", add:"Add",
+  settingsTitle:"Settings", settingsSub:"Make it yours", langHead:"Language", regionHead:"Region",
+  regionNote:"On Auto, we pick Korea or Singapore from your iPhone's time zone, so it follows you when you travel. <b>Check my location</b> uses GPS once. Your location is only used to tell which country you're in. It isn't saved or sent anywhere.",
+  sgHead:"When you're in Singapore",
+  tKrAbroad:"Also show Korean deals that work abroad", tKrAbroadD:"Korean app rewards like Toss or Naver Pay that you can claim from Singapore. Mostly useful if you have Korean accounts.",
+  tCitizen:"Show citizen-only benefits", tCitizenD:"Benefits only Singapore citizens can get, like CDC vouchers. Turn on if you or your family are citizens.",
+  modeHead:"When opening an app or page", modeDirect:"Open directly", modeConfirm:"Ask first",
+  modeNoteDirect:"Opens right away. Web pages open in a new window and app links open the app. iPhone may ask \"Open in …?\" for app links. That's an iOS prompt we can't turn off.",
+  modeNoteConfirm:"Shows a confirmation first, and only opens after you tap Go. Web pages open in a new window.",
+  customHead:"My daily items", customAdd:"+ Add your own reward", nothingYet:"Nothing yet", del:"Delete",
+  hiddenHead:"Hidden items", noHidden:"No hidden items", unhide:"Show again",
+  etcHead:"Other", resetToday:"Clear today's daily checks", dataNote:"The deals list is researched and refreshed by AI every midnight (Singapore time). Last update",
+  tabDeals:"Deals", tabDaily:"Daily", tabGuides:"Savings", tabWallet:"Points", tabSettings:"Settings",
+  go:"Go", goWeb:"Opens in a new window. Close it to come back to JupJup.", goApp:"Opening the app.",
+  linkTitle:"Use my link", linkDesc:"Paste a link you copied with the app's Share button and it will open that exact page. Save it empty to go back to the default.",
+  linkLabel:"Link", linkPh:"https://... or app link",
+  cTitle:"Add your own daily item", cTitlePh:"e.g. Starbucks app check-in", cUrl:"Link (optional)", cUrlPh:"https://... or app link", cReward:"Reward note (optional)", cRewardPh:"e.g. 10 pts a day",
+  rAuto:"📍 Auto", viaGps:"by GPS", viaTz:"by iPhone time zone", viaUnknown:"outside Korea/Singapore, so", locateBtn:"Check my location",
+  rManual:"✋ Region picked manually", autoBtn:"Follow my location",
+  sgExtraKr:"open to foreign residents, plus Korean deals that work abroad", sgExtraSg:"showing deals open to foreign residents",
+  eKrAbroad:"🇰🇷 Works from abroad", eKrOnly:"🇰🇷 Must be in Korea", eSgCitizen:"🇸🇬 Citizens only", eSgOpen:"🇸🇬 Open to foreigners",
+  toastRegionAutoOff:"Showing {r} only. Auto region is off", toastRegion:"Showing {r} only", toastAuto:"Following your location. Now {r}",
+  locNo:"Location isn't available on this device", locating:"Checking location…", locFound:"You're in {r}. Switched to {r} deals", locOutside:"Outside Korea and Singapore, showing everything",
+  locDenied:"Location is off. Allow it in Settings > Privacy > Location Services > Safari Websites", locFail:"Couldn't get your location. Please try again",
+  on:"On", off:"Off", toastHidden:"Hidden. You can show it again in Settings", latest:"You're up to date", loadFail:"Couldn't load",
+  toastModeDirect:"Links open directly", toastModeConfirm:"Links ask first", toastMyLink:"Saved your link", toastDefaultLink:"Back to the default link",
+  needName:"Please add a name", toastCustom:"Added to Daily", toastReset:"Cleared today's checks", saved:"Saved", deleted:"Deleted",
+  toastLang:"Switched to English", markDone:"Mark done"
+}};
+
 const CATS = {
-  air:   {name:"항공 마일리지", short:"✈️ 항공"},
-  toss:  {name:"토스",          short:"토스"},
-  npay:  {name:"네이버페이",    short:"네이버페이"},
-  kakao: {name:"카카오페이",    short:"카카오페이"},
-  card:  {name:"카드",          short:"💳 카드"},
-  shop:  {name:"쇼핑",          short:"🛍️ 쇼핑"},
-  gov:   {name:"정부 혜택",     short:"🏛️ 정부"},
-  sg:    {name:"싱가포르",      short:"🇸🇬 싱가포르"},
-  walk:  {name:"캐시워크",      short:"캐시워크"},
-  etc:   {name:"기타",          short:"기타"},
-  mine:  {name:"내 항목",       short:"내 항목"}
+  air:{ko:"항공 마일리지",en:"Air miles",sko:"✈️ 항공",sen:"✈️ Airlines"}, toss:{ko:"토스",en:"Toss",sko:"토스",sen:"Toss"},
+  npay:{ko:"네이버페이",en:"Naver Pay",sko:"네이버페이",sen:"Naver Pay"}, kakao:{ko:"카카오페이",en:"Kakao Pay",sko:"카카오페이",sen:"Kakao Pay"},
+  card:{ko:"카드",en:"Cards",sko:"💳 카드",sen:"💳 Cards"}, shop:{ko:"쇼핑",en:"Shopping",sko:"🛍️ 쇼핑",sen:"🛍️ Shopping"},
+  gov:{ko:"정부 혜택",en:"Government",sko:"🏛️ 정부",sen:"🏛️ Government"}, sg:{ko:"싱가포르",en:"Singapore",sko:"🇸🇬 싱가포르",sen:"🇸🇬 Singapore"},
+  walk:{ko:"캐시워크",en:"Cashwalk",sko:"캐시워크",sen:"Cashwalk"}, etc:{ko:"기타",en:"Other",sko:"기타",sen:"Other"},
+  mine:{ko:"내 항목",en:"Mine",sko:"내 항목",sen:"Mine"}
 };
 const TYPES = {
-  free:  {label:"무료",      cls:"t-free"},
-  entry: {label:"추첨 응모", cls:"t-entry"},
-  cond:  {label:"조건 있음", cls:"t-cond"},
-  info:  {label:"소식",      cls:"t-info"}
+  free:{ko:"무료",en:"Free",cls:"t-free"}, entry:{ko:"추첨 응모",en:"Lucky draw",cls:"t-entry"},
+  cond:{ko:"조건 있음",en:"Conditions apply",cls:"t-cond"}, info:{ko:"소식",en:"News",cls:"t-info"}
 };
-const REGIONS = {
-  kr:  {name:"한국",     flag:"🇰🇷"},
-  sg:  {name:"싱가포르", flag:"🇸🇬"},
-  all: {name:"전체",     flag:"🌏"}
-};
-const APP_VERSION = "4";
+const REGIONS = { kr:{ko:"한국",en:"Korea",flag:"🇰🇷"}, sg:{ko:"싱가포르",en:"Singapore",flag:"🇸🇬"}, all:{ko:"전체",en:"All",flag:"🌏"} };
 const GROUPS = {
-  dining:    {name:"외식 할인", icon:"🍽️"},
-  leftover:  {name:"마감 할인", icon:"🥡"},
-  cashback:  {name:"캐시백",   icon:"💸"},
-  transport: {name:"교통",     icon:"🚇"},
-  life:      {name:"생활",     icon:"🏠"}
+  dining:{ko:"외식 할인",en:"Dining deals",icon:"🍽️"}, leftover:{ko:"마감 할인",en:"Surplus food",icon:"🥡"},
+  grocery:{ko:"장보기",en:"Groceries",icon:"🛒"}, cashback:{ko:"캐시백",en:"Cashback",icon:"💸"},
+  transport:{ko:"교통",en:"Transport",icon:"🚇"}, free:{ko:"무료 즐길거리",en:"Free fun",icon:"✨"},
+  finance:{ko:"돈 관리",en:"Money",icon:"💱"}, life:{ko:"생활",en:"Living",icon:"🏠"}
 };
 const WALLET_PRESETS = [
-  {name:"직접 입력", unit:""},
-  {name:"대한항공 스카이패스", unit:"마일"},
-  {name:"아시아나클럽", unit:"마일"},
-  {name:"KrisFlyer", unit:"miles"},
-  {name:"토스 포인트", unit:"P"},
-  {name:"네이버페이 포인트", unit:"P"},
-  {name:"카드 포인트", unit:"P"},
-  {name:"OK캐쉬백", unit:"P"},
-  {name:"CJ ONE", unit:"P"}
+  {ko:"직접 입력",en:"Custom",unit:""}, {ko:"대한항공 스카이패스",en:"Korean Air SKYPASS",unit:"마일"},
+  {ko:"아시아나클럽",en:"Asiana Club",unit:"마일"}, {ko:"KrisFlyer",en:"KrisFlyer",unit:"miles"},
+  {ko:"토스 포인트",en:"Toss points",unit:"P"}, {ko:"네이버페이 포인트",en:"Naver Pay points",unit:"P"},
+  {ko:"카드 포인트",en:"Card points",unit:"P"}, {ko:"Linkpoints (FairPrice)",en:"Linkpoints (FairPrice)",unit:"pts"},
+  {ko:"GrabCoins",en:"GrabCoins",unit:"coins"}, {ko:"CJ ONE",en:"CJ ONE",unit:"P"}
 ];
 
 /* ======================= 저장소 ======================= */
@@ -344,28 +438,48 @@ const store = {
   get(k, d){ try{ const v = localStorage.getItem("jupjup:"+k); return v==null ? d : JSON.parse(v); }catch(e){ return d; } },
   set(k, v){ try{ localStorage.setItem("jupjup:"+k, JSON.stringify(v)); }catch(e){} }
 };
+function defaultLang(){ try{ return /^ko/i.test(navigator.language||"") ? "ko" : "en"; }catch(e){ return "ko"; } }
 const state = {
+  lang: store.get("lang", null) || defaultLang(),
   mode: store.get("mode", "confirm"),
-  done: store.get("done", {}),        // 매일 체크 { "2026-11-21": {id:true} }
-  monthly: store.get("monthly", {}),  // 월 횟수 { "2026-11": {id:count} }
-  links: store.get("links", {}),      // 내 링크 { id: url }
-  hidden: store.get("hidden", []),
-  joined: store.get("joined", {}),    // 한정 혜택 참여 { id: "2026-11-21" }
-  custom: store.get("custom", []),
-  wallet: store.get("wallet", []),
+  done: store.get("done", {}), monthly: store.get("monthly", {}), links: store.get("links", {}),
+  hidden: store.get("hidden", []), joined: store.get("joined", {}), custom: store.get("custom", []), wallet: store.get("wallet", []),
   freeOnly: store.get("freeOnly", false),
-  region: store.get("region", null),            // kr | sg | all
-  regionAuto: store.get("regionAuto", true),    // 위치 따라 자동
-  regionVia: store.get("regionVia", null),      // tz | gps | unknown | manual
-  showKrAbroad: store.get("showKrAbroad", true),// 싱가포르에서도 되는 한국 혜택 같이 보기
-  showCitizen: store.get("showCitizen", false), // 싱가포르 국민 전용 혜택도 보기
-  dealFilter: "all",
-  guideFilter: "all",
-  dailyFilter: "all",
-  loadStatus: "loading",              // loading | ok | cached | error
-  lastFetch: 0
+  region: store.get("region", null), regionAuto: store.get("regionAuto", true), regionVia: store.get("regionVia", null),
+  showKrAbroad: store.get("showKrAbroad", null), showCitizen: store.get("showCitizen", false),
+  dealFilter:"all", dailyFilter:"all", guideFilter:"all", loadStatus:"loading", lastFetch:0
 };
-function save(){ ["mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly","region","regionAuto","regionVia","showKrAbroad","showCitizen"].forEach(k=>store.set(k, state[k])); }
+if(state.showKrAbroad===null) state.showKrAbroad = state.lang==="ko";
+if(!I18N[state.lang]) state.lang = "ko";
+function save(){ ["lang","mode","done","monthly","links","hidden","joined","custom","wallet","freeOnly","region","regionAuto","regionVia","showKrAbroad","showCitizen"].forEach(k=>store.set(k, state[k])); }
+
+/* ======================= 번역 도우미 ======================= */
+function t(key, vars){
+  let s = (I18N[state.lang] && I18N[state.lang][key]!=null) ? I18N[state.lang][key] : (I18N.ko[key]!=null ? I18N.ko[key] : key);
+  if(vars) s = s.replace(/\{(\w+)\}/g, (_,k)=> vars[k]!=null ? vars[k] : "");
+  return s;
+}
+// 데이터 항목의 글자: 영어면 en 필드, 없으면 한국어 그대로
+function L(x, f){ if(state.lang==="en" && x && x.en && x.en[f]!=null) return x.en[f]; return x ? x[f] : ""; }
+function N(o, short){ if(!o) return ""; const k = (short?"s":"")+state.lang; return o[k]!=null ? o[k] : (o[short?"sko":"ko"]||""); }
+function rName(r){ return REGIONS[r] ? REGIONS[r][state.lang] : ""; }
+function applyStatic(){
+  document.documentElement.lang = state.lang;
+  document.title = t("appTitle");
+  document.querySelectorAll("[data-t]").forEach(el=>{ el.textContent = t(el.dataset.t); });
+  document.querySelectorAll("[data-th]").forEach(el=>{ el.innerHTML = t(el.dataset.th); });
+  document.querySelectorAll("[data-tp]").forEach(el=>{ el.placeholder = t(el.dataset.tp); });
+  $("#lang-btn").textContent = t("langBtn");
+  $("#refresh-btn").textContent = t("refresh");
+  document.querySelectorAll("#seg-lang button").forEach(b=>b.classList.toggle("on", b.dataset.lang===state.lang));
+  $("#w-preset").innerHTML = WALLET_PRESETS.map((p,i)=>`<option value="${i}">${esc(p[state.lang]||p.ko)}</option>`).join("");
+}
+function setLang(l){
+  if(!I18N[l] || l===state.lang) return;
+  state.lang = l;
+  state.showKrAbroad = l==="ko";   // 영어 사용자는 한국 앱 혜택이 기본으로 안 보이게
+  save(); applyStatic(); render(); toast(t("toastLang"));
+}
 
 /* ======================= 데이터 ======================= */
 function normalize(j){
@@ -373,25 +487,18 @@ function normalize(j){
   if(!j || typeof j!=="object") return out;
   const ok = x => x && typeof x==="object" && typeof x.id==="string" && typeof x.title==="string";
   out.updated = typeof j.updated==="string" ? j.updated : null;
-  out.deals = Array.isArray(j.deals) ? j.deals.filter(ok) : [];
-  out.daily = Array.isArray(j.daily) ? j.daily.filter(ok) : [];
-  out.guides = Array.isArray(j.guides) ? j.guides.filter(ok) : [];
+  ["deals","daily","guides"].forEach(k=>{ out[k] = Array.isArray(j[k]) ? j[k].filter(ok) : []; });
   return out;
 }
 let DATA = normalize(store.get("data", null));
 function hasData(){ return DATA.deals.length>0 || DATA.daily.length>0; }
-
 async function loadData(){
   try{
     const r = await fetch("data.json?t="+Date.now(), {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP "+r.status);
     const j = await r.json();
-    DATA = normalize(j);
-    store.set("data", j);
-    state.loadStatus = "ok";
-  }catch(e){
-    state.loadStatus = hasData() ? "cached" : "error";
-  }
+    DATA = normalize(j); store.set("data", j); state.loadStatus = "ok";
+  }catch(e){ state.loadStatus = hasData() ? "cached" : "error"; }
   state.lastFetch = Date.now();
   render();
 }
@@ -405,21 +512,22 @@ function monthKey(){ return todayKey().slice(0,7); }
 function esc(s){ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 function daysUntil(iso){
   if(!iso || typeof iso!=="string") return null;
-  const t = new Date(todayKey()+"T00:00:00"), d = new Date(iso.slice(0,10)+"T00:00:00");
+  const tt = new Date(todayKey()+"T00:00:00"), d = new Date(iso.slice(0,10)+"T00:00:00");
   if(isNaN(d)) return null;
-  return Math.round((d-t)/86400000);
+  return Math.round((d-tt)/86400000);
 }
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtMD(iso){ const p = String(iso).slice(0,10).split("-"); return Number(p[1])+"/"+Number(p[2]); }
 function fmtUpdated(s){
   const d = new Date(s); if(isNaN(d)) return "";
-  return (d.getMonth()+1)+"월 "+d.getDate()+"일 "+pad(d.getHours())+":"+pad(d.getMinutes());
+  const hm = pad(d.getHours())+":"+pad(d.getMinutes());
+  return state.lang==="en" ? `${d.getDate()} ${MON[d.getMonth()]} ${hm}` : `${d.getMonth()+1}월 ${d.getDate()}일 ${hm}`;
 }
 function ddayLabel(n){ if(n==null) return "–"; if(n===0) return "D-DAY"; return n>0 ? "D-"+n : "D+"+(-n); }
-function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),1600); }
+function toast(msg){ const el=$("#toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(el._h); el._h=setTimeout(()=>el.classList.remove("show"),1800); }
 function isWeb(u){ return /^https?:\/\//i.test(u||""); }
 function safeUrl(u){
-  u = (u||"").trim();
-  if(!u) return "";
+  u = (u||"").trim(); if(!u) return "";
   if(/^\s*(javascript|data|vbscript|file):/i.test(u)) return "";
   if(!/^[a-z][a-z0-9+.\-]*:/i.test(u)) u = "https://"+u;
   return u;
@@ -428,8 +536,7 @@ function targetAttr(url){ return isWeb(url) ? 'target="_blank" rel="noopener"' :
 
 /* ======================= 지역 ======================= */
 function regionFromTZ(){
-  let tz = "";
-  try{ tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; }catch(e){}
+  let tz = ""; try{ tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; }catch(e){}
   if(tz==="Asia/Seoul") return "kr";
   if(tz==="Asia/Singapore") return "sg";
   return null;
@@ -440,15 +547,13 @@ function regionFromCoords(lat, lng){
   return null;
 }
 function applyAutoRegion(){
-  const gps = store.get("gps", null);   // {region, at} 나라만 저장하고 좌표는 저장 안 함
-  const tz = regionFromTZ();
+  const gps = store.get("gps", null), tz = regionFromTZ();
   if(gps && gps.region && Date.now()-gps.at < 12*3600*1000){ state.region = gps.region; state.regionVia = "gps"; }
   else if(tz){ state.region = tz; state.regionVia = "tz"; }
   else { state.region = "all"; state.regionVia = "unknown"; }
   save();
 }
 function itemRegion(x){ return x.region || (x.cat==="sg" ? "sg" : "kr"); }
-// 한국인 사용자 기준으로 지금 지역에서 받을 수 있는지
 function inRegion(x){
   const r = itemRegion(x);
   if(r==="sg" && x.citizen_only && !state.showCitizen) return false;
@@ -460,34 +565,31 @@ function inRegion(x){
 function eligTag(x){
   if(state.region==="kr") return "";
   const r = itemRegion(x);
-  if(r==="kr") return x.abroad===false ? `<span class="tag bad">🇰🇷 한국에 있어야 해요</span>` : `<span class="tag">🇰🇷 해외에서도 OK</span>`;
-  if(r==="sg") return x.citizen_only ? `<span class="tag warn">🇸🇬 싱가포르 국민 전용</span>` : `<span class="tag">🇸🇬 외국인도 OK</span>`;
+  if(r==="kr") return x.abroad===false ? `<span class="tag bad">${t("eKrOnly")}</span>` : `<span class="tag">${t("eKrAbroad")}</span>`;
+  if(r==="sg") return x.citizen_only ? `<span class="tag warn">${t("eSgCitizen")}</span>` : `<span class="tag">${t("eSgOpen")}</span>`;
   return "";
 }
 function locate(){
-  if(!navigator.geolocation){ toast("이 기기에서는 위치를 확인할 수 없어요"); return; }
-  toast("위치 확인 중…");
+  if(!navigator.geolocation){ toast(t("locNo")); return; }
+  toast(t("locating"));
   navigator.geolocation.getCurrentPosition(pos=>{
     const r = regionFromCoords(pos.coords.latitude, pos.coords.longitude);
     store.set("gps", {region: r || "all", at: Date.now()});
     state.regionAuto = true; state.region = r || "all"; state.regionVia = "gps";
     save(); render();
-    toast(r ? `지금 ${REGIONS[r].name}에 있어요. ${REGIONS[r].name} 혜택으로 맞췄어요` : "한국이나 싱가포르 밖이라 전체를 보여줄게요");
-  }, err=>{
-    toast(err && err.code===1
-      ? "위치 권한이 꺼져 있어요. 설정 > 개인정보 보호 > 위치 서비스에서 Safari 웹 사이트를 허용해 주세요"
-      : "위치를 확인하지 못했어요. 잠시 후 다시 해주세요");
-  }, {enableHighAccuracy:false, timeout:10000, maximumAge:10*60*1000});
+    toast(r ? t("locFound",{r:rName(r)}) : t("locOutside"));
+  }, err=>{ toast(err && err.code===1 ? t("locDenied") : t("locFail")); },
+  {enableHighAccuracy:false, timeout:10000, maximumAge:10*60*1000});
 }
 function regionBar(){
-  const segs = ["kr","sg","all"].map(r=>`<button class="${state.region===r?"on":""}" data-region="${r}">${REGIONS[r].flag} ${REGIONS[r].name}</button>`).join("");
+  const segs = ["kr","sg","all"].map(r=>`<button class="${state.region===r?"on":""}" data-region="${r}">${REGIONS[r].flag} ${rName(r)}</button>`).join("");
+  const extra = state.region==="sg" ? " · "+(state.showKrAbroad ? t("sgExtraKr") : t("sgExtraSg")) : "";
   let status;
-  const extra = state.region==="sg" ? (state.showKrAbroad ? " · 한국인이 받을 수 있는 것만, 해외에서 되는 한국 혜택 포함" : " · 한국인이 받을 수 있는 싱가포르 혜택만") : "";
   if(state.regionAuto){
-    const via = state.regionVia==="gps" ? "현재 위치 기준" : state.regionVia==="unknown" ? "한국·싱가포르 밖이라" : "아이폰 시간대 기준";
-    status = `📍 자동 · ${via} ${REGIONS[state.region]?REGIONS[state.region].name:""}${extra} · <button class="linkbtn" data-locate>현재 위치로 다시 확인</button>`;
+    const via = state.regionVia==="gps" ? t("viaGps") : state.regionVia==="unknown" ? t("viaUnknown") : t("viaTz");
+    status = `${t("rAuto")} · ${via} ${rName(state.region)}${extra} · <button class="linkbtn" data-locate>${t("locateBtn")}</button>`;
   } else {
-    status = `✋ 직접 고른 지역이에요${extra} · <button class="linkbtn" data-autoregion>위치 따라 자동으로 바꾸기</button>`;
+    status = `${t("rManual")}${extra} · <button class="linkbtn" data-autoregion>${t("autoBtn")}</button>`;
   }
   return `<div class="seg region-seg">${segs}</div><div class="region-status">${status}</div>`;
 }
@@ -503,14 +605,11 @@ async function checkVersion(){
     if(!r.ok) return;
     const v = await r.json();
     if(!v || !v.app || String(v.app)===APP_VERSION) return;
-    let tried = null;
-    try{ tried = sessionStorage.getItem("jupjup:reloadFor"); }catch(e){}
+    let tried = null; try{ tried = sessionStorage.getItem("jupjup:reloadFor"); }catch(e){}
     if(tried!==String(v.app)){
       try{ sessionStorage.setItem("jupjup:reloadFor", String(v.app)); }catch(e){}
       location.replace(location.pathname+"?v="+encodeURIComponent(v.app));
-    } else {
-      $("#update-banner").classList.remove("hidden");
-    }
+    } else $("#update-banner").classList.remove("hidden");
   }catch(e){}
 }
 $("#update-banner").addEventListener("click", ()=>{ location.replace(location.pathname+"?v="+Date.now()); });
@@ -519,57 +618,51 @@ $("#update-banner").addEventListener("click", ()=>{ location.replace(location.pa
 function activeDeals(){
   return DATA.deals.filter(d=>{
     if(state.hidden.includes(d.id)) return false;
-    const dd = daysUntil(d.end);
-    return !(dd!=null && dd<0);
+    const dd = daysUntil(d.end); return !(dd!=null && dd<0);
   });
 }
 function dealCard(d){
-  const dd = daysUntil(d.end);
-  const joined = !!state.joined[d.id];
-  const isNew = d.added===todayKey();
-  const type = TYPES[d.type] || TYPES.info;
-  const cat = CATS[d.cat] || CATS.etc;
-  const url = safeUrl(d.url);
-  const src = safeUrl(d.source_url);
+  const dd = daysUntil(d.end), joined = !!state.joined[d.id], isNew = d.added===todayKey();
+  const type = TYPES[d.type] || TYPES.info, cat = CATS[d.cat] || CATS.etc;
+  const url = safeUrl(d.url), src = safeUrl(d.source_url);
   let box;
   if(dd!=null){
     const cls = d.type==="info" ? (dd<=14?"warn":"") : (dd<=3?"bad":dd<=10?"warn":"");
-    box = `<div class="dday ${cls}">${ddayLabel(dd)}<small>${fmtMD(d.end)}${d.type==="info"?"":"까지"}</small></div>`;
+    box = `<div class="dday ${cls}">${ddayLabel(dd)}<small>${d.type==="info" ? fmtMD(d.end) : t("until",{d:fmtMD(d.end)})}</small></div>`;
   } else {
-    box = `<div class="dday txt muted">${esc(d.badge || (d.type==="info"?"소식":"상시"))}</div>`;
+    box = `<div class="dday txt muted">${esc(L(d,"badge") || (d.type==="info"?t("badgeInfo"):t("badgeAlways")))}</div>`;
   }
   const period = d.start && d.end ? `${fmtMD(d.start)} ~ ${fmtMD(d.end)}` : "";
-  const joinLabel = d.type==="info" ? (joined?"✓ 확인했어요":"확인했어요") : (joined?"✓ 참여했어요":"참여했어요");
+  const jl = d.type==="info" ? (joined?t("infoDoneOn"):t("infoDone")) : (joined?t("joinDoneOn"):t("joinDone"));
+  const pts = L(d,"points");
   return `<div class="card ${joined?"done":""}">
     ${box}
     <div class="body">
-      <div class="title">${esc(d.title)}${isNew&&!joined?'<span class="badge-new">NEW</span>':""}</div>
+      <div class="title">${esc(L(d,"title"))}${isNew&&!joined?'<span class="badge-new">NEW</span>':""}</div>
       <div class="meta">
-        <span class="tag ${type.cls}">${type.label}</span>
-        <span class="tag plain">${esc(cat.name)}</span>
+        <span class="tag ${type.cls}">${type[state.lang]}</span>
+        <span class="tag plain">${esc(N(cat))}</span>
         ${eligTag(d)}
         ${period?`<span class="tag plain">${period}</span>`:""}
       </div>
-      ${d.reward?`<div class="reward">${esc(d.reward)}</div>`:""}
-      ${d.desc?`<div class="desc">${esc(d.desc)}</div>`:""}
-      ${Array.isArray(d.points)&&d.points.length?`<ul class="points">${d.points.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>`:""}
-      ${d.condition?`<div class="cond"><b>조건</b> ${esc(d.condition)}</div>`:""}
+      ${L(d,"reward")?`<div class="reward">${esc(L(d,"reward"))}</div>`:""}
+      ${L(d,"desc")?`<div class="desc">${esc(L(d,"desc"))}</div>`:""}
+      ${Array.isArray(pts)&&pts.length?`<ul class="points">${pts.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>`:""}
+      ${L(d,"condition")?`<div class="cond"><b>${t("terms")}</b> ${esc(L(d,"condition"))}</div>`:""}
       <div class="actions">
-        ${url?`<a class="btn go small" data-godeal="${esc(d.id)}" href="${esc(url)}" ${targetAttr(url)}>${esc(d.cta||"참여하기")} ↗</a>`:""}
-        <button class="btn small ${joined?"joined":"ghost"}" data-join="${esc(d.id)}">${joinLabel}</button>
-        <button class="btn ghost small" data-hide="${esc(d.id)}">숨기기</button>
+        ${url?`<a class="btn go small" data-godeal="${esc(d.id)}" href="${esc(url)}" ${targetAttr(url)}>${esc(L(d,"cta")||t("join"))} ↗</a>`:""}
+        <button class="btn small ${joined?"joined":"ghost"}" data-join="${esc(d.id)}">${jl}</button>
+        <button class="btn ghost small" data-hide="${esc(d.id)}">${t("hide")}</button>
       </div>
-      ${src && src!==url?`<a class="src" href="${esc(src)}" target="_blank" rel="noopener">출처 보기 ↗</a>`:""}
+      ${src && src!==url?`<a class="src" href="${esc(src)}" target="_blank" rel="noopener">${t("source")}</a>`:""}
     </div>
   </div>`;
 }
 function renderDeals(){
-  $("#deals-updated").textContent = DATA.updated
-    ? fmtUpdated(DATA.updated)+" 업데이트 · 매일 자정에 새로 채워요"
-    : (state.loadStatus==="loading" ? "불러오는 중…" : "아직 받아온 목록이 없어요");
+  $("#deals-updated").textContent = DATA.updated ? t("updated",{d:fmtUpdated(DATA.updated)}) : (state.loadStatus==="loading" ? t("loading") : t("noData"));
   const b = $("#load-banner");
-  if(state.loadStatus==="cached"){ b.textContent="최신 목록을 못 불러와서 마지막으로 받아둔 목록을 보여주고 있어요"; b.classList.remove("hidden"); }
-  else if(state.loadStatus==="error"){ b.textContent="목록을 불러오지 못했어요. 인터넷 연결을 확인하고 새로고침을 눌러주세요"; b.classList.remove("hidden"); }
+  if(state.loadStatus==="cached"){ b.textContent=t("cached"); b.classList.remove("hidden"); }
+  else if(state.loadStatus==="error"){ b.textContent=t("loadError"); b.classList.remove("hidden"); }
   else b.classList.add("hidden");
 
   const all = activeDeals().filter(inRegion);
@@ -577,30 +670,26 @@ function renderDeals(){
   if(state.dealFilter!=="all" && !cats.includes(state.dealFilter)) state.dealFilter="all";
   const freeCount = all.filter(d=>d.type==="free").length;
   $("#deal-chips").innerHTML =
-    `<button class="chip toggle ${state.freeOnly?"on":""}" data-freeonly>🎁 무료만 ${freeCount}</button>`+
-    `<button class="chip ${state.dealFilter==="all"?"on":""}" data-dfilter="all">전체</button>`+
-    cats.map(c=>`<button class="chip ${state.dealFilter===c?"on":""}" data-dfilter="${c}">${esc(CATS[c].short)}</button>`).join("");
+    `<button class="chip toggle ${state.freeOnly?"on":""}" data-freeonly>${t("freeOnly",{n:freeCount})}</button>`+
+    `<button class="chip ${state.dealFilter==="all"?"on":""}" data-dfilter="all">${t("all")}</button>`+
+    cats.map(c=>`<button class="chip ${state.dealFilter===c?"on":""}" data-dfilter="${c}">${esc(N(CATS[c],true))}</button>`).join("");
 
   const list = all.filter(d=>(state.dealFilter==="all"||d.cat===state.dealFilter) && (!state.freeOnly||d.type==="free"));
   const sk = d => { const n = daysUntil(d.end); return n==null ? 9999 : n; };
-  const typeRank = {free:0, entry:1, cond:2, info:3};
-  list.sort((a,b)=> sk(a)-sk(b) || (typeRank[a.type]??9)-(typeRank[b.type]??9));
-  const today = todayKey();
-  const joinedF = d => !!state.joined[d.id];
-  const fresh = list.filter(d=>d.added===today && !joinedF(d));
-  const rest = list.filter(d=>d.added!==today && !joinedF(d));
-  const joined = list.filter(joinedF);
-
+  const rank = {free:0, entry:1, cond:2, info:3};
+  list.sort((a,b)=> sk(a)-sk(b) || (rank[a.type]??9)-(rank[b.type]??9));
+  const today = todayKey(), J = d => !!state.joined[d.id];
+  const fresh = list.filter(d=>d.added===today && !J(d)), rest = list.filter(d=>d.added!==today && !J(d)), joined = list.filter(J);
   let html = "";
   if(!list.length){
-    if(state.freeOnly) html = `<div class="empty">지금은 조건 없이 받는 무료 혜택이 없어요.<br>무료만 보기를 끄면 다른 혜택도 볼 수 있어요.</div>`;
-    else if(state.loadStatus==="loading") html = `<div class="empty">불러오는 중…</div>`;
-    else if(state.region!=="all") html = `<div class="empty">지금은 ${REGIONS[state.region].name} 혜택이 없어요.<br>매일 자정에 새로 채워지니까 내일 다시 확인해 주세요.</div>`;
-    else html = `<div class="empty">보여줄 혜택이 없어요</div>`;
+    if(state.freeOnly) html = `<div class="empty">${t("emptyFree")}</div>`;
+    else if(state.loadStatus==="loading") html = `<div class="empty">${t("loading")}</div>`;
+    else if(state.region!=="all") html = `<div class="empty">${t("emptyRegion",{r:rName(state.region)})}</div>`;
+    else html = `<div class="empty">${t("emptyAll")}</div>`;
   } else {
-    if(fresh.length) html += `<div class="sec">🆕 <b>오늘 새로 올라온 혜택</b> ${fresh.length}개</div>` + fresh.map(dealCard).join("");
-    if(rest.length) html += `<div class="sec">⏰ <b>진행 중</b> 마감 임박순</div>` + rest.map(dealCard).join("");
-    if(joined.length) html += `<div class="sec">✓ <b>참여 완료</b> ${joined.length}개</div>` + joined.map(dealCard).join("");
+    if(fresh.length) html += `<div class="sec">${t("secNew",{n:fresh.length})}</div>` + fresh.map(dealCard).join("");
+    if(rest.length) html += `<div class="sec">${t("secOngoing")}</div>` + rest.map(dealCard).join("");
+    if(joined.length) html += `<div class="sec">${t("secDone",{n:joined.length})}</div>` + joined.map(dealCard).join("");
   }
   $("#deals-list").innerHTML = html;
 }
@@ -626,97 +715,87 @@ function toggleDone(it){
   save(); render();
 }
 function markDoneSoon(it){ if(!isDone(it)) setTimeout(()=>{ if(!isDone(it)) toggleDone(it); }, 400); }
-
 function renderDaily(){
   const d = new Date();
-  const wk = ["일","월","화","수","목","금","토"][d.getDay()];
-  $("#today-label").textContent = (d.getMonth()+1)+"월 "+d.getDate()+"일 "+wk+"요일 · 매일 받을 수 있는 소소한 보상";
+  const W = state.lang==="en" ? ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()] : ["일","월","화","수","목","금","토"][d.getDay()];
+  $("#today-label").textContent = t("todayLabel",{M:d.getMonth()+1, D:d.getDate(), W, MON:MON[d.getMonth()]});
   const items = allDaily().filter(it=>!state.hidden.includes(it.id)).filter(inRegion);
   const cats = [...new Set(items.map(i=>i.cat))].filter(c=>CATS[c]);
   if(state.dailyFilter!=="all" && !cats.includes(state.dailyFilter)) state.dailyFilter="all";
-  $("#daily-chips").innerHTML = [`<button class="chip ${state.dailyFilter==="all"?"on":""}" data-filter="all">전체</button>`]
-    .concat(cats.map(c=>`<button class="chip ${state.dailyFilter===c?"on":""}" data-filter="${c}">${esc(CATS[c].short)}</button>`)).join("");
-
+  $("#daily-chips").innerHTML = [`<button class="chip ${state.dailyFilter==="all"?"on":""}" data-filter="all">${t("all")}</button>`]
+    .concat(cats.map(c=>`<button class="chip ${state.dailyFilter===c?"on":""}" data-filter="${c}">${esc(N(CATS[c],true))}</button>`)).join("");
   const doneCount = items.filter(isDone).length;
   $("#prog-num").textContent = doneCount+" / "+items.length;
   $("#prog-bar").style.width = (items.length ? doneCount/items.length*100 : 0)+"%";
-
   const used = it => isDone(it) || (it.freq==="monthly5" && monthCount(it.id)>=5);
-  const visible = items.filter(it=>state.dailyFilter==="all"||it.cat===state.dailyFilter)
-    .sort((a,b)=>used(a)-used(b));
-
+  const visible = items.filter(it=>state.dailyFilter==="all"||it.cat===state.dailyFilter).sort((a,b)=>used(a)-used(b));
   $("#daily-list").innerHTML = visible.length ? visible.map(it=>{
-    const done = isDone(it);
-    const url = linkOf(it);
-    const mine = !!state.links[it.id];
+    const done = isDone(it), url = linkOf(it), mine = !!state.links[it.id], cat = CATS[it.cat] || CATS.etc;
     let kindTag = "";
-    if(mine) kindTag = `<span class="tag">내 링크</span>`;
-    else if(it.linkKind==="app") kindTag = `<span class="tag warn">앱 첫 화면까지</span>`;
-    else if(it.linkKind==="none") kindTag = `<span class="tag bad">링크 없음</span>`;
-    const freqTag = it.freq==="monthly5" ? `<span class="tag">이번 달 ${monthCount(it.id)}/5</span>` : "";
-    const cat = CATS[it.cat] || CATS.etc;
+    if(mine) kindTag = `<span class="tag">${t("myLink")}</span>`;
+    else if(it.linkKind==="app") kindTag = `<span class="tag warn">${t("appHome")}</span>`;
+    else if(it.linkKind==="none") kindTag = `<span class="tag bad">${t("noLink")}</span>`;
+    const freqTag = it.freq==="monthly5" ? `<span class="tag">${t("monthCount",{n:monthCount(it.id)})}</span>` : "";
     return `<div class="card ${done?"done":""}">
-      <button class="check" data-check="${esc(it.id)}" aria-label="완료 표시">${done?"✓":""}</button>
+      <button class="check" data-check="${esc(it.id)}" aria-label="${t("markDone")}">${done?"✓":""}</button>
       <div class="body">
-        <div class="title">${esc(it.title)}</div>
+        <div class="title">${esc(L(it,"title"))}</div>
         <div class="meta">
-          <span class="tag plain">${esc(cat.name)}</span>
-          ${it.reward?`<span class="tag reward">${esc(it.reward)}</span>`:""}
+          <span class="tag plain">${esc(N(cat))}</span>
+          ${L(it,"reward")?`<span class="tag reward">${esc(L(it,"reward"))}</span>`:""}
           ${it.custom?"":eligTag(it)}${freqTag}${kindTag}
         </div>
-        ${it.desc?`<div class="desc">${esc(it.desc)}</div>`:""}
+        ${L(it,"desc")?`<div class="desc">${esc(L(it,"desc"))}</div>`:""}
         <div class="actions">
-          ${url?`<a class="btn go small" data-go="${esc(it.id)}" href="${esc(url)}" ${targetAttr(url)}>열기 ↗</a>`:`<button class="btn go small" disabled>앱에서 직접 열기</button>`}
-          ${it.custom?"":`<button class="btn ghost small" data-editlink="${esc(it.id)}">내 링크로 바꾸기</button>`}
-          <button class="btn ghost small" data-hide="${esc(it.id)}">숨기기</button>
+          ${url?`<a class="btn go small" data-go="${esc(it.id)}" href="${esc(url)}" ${targetAttr(url)}>${t("open")}</a>`:`<button class="btn go small" disabled>${t("openYourself")}</button>`}
+          ${it.custom?"":`<button class="btn ghost small" data-editlink="${esc(it.id)}">${t("useMyLink")}</button>`}
+          <button class="btn ghost small" data-hide="${esc(it.id)}">${t("hide")}</button>
         </div>
       </div>
     </div>`;
-  }).join("") : `<div class="empty">${state.region!=="all"&&!items.length ? REGIONS[state.region].name+"에서 매일 챙길 항목이 아직 없어요.<br>설정에서 직접 추가할 수 있어요." : "이 분류에는 항목이 없어요"}</div>`;
+  }).join("") : `<div class="empty">${state.region!=="all"&&!items.length ? t("emptyDailyRegion",{r:rName(state.region)}) : t("emptyCat")}</div>`;
 }
 
 /* ======================= 생활 혜택 ======================= */
 function guideCard(g){
-  const url = safeUrl(g.url), src = safeUrl(g.source_url);
+  const url = safeUrl(g.url), src = safeUrl(g.source_url), how = L(g,"how");
   return `<div class="card">
     <div class="gicon">${esc(g.icon||"✨")}</div>
     <div class="body">
-      <div class="title">${esc(g.title)}${g.added===todayKey()?'<span class="badge-new">NEW</span>':""}</div>
-      ${g.tagline?`<div class="tagline">${esc(g.tagline)}</div>`:""}
+      <div class="title">${esc(L(g,"title"))}${g.added===todayKey()?'<span class="badge-new">NEW</span>':""}</div>
+      ${L(g,"tagline")?`<div class="tagline">${esc(L(g,"tagline"))}</div>`:""}
       <div class="meta">
-        ${g.saving?`<span class="tag reward">${esc(g.saving)}</span>`:""}
-        ${g.cost?`<span class="tag plain">${esc(g.cost)}</span>`:""}
+        ${L(g,"saving")?`<span class="tag reward">${esc(L(g,"saving"))}</span>`:""}
+        ${L(g,"cost")?`<span class="tag plain">${esc(L(g,"cost"))}</span>`:""}
         ${eligTag(g)}
       </div>
-      ${g.desc?`<div class="desc">${esc(g.desc)}</div>`:""}
-      ${Array.isArray(g.how)&&g.how.length?`<ol class="how">${g.how.map(s=>`<li>${esc(s)}</li>`).join("")}</ol>`:""}
-      ${g.tip?`<div class="cond"><b>팁</b> ${esc(g.tip)}</div>`:""}
+      ${L(g,"desc")?`<div class="desc">${esc(L(g,"desc"))}</div>`:""}
+      ${Array.isArray(how)&&how.length?`<ol class="how">${how.map(s=>`<li>${esc(s)}</li>`).join("")}</ol>`:""}
+      ${L(g,"tip")?`<div class="cond"><b>${t("tip")}</b> ${esc(L(g,"tip"))}</div>`:""}
       <div class="actions">
-        ${url?`<a class="btn go small" data-goguide="${esc(g.id)}" href="${esc(url)}" ${targetAttr(url)}>${esc(g.cta||"열기")} ↗</a>`:""}
-        <button class="btn ghost small" data-hide="${esc(g.id)}">숨기기</button>
+        ${url?`<a class="btn go small" data-goguide="${esc(g.id)}" href="${esc(url)}" ${targetAttr(url)}>${esc(L(g,"cta")||t("openDefault"))} ↗</a>`:""}
+        <button class="btn ghost small" data-hide="${esc(g.id)}">${t("hide")}</button>
       </div>
-      ${src && src!==url?`<a class="src" href="${esc(src)}" target="_blank" rel="noopener">출처 보기 ↗</a>`:""}
+      ${src && src!==url?`<a class="src" href="${esc(src)}" target="_blank" rel="noopener">${t("source")}</a>`:""}
     </div>
   </div>`;
 }
 function renderGuides(){
   const r = state.region;
-  $("#guides-sub").textContent = r==="sg" ? "싱가포르에서 늘 쓸 수 있는 할인 앱과 제도예요"
-    : r==="kr" ? "한국에서 늘 쓸 수 있는 할인 앱과 제도예요" : "늘 쓸 수 있는 할인 앱과 제도예요";
+  $("#guides-sub").textContent = r==="sg" ? t("guidesSubSg") : r==="kr" ? t("guidesSubKr") : t("guidesSubAll");
   const all = DATA.guides.filter(g=>!state.hidden.includes(g.id)).filter(inRegion);
-  const order = Object.keys(GROUPS);
-  const groups = [...new Set(all.map(g=>g.group))].filter(k=>GROUPS[k]).sort((a,b)=>order.indexOf(a)-order.indexOf(b));
+  const order = Object.keys(GROUPS), idx = k => { const i = order.indexOf(k); return i<0 ? 99 : i; };
+  const groups = [...new Set(all.map(g=>g.group))].filter(k=>GROUPS[k]).sort((a,b)=>idx(a)-idx(b));
   if(state.guideFilter!=="all" && !groups.includes(state.guideFilter)) state.guideFilter="all";
-  $("#guide-chips").innerHTML = `<button class="chip ${state.guideFilter==="all"?"on":""}" data-gfilter="all">전체</button>`+
-    groups.map(k=>`<button class="chip ${state.guideFilter===k?"on":""}" data-gfilter="${k}">${GROUPS[k].icon} ${GROUPS[k].name}</button>`).join("");
-  const list = all.filter(g=>state.guideFilter==="all"||g.group===state.guideFilter)
-    .sort((a,b)=>{ const ia=order.indexOf(a.group), ib=order.indexOf(b.group); return (ia<0?99:ia)-(ib<0?99:ib); });
+  $("#guide-chips").innerHTML = `<button class="chip ${state.guideFilter==="all"?"on":""}" data-gfilter="all">${t("all")}</button>`+
+    groups.map(k=>`<button class="chip ${state.guideFilter===k?"on":""}" data-gfilter="${k}">${GROUPS[k].icon} ${GROUPS[k][state.lang]}</button>`).join("");
+  const list = all.filter(g=>state.guideFilter==="all"||g.group===state.guideFilter).sort((a,b)=>idx(a.group)-idx(b.group));
   let html = "", cur = null;
   list.forEach(g=>{
-    if(g.group!==cur){ cur = g.group; const G = GROUPS[cur] || {name:"기타", icon:"✨"}; html += `<div class="sec">${G.icon} <b>${G.name}</b></div>`; }
+    if(g.group!==cur){ cur = g.group; const G = GROUPS[cur] || {ko:"기타",en:"Other",icon:"✨"}; html += `<div class="sec">${G.icon} <b>${G[state.lang]}</b></div>`; }
     html += guideCard(g);
   });
-  $("#guides-list").innerHTML = html || `<div class="empty">${r==="kr" ? "한국 생활 혜택은 곧 채울게요.<br>지금은 싱가포르 정보만 있어요." : "보여줄 항목이 없어요"}</div>`;
+  $("#guides-list").innerHTML = html || `<div class="empty">${r==="kr" ? t("guidesEmptyKr") : t("guidesEmpty")}</div>`;
 }
 
 /* ======================= 내 포인트 ======================= */
@@ -727,36 +806,33 @@ function renderWallet(){
   $("#wallet-list").innerHTML = list.length ? list.map(w=>{
     const dd = w.expiry ? daysUntil(w.expiry) : null;
     const cls = dd==null ? "muted" : dd<0 ? "bad" : dd<=30 ? "bad" : dd<=90 ? "warn" : "";
-    const bal = w.balance!=="" && w.balance!=null ? Number(w.balance).toLocaleString("ko-KR")+" "+esc(w.unit||"") : "잔액 미입력";
+    const bal = w.balance!=="" && w.balance!=null ? Number(w.balance).toLocaleString(state.lang==="en"?"en-SG":"ko-KR")+" "+esc(w.unit||"") : t("noBalance");
     return `<div class="card" data-wallet="${esc(w.id)}" style="cursor:pointer">
-      <div class="dday ${cls} ${dd==null?"txt":""}">${dd==null?"소멸일<br>없음":ddayLabel(dd)}${w.expiry?`<small>${esc(w.expiry.slice(2).split("-").join("/"))}</small>`:""}</div>
+      <div class="dday ${cls} ${dd==null?"txt":""}">${dd==null?t("noExpiry"):ddayLabel(dd)}${w.expiry?`<small>${esc(w.expiry.slice(2).split("-").join("/"))}</small>`:""}</div>
       <div class="body">
         <div class="title">${esc(w.name)}</div>
         <div class="desc" style="font-size:15px;color:var(--text);font-weight:700;margin-top:2px">${bal}</div>
-        ${dd!=null&&dd>=0&&dd<=30?`<div class="desc" style="color:var(--bad);margin-top:4px">곧 소멸돼요. 이번 달 안에 쓰는 걸 추천해요</div>`:""}
-        ${dd!=null&&dd<0?`<div class="desc" style="color:var(--bad);margin-top:4px">소멸일이 지났어요. 날짜를 업데이트해 주세요</div>`:""}
+        ${dd!=null&&dd>=0&&dd<=30?`<div class="desc" style="color:var(--bad);margin-top:4px">${t("expSoon")}</div>`:""}
+        ${dd!=null&&dd<0?`<div class="desc" style="color:var(--bad);margin-top:4px">${t("expPast")}</div>`:""}
       </div>
     </div>`;
-  }).join("") : `<div class="empty">아직 등록한 포인트가 없어요.<br>마일리지나 카드 포인트를 추가해 보세요.</div>`;
+  }).join("") : `<div class="empty">${t("walletEmpty")}</div>`;
 }
 
 /* ======================= 설정 ======================= */
 function renderSettings(){
+  document.querySelectorAll("#seg-lang button").forEach(b=>b.classList.toggle("on", b.dataset.lang===state.lang));
   document.querySelectorAll("#seg-mode button").forEach(b=>b.classList.toggle("on", b.dataset.mode===state.mode));
-  $("#mode-note").innerHTML = state.mode==="direct"
-    ? "누르면 바로 넘어가요. 웹페이지는 새 창으로 열리고, 토스 같은 앱 링크는 그 앱이 열려요. 앱 링크는 아이폰이 \"○○에서 열겠습니까?\"를 한 번 물어볼 수 있는데, 이건 iOS가 띄우는 창이라 웹앱에서 끌 수 없어요."
-    : "누르면 먼저 확인 창을 보여주고, 이동하기를 눌러야 넘어가요. 웹페이지는 새 창으로 열려요.";
-  $("#custom-list").innerHTML = state.custom.length
-    ? state.custom.map(c=>`<div class="card"><div class="body"><div class="title">${esc(c.title)}</div><div class="desc">${esc(c.url||"링크 없음")}</div></div><button class="btn ghost small" data-delcustom="${esc(c.id)}">삭제</button></div>`).join("")
-    : `<div class="empty" style="padding:12px">아직 없어요</div>`;
+  $("#mode-note").textContent = state.mode==="direct" ? t("modeNoteDirect") : t("modeNoteConfirm");
   const trow = (key, title, desc)=>`<button class="trow" data-toggle="${key}"><span class="tt"><b>${title}</b><small>${desc}</small></span><span class="sw ${state[key]?"on":""}"></span></button>`;
-  $("#settings-toggles").innerHTML =
-    trow("showKrAbroad", "해외에서 되는 한국 혜택도 같이 보기", "토스, 네이버페이처럼 싱가포르에 있어도 받을 수 있는 한국 혜택을 같이 보여줘요. 한국 매장이나 국내 거주 조건이 있는 건 빼요.")+
-    trow("showCitizen", "싱가포르 국민 전용 혜택도 보기", "CDC 바우처처럼 싱가포르 국민만 받을 수 있는 혜택이에요. 시민권자 가족이 있으면 켜두세요.");
+  $("#settings-toggles").innerHTML = trow("showKrAbroad", t("tKrAbroad"), t("tKrAbroadD")) + trow("showCitizen", t("tCitizen"), t("tCitizenD"));
+  $("#custom-list").innerHTML = state.custom.length
+    ? state.custom.map(c=>`<div class="card"><div class="body"><div class="title">${esc(c.title)}</div><div class="desc">${esc(c.url||t("noLink"))}</div></div><button class="btn ghost small" data-delcustom="${esc(c.id)}">${t("del")}</button></div>`).join("")
+    : `<div class="empty" style="padding:12px">${t("nothingYet")}</div>`;
   const hid = DATA.deals.concat(allDaily(), DATA.guides).filter(i=>state.hidden.includes(i.id));
   $("#hidden-list").innerHTML = hid.length
-    ? hid.map(i=>`<div class="card"><div class="body"><div class="title">${esc(i.title)}</div></div><button class="btn ghost small" data-unhide="${esc(i.id)}">다시 보이기</button></div>`).join("")
-    : `<div class="empty" style="padding:12px">숨긴 항목이 없어요</div>`;
+    ? hid.map(i=>`<div class="card"><div class="body"><div class="title">${esc(L(i,"title"))}</div></div><button class="btn ghost small" data-unhide="${esc(i.id)}">${t("unhide")}</button></div>`).join("")
+    : `<div class="empty" style="padding:12px">${t("noHidden")}</div>`;
   $("#data-date").textContent = DATA.updated ? fmtUpdated(DATA.updated) : "–";
 }
 
@@ -773,16 +849,14 @@ function handleGo(e, title, url, after){
   if(state.mode==="confirm"){
     e.preventDefault();
     $("#go-title").textContent = title;
-    $("#go-desc").textContent = isWeb(url) ? "새 창으로 페이지를 열게요. 다 보고 닫으면 줍줍으로 돌아와요." : "해당 앱으로 이동할게요.";
+    $("#go-desc").textContent = isWeb(url) ? t("goWeb") : t("goApp");
     const a = $("#go-link"); a.href = url;
     if(isWeb(url)){ a.target="_blank"; a.rel="noopener"; } else { a.removeAttribute("target"); a.removeAttribute("rel"); }
     a.onclick = ()=>{ if(after) after(); setTimeout(closeSheets, 50); };
     openSheet("#go-sheet");
   } else if(after){ after(); }
 }
-
 let editingLinkId = null, editingWalletId = null;
-
 function switchTab(name){
   document.querySelectorAll("nav.tabs button").forEach(b=>b.classList.toggle("on", b.dataset.tab===name));
   ["deals","daily","guides","wallet","settings"].forEach(v=>$("#view-"+v).classList.toggle("hidden", v!==name));
@@ -791,109 +865,77 @@ function switchTab(name){
 
 /* ======================= 이벤트 ======================= */
 document.addEventListener("click", e=>{
-  const t = e.target.closest("[data-tab],[data-region],[data-locate],[data-autoregion],[data-toggle],[data-gfilter],[data-goguide],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
-  if(!t) return;
-  const ds = t.dataset;
-
+  const el = e.target.closest("[data-tab],[data-lang],[data-region],[data-locate],[data-autoregion],[data-toggle],[data-gfilter],[data-goguide],[data-dfilter],[data-freeonly],[data-filter],[data-mode],[data-check],[data-go],[data-godeal],[data-join],[data-editlink],[data-hide],[data-unhide],[data-delcustom],[data-wallet]");
+  if(!el) return;
+  const ds = el.dataset;
   if(ds.tab!==undefined){ switchTab(ds.tab); return; }
-  if(ds.toggle!==undefined){
-    const k = ds.toggle; if(!(k in state)) return;
-    state[k] = !state[k]; save(); render();
-    toast(state[k] ? "켰어요" : "껐어요");
-    return;
-  }
-  if(ds.gfilter!==undefined){ state.guideFilter = ds.gfilter; renderGuides(); return; }
-  if(ds.goguide!==undefined){
-    const g = DATA.guides.find(x=>x.id===ds.goguide); if(!g) return;
-    handleGo(e, g.title, safeUrl(g.url), null); return;
-  }
+  if(ds.lang!==undefined){ setLang(ds.lang); return; }
   if(ds.region!==undefined){
     const wasAuto = state.regionAuto;
     state.region = ds.region; state.regionAuto = false; state.regionVia = "manual";
-    save(); render();
-    toast(wasAuto ? `${REGIONS[ds.region].name} 혜택만 볼게요. 자동 맞춤은 꺼졌어요` : `${REGIONS[ds.region].name} 혜택만 볼게요`);
-    return;
+    save(); render(); toast(t(wasAuto?"toastRegionAutoOff":"toastRegion",{r:rName(ds.region)})); return;
   }
   if(ds.locate!==undefined){ locate(); return; }
-  if(ds.autoregion!==undefined){
-    state.regionAuto = true; applyAutoRegion(); render();
-    toast(`위치 따라 자동으로 맞출게요. 지금은 ${REGIONS[state.region].name}`);
-    return;
+  if(ds.autoregion!==undefined){ state.regionAuto = true; applyAutoRegion(); render(); toast(t("toastAuto",{r:rName(state.region)})); return; }
+  if(ds.toggle!==undefined){
+    const k = ds.toggle; if(!(k in state)) return;
+    state[k] = !state[k]; save(); render(); toast(state[k] ? t("on") : t("off")); return;
   }
+  if(ds.gfilter!==undefined){ state.guideFilter = ds.gfilter; renderGuides(); return; }
+  if(ds.goguide!==undefined){ const g = DATA.guides.find(x=>x.id===ds.goguide); if(g) handleGo(e, L(g,"title"), safeUrl(g.url), null); return; }
   if(ds.dfilter!==undefined){ state.dealFilter = ds.dfilter; renderDeals(); return; }
   if(ds.freeonly!==undefined){ state.freeOnly = !state.freeOnly; save(); renderDeals(); return; }
   if(ds.filter!==undefined){ state.dailyFilter = ds.filter; renderDaily(); return; }
-  if(ds.mode!==undefined){ state.mode = ds.mode; save(); renderSettings(); toast(state.mode==="direct"?"바로 이동으로 바꿨어요":"확인 후 이동으로 바꿨어요"); return; }
-
+  if(ds.mode!==undefined){ state.mode = ds.mode; save(); renderSettings(); toast(state.mode==="direct"?t("toastModeDirect"):t("toastModeConfirm")); return; }
   if(ds.check!==undefined){ const it = allDaily().find(i=>i.id===ds.check); if(it) toggleDone(it); return; }
-  if(ds.go!==undefined){
-    const it = allDaily().find(i=>i.id===ds.go); if(!it) return;
-    handleGo(e, it.title, linkOf(it), ()=>markDoneSoon(it)); return;
-  }
-  if(ds.godeal!==undefined){
-    const d = DATA.deals.find(x=>x.id===ds.godeal); if(!d) return;
-    handleGo(e, d.title, safeUrl(d.url), null); return;
-  }
+  if(ds.go!==undefined){ const it = allDaily().find(i=>i.id===ds.go); if(it) handleGo(e, L(it,"title"), linkOf(it), ()=>markDoneSoon(it)); return; }
+  if(ds.godeal!==undefined){ const d = DATA.deals.find(x=>x.id===ds.godeal); if(d) handleGo(e, L(d,"title"), safeUrl(d.url), null); return; }
   if(ds.join!==undefined){
     if(state.joined[ds.join]) delete state.joined[ds.join]; else state.joined[ds.join] = todayKey();
-    // 목록에서 사라진 혜택의 참여 기록은 정리
     const ids = new Set(DATA.deals.map(d=>d.id));
     if(ids.size) Object.keys(state.joined).forEach(id=>{ if(!ids.has(id)) delete state.joined[id]; });
-    save(); renderDeals();
-    if(state.joined[ds.join]) toast("참여 완료로 옮겼어요");
-    return;
+    save(); renderDeals(); if(state.joined[ds.join]) toast(t("toastJoined")); return;
   }
-  if(ds.editlink!==undefined){
-    editingLinkId = ds.editlink;
-    $("#link-input").value = state.links[editingLinkId] || "";
-    openSheet("#link-sheet"); return;
-  }
-  if(ds.hide!==undefined){ if(!state.hidden.includes(ds.hide)) state.hidden.push(ds.hide); save(); render(); toast("숨겼어요. 설정에서 다시 볼 수 있어요"); return; }
+  if(ds.editlink!==undefined){ editingLinkId = ds.editlink; $("#link-input").value = state.links[editingLinkId] || ""; openSheet("#link-sheet"); return; }
+  if(ds.hide!==undefined){ if(!state.hidden.includes(ds.hide)) state.hidden.push(ds.hide); save(); render(); toast(t("toastHidden")); return; }
   if(ds.unhide!==undefined){ state.hidden = state.hidden.filter(x=>x!==ds.unhide); save(); render(); return; }
   if(ds.delcustom!==undefined){ state.custom = state.custom.filter(c=>c.id!==ds.delcustom); save(); render(); return; }
   if(ds.wallet!==undefined){ openWallet(ds.wallet); return; }
 });
-
+$("#lang-btn").addEventListener("click", ()=> setLang(state.lang==="ko" ? "en" : "ko"));
 $("#refresh-btn").addEventListener("click", async ()=>{
-  const b = $("#refresh-btn"); b.textContent = "불러오는 중…"; b.disabled = true;
-  await loadData();
-  b.textContent = "↻ 새로고침"; b.disabled = false;
-  toast(state.loadStatus==="ok" ? "최신 목록이에요" : "불러오지 못했어요");
+  const b = $("#refresh-btn"); b.textContent = t("loading"); b.disabled = true;
+  await loadData(); b.textContent = t("refresh"); b.disabled = false;
+  toast(state.loadStatus==="ok" ? t("latest") : t("loadFail"));
 });
-
 $("#link-save").addEventListener("click", ()=>{
   const v = safeUrl($("#link-input").value);
   if(v) state.links[editingLinkId] = v; else delete state.links[editingLinkId];
-  save(); closeSheets(); render(); toast(v ? "내 링크로 저장했어요" : "기본 링크로 돌렸어요");
+  save(); closeSheets(); render(); toast(v ? t("toastMyLink") : t("toastDefaultLink"));
 });
-
 $("#add-custom-btn").addEventListener("click", ()=>{ $("#c-title").value=""; $("#c-url").value=""; $("#c-reward").value=""; openSheet("#custom-sheet"); });
 $("#c-save").addEventListener("click", ()=>{
-  const title = $("#c-title").value.trim(); if(!title){ toast("이름을 적어주세요"); return; }
+  const title = $("#c-title").value.trim(); if(!title){ toast(t("needName")); return; }
   state.custom.push({id:"c"+Date.now(), title, url:safeUrl($("#c-url").value), reward:$("#c-reward").value.trim()});
-  save(); closeSheets(); render(); toast("매일 목록에 추가했어요");
+  save(); closeSheets(); render(); toast(t("toastCustom"));
 });
-
 $("#reset-today").addEventListener("click", ()=>{
   const k = todayKey(), m = monthKey();
   Object.keys(state.done[k]||{}).forEach(id=>{
     const it = allDaily().find(d=>d.id===id);
     if(it && it.freq==="monthly5" && state.monthly[m]) state.monthly[m][id] = Math.max(0,(state.monthly[m][id]||1)-1);
   });
-  state.done[k] = {}; save(); render(); toast("오늘 체크를 해제했어요");
+  state.done[k] = {}; save(); render(); toast(t("toastReset"));
 });
-
-// 내 포인트
-$("#w-preset").innerHTML = WALLET_PRESETS.map((p,i)=>`<option value="${i}">${esc(p.name)}</option>`).join("");
 $("#w-preset").addEventListener("change", e=>{
   const p = WALLET_PRESETS[e.target.value];
-  if(e.target.value!=="0"){ $("#w-name").value = p.name; $("#w-unit").value = p.unit; }
+  if(e.target.value!=="0"){ $("#w-name").value = p[state.lang]||p.ko; $("#w-unit").value = state.lang==="en"&&p.unit==="마일" ? "miles" : p.unit; }
 });
 $("#add-wallet-btn").addEventListener("click", ()=>openWallet(null));
 function openWallet(id){
   editingWalletId = id;
   const w = id ? state.wallet.find(x=>x.id===id) : null;
-  $("#wallet-sheet-title").textContent = w ? "포인트 수정" : "포인트 추가";
+  $("#wallet-sheet-title").textContent = w ? t("wEditTitle") : t("wAddTitle");
   $("#w-preset").value = "0";
   $("#w-name").value = w ? w.name : ""; $("#w-balance").value = w ? (w.balance??"") : "";
   $("#w-unit").value = w ? (w.unit||"") : ""; $("#w-expiry").value = w ? (w.expiry||"") : "";
@@ -901,26 +943,26 @@ function openWallet(id){
   openSheet("#wallet-sheet");
 }
 $("#w-save").addEventListener("click", ()=>{
-  const name = $("#w-name").value.trim(); if(!name){ toast("이름을 적어주세요"); return; }
+  const name = $("#w-name").value.trim(); if(!name){ toast(t("needName")); return; }
   const rec = {name, balance:$("#w-balance").value.replace(/[^\d.]/g,""), unit:$("#w-unit").value.trim(), expiry:$("#w-expiry").value};
   const cur = editingWalletId && state.wallet.find(x=>x.id===editingWalletId);
   if(cur) Object.assign(cur, rec); else state.wallet.push(Object.assign({id:"w"+Date.now()}, rec));
-  save(); closeSheets(); render(); toast("저장했어요");
+  save(); closeSheets(); render(); toast(t("saved"));
 });
-$("#w-delete").addEventListener("click", ()=>{
-  state.wallet = state.wallet.filter(x=>x.id!==editingWalletId); save(); closeSheets(); render(); toast("삭제했어요");
-});
+$("#w-delete").addEventListener("click", ()=>{ state.wallet = state.wallet.filter(x=>x.id!==editingWalletId); save(); closeSheets(); render(); toast(t("deleted")); });
 
 /* ======================= 시작 ======================= */
 let lastDay = todayKey();
 setInterval(()=>{ if(todayKey()!==lastDay){ lastDay = todayKey(); loadData(); } }, 60000);
 document.addEventListener("visibilitychange", ()=>{
   if(document.hidden) return;
-  if(state.regionAuto) applyAutoRegion();   // 여행 가서 시간대가 바뀌면 지역도 따라감
+  if(state.regionAuto) applyAutoRegion();
   const dayChanged = todayKey()!==lastDay; lastDay = todayKey();
   if(dayChanged || Date.now()-state.lastFetch > 10*60*1000){ loadData(); checkVersion(); } else render();
 });
 if(state.regionAuto || !REGIONS[state.region]) applyAutoRegion();
+save();
+applyStatic();
 render();
 loadData();
 checkVersion();

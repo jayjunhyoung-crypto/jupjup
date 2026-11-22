@@ -82,12 +82,14 @@
 - `id`는 영문 소문자, 숫자, 하이픈만 쓴다. 날짜나 연월을 붙여서 겹치지 않게 한다.
 - `url`은 반드시 `https://`로 시작해야 한다.
 - `kr` 항목은 `"abroad": true | false`, `sg` 항목은 `"citizen_only": true | false`를 같이 넣는다.
+- 앱은 한국어와 영어를 지원한다. 모든 항목에 `en` 객체를 넣고, 화면에 보이는 글자 필드(`title`, `reward`, `desc`, `condition`, `points`, `badge`, `cta`)를 자연스러운 영어로 옮긴다. 예: `"en": {"title": "...", "desc": "...", "cta": "View promotion"}`. 원화 금액은 ₩로 쓴다.
 
 ## 4-1. 생활 혜택 (`guides`)
 기간 한정이 아니라 늘 쓸 수 있는 할인 앱과 제도다 (Eatigo, Chope, Burpple Beyond, MRT 아침 할인 등). 한국인이 잘 모르는 현지 혜택을 쉽게 알려주는 게 목적이다.
 - 매일 새로 채울 필요는 없다. 서비스가 끝났거나 가격·조건이 크게 바뀐 게 확인되면 고치거나 지운다.
-- 한국인에게 확실히 쓸모 있는 상시 혜택을 새로 찾으면 하루 최대 1개까지 추가할 수 있다 (공식 링크 필수).
-- `group` 값: `dining`(외식 할인), `leftover`(마감·잉여 음식), `cashback`(캐시백), `transport`(교통), `life`(그 밖의 생활)
+- 싱가포르에 사는 한국인과 외국인에게 확실히 쓸모 있는 상시 혜택을 새로 찾으면 하루 최대 3개까지 추가한다 (공식 링크 필수). 외국인도 쓸 수 있는 것을 우선한다.
+- 생활 혜택에도 `en` 객체(`title`, `tagline`, `saving`, `cost`, `desc`, `how`, `tip`, `cta`)를 넣는다.
+- `group` 값: `dining`(외식 할인), `leftover`(마감·잉여 음식), `grocery`(장보기), `cashback`(캐시백), `transport`(교통), `free`(무료 즐길거리), `finance`(환전·송금·돈 관리), `life`(통신·구독 등 그 밖의 생활)
 
 ```json
 {

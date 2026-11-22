@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-22T01:30:00+08:00",
+  "updated": "2026-11-22T18:40:00+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -16,7 +16,14 @@
       "url": "https://www.koreanair.com/contents/promotion/list/2026/cashandmiles3",
       "cta": "이벤트 보기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Korean Air Cash & Miles: get up to 2,000 miles back",
+        "reward": "Up to 2,000 miles per ticket",
+        "desc": "Buy a ticket paying part of the fare with miles (Cash & Miles) and get miles credited back. This month you can pay up to 40% of the fare with miles.",
+        "condition": "Buy on the Korean Air website or app in November and fly your first segment by 30 Nov.",
+        "cta": "View promotion"
+      }
     },
     {
       "id": "kal-aviationday-2026",
@@ -32,7 +39,14 @@
       "url": "https://www.koreanair.com/contents/promotion/list/2026/46th_aviationday1027",
       "cta": "응모하러 가기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Aviation Day free ticket lucky draw",
+        "reward": "Return tickets for two to Guam or Phuket (one winner each)",
+        "desc": "Buy a ticket on the Korean Air website, then enter on the event page. Winners are announced on 8 Dec.",
+        "condition": "You need a ticket number bought on the website (13 digits starting with 180).",
+        "cta": "Enter now"
+      }
     },
     {
       "id": "kal-hotpick-sea-2611",
@@ -48,7 +62,14 @@
       "url": "https://www.koreanair.com/contents/promotion/list/2026/26winterhotpick",
       "cta": "노선 보기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Bonus Hot Pick: 7,000 miles off Southeast Asia awards",
+        "reward": "Economy return 40,000 → 33,000 miles",
+        "desc": "Award tickets from Incheon to Phuket, Chiang Mai and Ho Chi Minh City, and Busan to Da Nang, cost 7,000 fewer miles return. Selected flights and seats only.",
+        "condition": "Only for flights departing by 30 Nov.",
+        "cta": "See routes"
+      }
     },
     {
       "id": "npay-facesign-10-2611",
@@ -63,7 +84,14 @@
       "url": "https://biz.sbs.co.kr/amp/article/20000339581",
       "cta": "자세히 보기",
       "region": "kr",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "Naver Pay face payment (FaceSign): 10% back",
+        "reward": "10% of the payment in points",
+        "desc": "Pay with FaceSign at stores with an Npay Connect terminal and get 10% back in points.",
+        "condition": "In-store in Korea only.",
+        "cta": "Learn more"
+      }
     },
     {
       "id": "gmarket-ggok-hyundai-2611",
@@ -79,7 +107,14 @@
       "url": "https://m.gmarket.co.kr/n/showroom/ggokcard?eventCode=CEG6R",
       "cta": "이벤트 보기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Gmarket Ggok Hyundai Card lucky draw",
+        "reward": "₩3M Korean Air gift card, robot vacuum, Airwrap, ₩30k Smile Cash and more",
+        "desc": "Start a Ggok Membership Life+ subscription with a Gmarket Ggok Hyundai Card registered in Smile Pay to enter. Winners are notified by text in mid-December.",
+        "condition": "No payments with the card and no Ggok membership use in the last 6 months.",
+        "cta": "View promotion"
+      }
     },
     {
       "id": "sg-cdc-jan2026-expiry",
@@ -95,7 +130,14 @@
       "cta": "받는 법 보기",
       "region": "sg",
       "source_url": "https://ask.gov.sg/kampungspirit/questions/cmuou0g9m00br4g01b0tkbd2x",
-      "citizen_only": true
+      "citizen_only": true,
+      "en": {
+        "title": "CDC (Jan) and SG60 vouchers expire 31 Dec",
+        "reward": "CDC Jan S$300 per household, SG60 S$600–800 per person",
+        "desc": "CDC Vouchers 2026 (January) and SG60 Vouchers can't be used after 31 Dec. The June S$500 tranche lasts until end-2027, so spend the January ones first.",
+        "condition": "For Singapore citizens. Claim by logging in with Singpass.",
+        "cta": "How to claim"
+      }
     },
     {
       "id": "oz-staralliance-exit",
@@ -108,7 +150,12 @@
       "url": "https://flyasiana.com",
       "cta": "아시아나에서 확인",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Asiana leaves Star Alliance",
+        "desc": "Asiana leaves Star Alliance on 16 Dec and moves to SkyTeam. If you planned to use Asiana miles on partners like United or Lufthansa, check before then.",
+        "cta": "Check with Asiana"
+      }
     },
     {
       "id": "kal-oz-merge",
@@ -126,7 +173,17 @@
       "url": "https://www.koreanair.com",
       "cta": "대한항공에서 확인",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Korean Air and Asiana miles merge",
+        "desc": "From 17 Dec, new miles are earned in Korean Air SKYPASS only. Existing Asiana miles stay separate for 10 years and can be converted to SKYPASS.",
+        "points": [
+          "Conversion: flight miles 1:1, card and partner miles 1:0.82",
+          "You must convert the full balance, and it can't be undone",
+          "Converting doesn't extend expiry dates"
+        ],
+        "cta": "Check with Korean Air"
+      }
     },
     {
       "id": "toss-facepay-change-1113",
@@ -139,7 +196,13 @@
       "url": "https://toss.im/notices/25870",
       "cta": "공지 보기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Toss FacePay rewards changed",
+        "desc": "From 13 Nov, the flat 3% back ends and each payment earns between 0.2% and 3%. The monthly cap of 10,000 points stays.",
+        "badge": "From 11/13",
+        "cta": "Read notice"
+      }
     },
     {
       "id": "toss-phishing-1105",
@@ -152,7 +215,13 @@
       "url": "https://toss.im/notices/25904",
       "cta": "공지 보기",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Beware of fake Toss promotions",
+        "desc": "Fake event sites pretending to be Toss are asking for personal details and SMS codes. Only trust events shown inside the Toss app.",
+        "badge": "Warning",
+        "cta": "Read notice"
+      }
     },
     {
       "id": "npay-clicks-20261122",
@@ -166,7 +235,13 @@
       "added": "2026-11-22",
       "url": "https://eomisae.co.kr/ec/212059267",
       "cta": "모음 글 보기",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Today's Naver Pay click-reward links (11/22)",
+        "reward": "Small Naver Pay points per link",
+        "desc": "A community roundup of today's Naver Pay click-reward links. Stay logged in to Naver and tap them one by one.",
+        "cta": "Open roundup"
+      }
     },
     {
       "id": "nts-eitc-late-2611",
@@ -183,7 +258,14 @@
       "url": "https://www.hometax.go.kr",
       "source_url": "https://www.korea.kr/multi/visualNewsView.do?newsId=148974865",
       "cta": "신청하러 가기",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "Late application for earned income tax credit closes 1 Dec",
+        "reward": "95% of the credit (paid around 15 Jan 2027)",
+        "desc": "Missed the May application? Apply by 1 Dec to get 95% of the credit. If you got a notice, you can apply via the mobile notice or ARS (1544-9944).",
+        "condition": "2025 household income under ₩22M (single), ₩32M (one earner) or ₩44M (dual earners), and assets under ₩240M.",
+        "cta": "Apply"
+      }
     },
     {
       "id": "musinsa-offline-checkin-2611",
@@ -200,7 +282,14 @@
       "url": "https://www.musinsa.com/events/checkin/3/onboarding",
       "source_url": "https://www.musinsa.com/content/1566699932019111639",
       "cta": "이벤트 보기",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "Musinsa store check-in rewards",
+        "reward": "Musinsa Money per check-in, gifts for stamps",
+        "desc": "Tap your phone at the check-in station in Musinsa or 29CM stores in Korea to get Musinsa Money without buying anything. Collect stamps for limited gifts.",
+        "condition": "Needs an NFC phone, ID verification and marketing consent. Use the money within 3 days.",
+        "cta": "View promotion"
+      }
     },
     {
       "id": "kosaf-scholarship-2027-1-2611",
@@ -217,7 +306,14 @@
       "url": "https://www.kosaf.go.kr",
       "source_url": "https://vet.snu.ac.kr/33955/",
       "cta": "신청하러 가기",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "National Scholarship (Spring 2027) round 1 opens",
+        "reward": "Tuition support by income band",
+        "desc": "Round 1 applications open at 9am on 24 Nov. Family members must also give consent before screening starts.",
+        "condition": "For undergraduates in Korea. Student applications close 7 Jan 6pm, family consent 14 Jan 6pm.",
+        "cta": "Apply"
+      }
     },
     {
       "id": "mnuri-card-deadline-2611",
@@ -234,7 +330,14 @@
       "url": "https://www.mnuri.kr",
       "source_url": "https://www.mcst.go.kr/kor/s_policy/subPolicy/cultureart/cultureart06.jsp",
       "cta": "신청하러 가기",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "Culture Nuri Card: this year's issuance ends 30 Nov",
+        "reward": "₩150k per person a year (₩160k for ages 13–18 and 60–64)",
+        "desc": "Applications for this year's card and top-up close on 30 Nov. The balance must be used by 31 Dec.",
+        "condition": "Only for recipients of basic livelihood support or near-poverty households, aged 6+.",
+        "cta": "Apply"
+      }
     },
     {
       "id": "energy-voucher-2026-2611",
@@ -251,7 +354,14 @@
       "url": "https://www.energyv.or.kr",
       "source_url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/customer/notice/1309896_1141.html",
       "cta": "신청하러 가기",
-      "abroad": false
+      "abroad": false,
+      "en": {
+        "title": "2026 Energy Voucher: apply by 31 Dec",
+        "reward": "Heating and cooling voucher (about ₩367k per household on average)",
+        "desc": "Support for heating and cooling bills for vulnerable households is open until year-end. Extra support for homes heated with kerosene or LPG.",
+        "condition": "Welfare-recipient households living with seniors, infants, people with disabilities or pregnant women.",
+        "cta": "Apply"
+      }
     },
     {
       "id": "hana-1q-stamp-2611",
@@ -267,7 +377,14 @@
       "added": "2026-11-22",
       "url": "https://www.kebhana.com/cont/news/news02/1529258_115431.jsp",
       "cta": "이벤트 보기",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Hana 1Q Playground November stamp draw",
+        "reward": "Mobile coupons for bungeoppang (fish-shaped pastry)",
+        "desc": "Tap the stamp button in Hana 1Q Playground every day to enter. More stamps, better odds.",
+        "condition": "Hana 1Q members aged 14+ who join Playground. Winners notified by 15 Dec.",
+        "cta": "View promotion"
+      }
     },
     {
       "id": "sg-mof-ap-cash-2611",
@@ -282,7 +399,14 @@
       "added": "2026-11-22",
       "url": "https://www.mof.gov.sg/news-resources/newsroom/about-3-million-adult-singaporeans-to-receive---100-to--250-of-assurance-package-cash-in-december-2026/",
       "cta": "받는 법 보기",
-      "citizen_only": true
+      "citizen_only": true,
+      "en": {
+        "title": "Assurance Package cash S$100–250, final payout",
+        "reward": "S$100–250 cash (depends on income and property)",
+        "desc": "Singapore citizens aged 21+ in 2027 get this cash automatically in December. It's the final payout, so check your bank account is linked.",
+        "condition": "Link PayNow-NRIC by 24 Nov to get it on 8 Dec, or register a DBS/OCBC/UOB account on govbenefits by 30 Nov to get it by 17 Dec.",
+        "cta": "How to claim"
+      }
     },
     {
       "id": "sg-krisflyer-spontaneous-escapes-2611",
@@ -298,7 +422,14 @@
       "added": "2026-11-22",
       "url": "https://www.singaporeair.com/en_UK/gb/plan-travel/promotions/global/kf/kf-promo/kfescapes/",
       "cta": "노선 보기",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "KrisFlyer: 30% off award flights in December",
+        "reward": "30% off SIA Saver awards (15% off Scoot)",
+        "desc": "Book selected Singapore Airlines flights departing 1–31 Dec for 30% fewer miles. One-way economy to Kuala Lumpur, Jakarta or Bali from 5,600 miles.",
+        "condition": "Redeem by 30 Nov on the website or app. No changes or refunds after booking.",
+        "cta": "See routes"
+      }
     },
     {
       "id": "sg-activesg-sg60-credits-2611",
@@ -314,7 +445,14 @@
       "url": "https://ask.gov.sg/activesg/questions/cm82zqf5m00952v9vemzctz75",
       "source_url": "https://ask.gov.sg/activesg/questions/cm82zr7jc009a2v9vv6040tod",
       "cta": "확인하기",
-      "citizen_only": true
+      "citizen_only": true,
+      "en": {
+        "title": "SG60 ActiveSG credits: use once this year to extend",
+        "reward": "S$100 credits extended to end-2027",
+        "desc": "SG60 ActiveSG credits expire on 31 Dec if you haven't used them this year. One booking or pass purchase this year extends them to 31 Dec 2027.",
+        "condition": "Pay in your own name in the MyActiveSG+ app. Each child's credits need their own payment.",
+        "cta": "Check"
+      }
     }
   ],
   "daily": [
@@ -328,7 +466,12 @@
       "url": "supertoss://",
       "linkKind": "app",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Toss step counter",
+        "reward": "Points and lottery tickets for steps",
+        "desc": "Get points and lottery tickets each time you hit a step goal (up to 10,000 steps). Open it once in the evening to collect."
+      }
     },
     {
       "id": "toss-together",
@@ -340,7 +483,12 @@
       "url": "supertoss://",
       "linkKind": "app",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Toss 'open together' points",
+        "reward": "Random points",
+        "desc": "Earn points when someone nearby also has Toss open. Busy cafés and trains work best."
+      }
     },
     {
       "id": "toss-benefit",
@@ -352,7 +500,12 @@
       "url": "supertoss://",
       "linkKind": "app",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Check new events in Toss Benefits",
+        "reward": "Varies",
+        "desc": "New benefits are added to the Toss Benefits tab every day. Skim for instant ones."
+      }
     },
     {
       "id": "npay-home",
@@ -364,7 +517,12 @@
       "url": "https://home.pay.naver.com/?from=main_pay_icon",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver Pay home reward button",
+        "reward": "About ₩3",
+        "desc": "Tap the reward button in the middle of the Naver Pay home screen. Some days it doesn't appear."
+      }
     },
     {
       "id": "npay-random",
@@ -376,7 +534,12 @@
       "url": "https://point.pay.naver.com/",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver Pay random points",
+        "reward": "Random",
+        "desc": "On the points page, tap each spot with the green N-click button."
+      }
     },
     {
       "id": "npay-insurance",
@@ -388,7 +551,12 @@
       "url": "https://insurance.pay.naver.com/?inflow=point_category",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver Pay insurance visit points",
+        "reward": "Random, 3 times a day",
+        "desc": "During the event you can join up to three times a day."
+      }
     },
     {
       "id": "npay-scroll",
@@ -400,7 +568,12 @@
       "url": "https://new-m.pay.naver.com/historybenefit/home",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Browse Naver Pay home for 15 seconds",
+        "reward": "₩10 + ₩5",
+        "desc": "Scroll the payment benefits page for about 15 seconds to earn. Up to 5 times a month per account."
+      }
     },
     {
       "id": "naver-mycar",
@@ -412,7 +585,12 @@
       "url": "https://mycar.naver.com/",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver MyCar banner rewards",
+        "reward": "Small amount per banner",
+        "desc": "Tap the banners in the middle of the page. Different banners open each day."
+      }
     },
     {
       "id": "naver-shopping",
@@ -424,7 +602,12 @@
       "url": "https://mkt.naver.com/store_discovery",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver shopping credit draw",
+        "reward": "Shopping credit",
+        "desc": "Draw shopping credit once a day."
+      }
     },
     {
       "id": "naver-paypet",
@@ -436,7 +619,12 @@
       "url": "https://new-m.pay.naver.com/public/sharing/paypet",
       "linkKind": "deep",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Naver Pay MyPet",
+        "reward": "Points",
+        "desc": "Raise a pet and collect points."
+      }
     },
     {
       "id": "npay-clicklinks",
@@ -448,7 +636,12 @@
       "url": "https://damoang.net/economy",
       "linkKind": "web",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Today's click-reward links roundup",
+        "reward": "₩1–15 per link",
+        "desc": "Naver Pay click-reward links change daily and get rounded up in a community board. Open the post with today's date."
+      }
     },
     {
       "id": "cashwalk",
@@ -460,7 +653,12 @@
       "url": "",
       "linkKind": "none",
       "region": "kr",
-      "abroad": true
+      "abroad": true,
+      "en": {
+        "title": "Cashwalk step rewards",
+        "reward": "Up to 100 cash a day",
+        "desc": "1 cash per 100 steps, up to 10,000 steps. You must tap to collect, so open it before bed."
+      }
     },
     {
       "id": "sg-shopee-checkin",
@@ -472,7 +670,12 @@
       "desc": "Shopee 앱 홈에서 코인 잔액을 누르고 오늘 출석을 누르면 돼요. 연속으로 출석할수록 더 주고, 코인은 적립한 달부터 3개월째 말에 사라져요.",
       "url": "https://shopee.sg/",
       "linkKind": "app",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Shopee Coins daily check-in",
+        "reward": "Daily coins plus streak bonus",
+        "desc": "Tap your Coins balance on the Shopee home screen and check in. Longer streaks earn more. Coins expire at the end of the third month."
+      }
     },
     {
       "id": "sg-lazada-checkin",
@@ -484,7 +687,12 @@
       "desc": "Lazada 앱의 코인 페이지에서 출석 버튼을 누르면 돼요. 연속으로 출석할수록 보상이 커져요.",
       "url": "https://www.lazada.sg/",
       "linkKind": "app",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Lazada Coins daily check-in",
+        "reward": "Daily coins",
+        "desc": "Tap check-in on the Coins page in the Lazada app. Longer streaks earn more."
+      }
     }
   ],
   "guides": [
@@ -508,7 +716,21 @@
       "cta": "앱 받기",
       "source_url": "https://blog.eatigo.com/singapore/trending-restaurants-in-singapore/",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Eatigo",
+        "tagline": "Book quiet hours, get up to 50% off",
+        "saving": "Up to 50% off food",
+        "cost": "Free, no membership",
+        "desc": "A booking app where discounts go up when restaurants are quiet. Lots of hotel buffets and restaurants.",
+        "how": [
+          "Pick a restaurant and check discounts by time slot",
+          "Book the slot with the biggest discount",
+          "Mention your booking and the discount applies at the bill"
+        ],
+        "tip": "Late lunch (after 1:30pm) and late dinner (after 9pm) get the deepest cuts. Discounts apply to food.",
+        "cta": "Get the app"
+      }
     },
     {
       "id": "sg-chope",
@@ -530,7 +752,21 @@
       "cta": "앱 받기",
       "source_url": "https://eatbook.sg/supper-deals-chope/amp/",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Chope",
+        "tagline": "Reservations, discount vouchers and rewards",
+        "saving": "Off-peak vouchers up to 50% off",
+        "cost": "Free",
+        "desc": "Singapore's most used restaurant booking app. Buy vouchers in Chope Deals for discounts, and earn Chope-Dollars on bookings.",
+        "how": [
+          "Book restaurants in the app",
+          "Buy off-peak vouchers in Deals for bigger savings",
+          "Show the voucher when paying"
+        ],
+        "tip": "Off-peak vouchers only work on set days and times, so check before you go.",
+        "cta": "Get the app"
+      }
     },
     {
       "id": "sg-burpple-beyond",
@@ -552,7 +788,21 @@
       "cta": "앱 받기",
       "source_url": "https://www.burpple.com/beyond",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Burpple Beyond",
+        "tagline": "1-for-1 at 500+ restaurants",
+        "saving": "1-for-1 mains",
+        "cost": "Paid, from S$99/year",
+        "desc": "The paid membership of review app Burpple. 1-for-1 and % discounts, mostly cafés and casual dining.",
+        "how": [
+          "Join Beyond in the Burpple app",
+          "Pick a restaurant with a 1-for-1 deal",
+          "Tell staff you're using Burpple and redeem in the app"
+        ],
+        "tip": "Pays for itself quickly if you eat out in pairs. Not great if you usually dine alone.",
+        "cta": "Get the app"
+      }
     },
     {
       "id": "sg-entertainer",
@@ -574,7 +824,21 @@
       "cta": "웹사이트",
       "source_url": "https://expatliving.sg/the-entertainer-app-savings-to-explore-singapore",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "The ENTERTAINER",
+        "tagline": "1-for-1 coupons for food, activities and spas",
+        "saving": "2,000+ 1-for-1 deals",
+        "cost": "Paid, about S$80–95/year",
+        "desc": "A coupon app with 1-for-1 deals beyond food: hotel dining, attractions, gyms and spas. The 2026 edition also covers Johor Bahru.",
+        "how": [
+          "Buy this year's membership in the app",
+          "Redeem a coupon when ordering",
+          "Share the membership with family"
+        ],
+        "tip": "Better than Burpple if you do more activities and spas than casual dining.",
+        "cta": "Website"
+      }
     },
     {
       "id": "sg-fave",
@@ -595,7 +859,20 @@
       "cta": "웹사이트",
       "source_url": "https://blog.moneysmart.sg/dining/burpple-entertainer-chope-fave-eatigo",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Fave",
+        "tagline": "Discount vouchers and payment cashback",
+        "saving": "Voucher discounts and cashback",
+        "cost": "Free",
+        "desc": "Buy discount vouchers for restaurants, cafés and salons, or pay with FavePay for cashback.",
+        "how": [
+          "Buy a voucher in the app, or",
+          "Pay with the FavePay QR at the shop",
+          "Cashback is usually used at the same shop next time"
+        ],
+        "cta": "Website"
+      }
     },
     {
       "id": "sg-shopback",
@@ -616,7 +893,20 @@
       "cta": "웹사이트",
       "source_url": "https://blog.seedly.sg/mobile-apps-singaporean-foodie-should-have",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "ShopBack & ShopBack GO",
+        "tagline": "Cashback online and in stores",
+        "saving": "Cashback on purchases",
+        "cost": "Free",
+        "desc": "Shop online through ShopBack to earn cashback, and use ShopBack GO to earn cashback at restaurants and stores.",
+        "how": [
+          "Install the ShopBack app",
+          "For online shopping, go to the store through the app",
+          "In stores, pay at GO merchants as shown in the app"
+        ],
+        "cta": "Website"
+      }
     },
     {
       "id": "sg-treatsure",
@@ -637,7 +927,20 @@
       "cta": "앱 받기",
       "source_url": "https://www.gov.sg/profile-stories/mts-preston/",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "treatsure",
+        "tagline": "Hotel buffet surplus at a discount",
+        "saving": "Far below the usual price",
+        "cost": "Free",
+        "desc": "Buy surplus food from hotel buffets, restaurants and grocers. Buffet in a Box, where you fill a box near closing, is the famous one.",
+        "how": [
+          "Check nearby hotels and shops in the app",
+          "Pay in the app",
+          "Collect at the set time"
+        ],
+        "cta": "Get the app"
+      }
     },
     {
       "id": "sg-yindii",
@@ -658,7 +961,21 @@
       "url": "https://mothership.sg/2025/01/yindii-app-reduce-food-waste/",
       "cta": "자세히 보기",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Yindii",
+        "tagline": "End-of-day surprise bags from bakeries and cafés",
+        "saving": "Up to 80% off",
+        "cost": "Free",
+        "desc": "Shops sell leftover bread and food as surprise bags before closing. Partners include Paul, Baker & Cook and SaladStop!.",
+        "how": [
+          "Reserve a surprise bag nearby in the app",
+          "Check each shop's pickup window",
+          "Pick it up on time"
+        ],
+        "tip": "Some shops only allow a 30-minute pickup late at night, so check the time.",
+        "cta": "Learn more"
+      }
     },
     {
       "id": "sg-mrt-prepeak",
@@ -677,7 +994,19 @@
       "url": "https://www.ptc.gov.sg/fares/morning-pre-peak-fares/",
       "cta": "자세히 보기",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Pre-peak MRT discount before 7:45am",
+        "tagline": "Up to 50 cents off on weekday mornings",
+        "saving": "Up to S$0.50 per trip",
+        "cost": "Automatic",
+        "desc": "Tap in at any MRT station before 7:45am on weekdays (not public holidays) and your fare drops by up to 50 cents. Nothing to sign up for.",
+        "how": [
+          "Tap in with a fare card or contactless card before 7:45am on a weekday",
+          "The discount applies automatically"
+        ],
+        "cta": "Learn more"
+      }
     },
     {
       "id": "sg-nel-free-morning",
@@ -697,7 +1026,233 @@
       "cta": "자세히 보기",
       "source_url": "https://thesmartlocal.com/read/free-discounted-mrt-rides/",
       "added": "2026-11-22",
-      "citizen_only": false
+      "citizen_only": false,
+      "en": {
+        "title": "Free morning rides on the North East Line",
+        "tagline": "Free rides from Punggol-area stations at set times",
+        "saving": "First ride free",
+        "cost": "Automatic",
+        "desc": "Tap in at the six NEL stations from Punggol Coast to Kovan, or any Sengkang-Punggol LRT station, before 7:30am or between 9:00 and 9:45am on weekdays to ride free. Runs until 26 Dec 2027.",
+        "how": [
+          "Tap in at those stations during the set times on a weekday",
+          "No fare is charged"
+        ],
+        "cta": "Learn more"
+      }
+    },
+    {
+      "id": "sg-fairprice-link",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "grocery",
+      "icon": "🛒",
+      "title": "FairPrice Group 앱 (Linkpoints)",
+      "tagline": "장 볼 때마다 포인트 쌓기",
+      "saving": "S$1당 0.5 Linkpoints, Kopitiam 10% 할인",
+      "cost": "무료",
+      "desc": "싱가포르 대표 마트 FairPrice 앱이에요. 계산할 때 앱 QR을 보여주면 Linkpoints가 쌓이고, 앱으로 Kopitiam 푸드코트에서 내면 10% 할인돼요.",
+      "how": [
+        "FairPrice Group 앱 설치 후 무료 Link 회원 가입",
+        "계산 전에 Pay/Earn을 눌러 QR 보여주기",
+        "모은 포인트는 99 Linkpoints부터 앱 리워드로 교환"
+      ],
+      "tip": "Cheers, Unity, FairPrice Xpress에서도 똑같이 쌓여요.",
+      "url": "https://www.fairprice.com.sg/go-digital-in-stores/",
+      "cta": "자세히 보기",
+      "source_url": "https://support.link.sg/hc/en-us/articles/21161023900825-How-do-I-earn-Linkpoints",
+      "added": "2026-11-22",
+      "en": {
+        "title": "FairPrice Group app (Linkpoints)",
+        "tagline": "Earn points every time you buy groceries",
+        "saving": "0.5 Linkpoints per S$1, 10% off at Kopitiam",
+        "cost": "Free",
+        "desc": "The app for FairPrice, Singapore's biggest supermarket chain. Show the app QR at checkout to earn Linkpoints, and pay with the app at Kopitiam food courts for 10% off.",
+        "how": [
+          "Install the FairPrice Group app and join Link for free",
+          "Tap Pay/Earn and show the QR before paying",
+          "Redeem points for in-app rewards from 99 Linkpoints"
+        ],
+        "tip": "Works at Cheers, Unity and FairPrice Xpress too.",
+        "cta": "Learn more"
+      }
+    },
+    {
+      "id": "sg-free-lightshows",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "free",
+      "icon": "✨",
+      "title": "Garden Rhapsody · Spectra 무료 쇼",
+      "tagline": "매일 밤 무료 빛·음악 쇼 두 개",
+      "saving": "입장료 S$0",
+      "cost": "무료",
+      "desc": "가든스 바이 더 베이 슈퍼트리 그로브의 Garden Rhapsody(밤 7시 45분·8시 45분)와 마리나베이샌즈 앞 Spectra가 매일 밤 무료예요.",
+      "how": [
+        "Spectra 8시 쇼를 먼저 보고",
+        "걸어서 가든스 바이 더 베이로 이동",
+        "8시 45분 Garden Rhapsody 보기"
+      ],
+      "tip": "연말 행사 기간에는 슈퍼트리 그로브가 유료가 될 수 있어요. 그때는 World of Plants 쪽에서 무료로 볼 수 있어요.",
+      "url": "https://www.gardensbythebay.com.sg/en/things-to-do/calendar-of-events/garden-rhapsody.html",
+      "cta": "시간 확인",
+      "source_url": "https://thesmartlocal.com/read/free-things-to-do-in-singapore/",
+      "added": "2026-11-22",
+      "en": {
+        "title": "Garden Rhapsody & Spectra (free shows)",
+        "tagline": "Two free light and music shows every night",
+        "saving": "S$0 entry",
+        "cost": "Free",
+        "desc": "Garden Rhapsody at the Supertree Grove (7:45pm and 8:45pm) and Spectra in front of Marina Bay Sands are free every night.",
+        "how": [
+          "Catch the 8pm Spectra show first",
+          "Walk over to Gardens by the Bay",
+          "Watch Garden Rhapsody at 8:45pm"
+        ],
+        "tip": "During festive events the Supertree Grove may be ticketed. You can still watch for free from the World of Plants area.",
+        "cta": "Check times"
+      }
+    },
+    {
+      "id": "sg-sim-only",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "life",
+      "icon": "📱",
+      "title": "SIM-only 요금제 (GOMO, giga!, Circles.Life)",
+      "tagline": "약정 없이 월 S$10 안팎",
+      "saving": "통신비 절반 이하",
+      "cost": "월 S$10부터",
+      "desc": "싱가포르는 큰 통신사 약정보다 GOMO(Singtel), giga!(StarHub), Circles.Life(M1) 같은 SIM-only 요금제가 훨씬 싸요. 월 S$10 안쪽 요금제도 많아요.",
+      "how": [
+        "요금 비교 글에서 데이터와 로밍 조건 비교",
+        "앱으로 가입하고 eSIM이나 유심 받기",
+        "번호 이동하면 기존 번호 그대로 써요"
+      ],
+      "tip": "한국 갈 일이 많으면 아시아 로밍이 들어 있는 요금제를 고르세요.",
+      "url": "https://blog.moneysmart.sg/budgeting/cheapest-sim-only-plans/",
+      "cta": "요금 비교 보기",
+      "added": "2026-11-22",
+      "en": {
+        "title": "SIM-only plans (GOMO, giga!, Circles.Life)",
+        "tagline": "No contract, around S$10 a month",
+        "saving": "Often half the price of big-telco plans",
+        "cost": "From S$10/month",
+        "desc": "SIM-only plans from GOMO (Singtel), giga! (StarHub) and Circles.Life (M1) are far cheaper than contract plans. Many cost under S$10 a month.",
+        "how": [
+          "Compare data and roaming on a comparison site",
+          "Sign up in the app and get an eSIM or SIM",
+          "Port your number to keep it"
+        ],
+        "tip": "If you travel often, pick a plan with Asia roaming included.",
+        "cta": "Compare plans"
+      }
+    },
+    {
+      "id": "sg-youtrip",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "finance",
+      "icon": "💱",
+      "title": "YouTrip",
+      "tagline": "해외 결제 환전 수수료 0%",
+      "saving": "환전 수수료 0%",
+      "cost": "무료",
+      "desc": "싱가포르 달러로 충전해서 12개 통화를 도매 환율로 쓰는 선불 마스터카드예요. 여행이나 해외 직구할 때 카드 수수료를 아껴요.",
+      "how": [
+        "앱 설치 후 신분증으로 가입",
+        "싱가포르 달러로 충전",
+        "해외에서 결제하면 자동으로 환전"
+      ],
+      "tip": "해외 ATM 출금은 한 달 무료 한도가 있어요.",
+      "url": "https://www.you.co/sg/",
+      "cta": "웹사이트",
+      "source_url": "https://www.you.co/sg/blog/best-multi-currency-cards-singapore/",
+      "added": "2026-11-22",
+      "en": {
+        "title": "YouTrip",
+        "tagline": "0% FX fees when you spend abroad",
+        "saving": "0% FX fee",
+        "cost": "Free",
+        "desc": "A prepaid Mastercard you top up in SGD and spend in 12 currencies at wholesale rates. Saves card fees on trips and overseas shopping.",
+        "how": [
+          "Install the app and sign up with your ID",
+          "Top up in SGD",
+          "Pay abroad and it converts automatically"
+        ],
+        "tip": "Overseas ATM withdrawals have a monthly free limit.",
+        "cta": "Website"
+      }
+    },
+    {
+      "id": "sg-wise",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "finance",
+      "icon": "🏦",
+      "title": "Wise",
+      "tagline": "한국 송금과 다통화 계좌",
+      "saving": "은행보다 싼 송금 수수료",
+      "cost": "무료 (카드 S$8.50 1회)",
+      "desc": "중간 환율로 송금하고 수수료를 미리 보여줘서, 한국으로 돈 보낼 때 많이 써요. 싱가포르 달러 계좌로 월급이나 송금도 받을 수 있어요.",
+      "how": [
+        "앱 설치 후 신분증으로 인증",
+        "받는 사람 한국 계좌를 등록",
+        "보내기 전에 환율과 수수료 확인 후 송금"
+      ],
+      "tip": "2026년 5월부터 해외 ATM 무료 출금이 월 S$100로 줄었어요.",
+      "url": "https://wise.com/sg/",
+      "cta": "웹사이트",
+      "source_url": "https://www.expatica.com/sg/finance/money-management/how-to-use-wise-in-singapore-as-an-expat-2173428",
+      "added": "2026-11-22",
+      "en": {
+        "title": "Wise",
+        "tagline": "Cheap transfers home and a multi-currency account",
+        "saving": "Lower transfer fees than banks",
+        "cost": "Free (S$8.50 one-time card fee)",
+        "desc": "Sends money at the mid-market rate and shows the fee upfront. You also get an SGD account details to receive local payments.",
+        "how": [
+          "Install the app and verify your ID",
+          "Add the recipient's bank account",
+          "Check the rate and fee, then send"
+        ],
+        "tip": "From May 2026 free overseas ATM withdrawals dropped to S$100 a month.",
+        "cta": "Website"
+      }
+    },
+    {
+      "id": "sg-grabunlimited",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "life",
+      "icon": "🛵",
+      "title": "GrabUnlimited · GrabCoins",
+      "tagline": "배달비 할인 구독과 적립 코인",
+      "saving": "배달·차량 할인, 첫 달 무료",
+      "cost": "월 S$5.99 (연 S$59.88)",
+      "desc": "Grab 구독 멤버십이에요. 배달비 할인과 차량 혜택을 주고, 신규 회원은 첫 달이 무료예요. Grab을 쓸 때마다 GrabCoins(예전 GrabRewards)도 쌓여요.",
+      "how": [
+        "Grab 앱 홈에서 프로필 아이콘 누르기",
+        "GrabUnlimited 가입 (첫 달 무료)",
+        "주문할 때 결제 화면에서 혜택 쓰기"
+      ],
+      "tip": "한 달에 배달을 두세 번 이상 시키면 이득이에요. 안 쓰면 언제든 해지할 수 있어요.",
+      "url": "https://www.grab.com/sg/grabunlimited/",
+      "cta": "자세히 보기",
+      "added": "2026-11-22",
+      "en": {
+        "title": "GrabUnlimited & GrabCoins",
+        "tagline": "Delivery discount subscription plus reward coins",
+        "saving": "Delivery and ride perks, first month free",
+        "cost": "S$5.99/month (S$59.88/year)",
+        "desc": "Grab's membership with delivery discounts and ride perks. New members get the first month free, and every Grab order earns GrabCoins (formerly GrabRewards).",
+        "how": [
+          "Tap the profile icon on the Grab home screen",
+          "Join GrabUnlimited (first month free)",
+          "Apply your offers at checkout"
+        ],
+        "tip": "Worth it if you order delivery two or three times a month. Cancel anytime.",
+        "cta": "Learn more"
+      }
     }
   ]
 }
