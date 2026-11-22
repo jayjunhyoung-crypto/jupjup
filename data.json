@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-22T18:40:00+08:00",
+  "updated": "2026-11-23T00:28:31+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -224,26 +224,6 @@
       }
     },
     {
-      "id": "npay-clicks-20261122",
-      "cat": "npay",
-      "region": "kr",
-      "type": "free",
-      "title": "오늘의 네이버페이 클릭 적립 모음 (11/22)",
-      "reward": "링크마다 소액 네이버페이 포인트",
-      "desc": "커뮤니티에 오늘 올라온 네이버페이 클릭 적립 링크 모음이에요. 네이버에 로그인한 채로 하나씩 누르면 돼요.",
-      "end": "2026-11-22",
-      "added": "2026-11-22",
-      "url": "https://eomisae.co.kr/ec/212059267",
-      "cta": "모음 글 보기",
-      "abroad": true,
-      "en": {
-        "title": "Today's Naver Pay click-reward links (11/22)",
-        "reward": "Small Naver Pay points per link",
-        "desc": "A community roundup of today's Naver Pay click-reward links. Stay logged in to Naver and tap them one by one.",
-        "cta": "Open roundup"
-      }
-    },
-    {
       "id": "nts-eitc-late-2611",
       "cat": "gov",
       "region": "kr",
@@ -452,6 +432,122 @@
         "desc": "SG60 ActiveSG credits expire on 31 Dec if you haven't used them this year. One booking or pass purchase this year extends them to 31 Dec 2027.",
         "condition": "Pay in your own name in the MyActiveSG+ app. Each child's credits need their own payment.",
         "cta": "Check"
+      }
+    },
+    {
+      "id": "sg-changi-cappyworld-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "창이공항 앱 Cappyworld 매일 무료 게임",
+      "reward": "TADA 탑승권·굿즈·매장 바우처, 상위 500명은 호텔 1박 등",
+      "desc": "창이공항 앱에서 하루 한 번 무료로 게임을 하고 레벨을 깨면 바로 보상을 받아요. 1월 3일 기준 순위 상위 500명은 크라운플라자 창이 1박, Changi Rewards 포인트, 여행용 마작 세트 중 하나를 받아요.",
+      "condition": "18세 이상 인증된 Changi 계정이 필요하고, 실물 경품은 T3 지하 2층 고객센터에서 받아요.",
+      "start": "2026-11-03",
+      "end": "2027-01-03",
+      "added": "2026-11-23",
+      "url": "https://www.changiairport.com/id/en/happenings/promotions/cappyworld.html",
+      "cta": "이벤트 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Changi App Cappyworld: free daily game",
+        "reward": "TADA ride vouchers, merch and shop vouchers; top 500 win a hotel night and more",
+        "desc": "Play once a day for free in the Changi App and get instant rewards for clearing levels. The top 500 players on 3 Jan win a night at Crowne Plaza Changi Airport, Changi Rewards points or a travel mahjong set.",
+        "condition": "Needs a verified Changi account (18+). Physical prizes are collected at the T3 Basement 2 service counter.",
+        "cta": "View promotion"
+      }
+    },
+    {
+      "id": "sg-orchard-christmas-2026",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "오차드 로드 크리스마스 조명·프로젝션 쇼 무료",
+      "reward": "무료 크리스마스 조명, 포토존, 프로젝션 쇼",
+      "desc": "1월 3일까지 오차드 로드에 크리스마스 조명과 대형 Merli 포토존이 설치돼요. 힐튼 오차드 외벽 프로젝션 쇼는 매일 저녁 7~10시에 하고, 12월 24일 밤에는 길거리 파티가 열려요.",
+      "condition": "조명과 쇼는 누구나 무료로 볼 수 있고, Kiztopia 카니발 이용권은 유료예요.",
+      "start": "2026-11-17",
+      "end": "2027-01-03",
+      "added": "2026-11-23",
+      "url": "https://christmas.orchardroad.org/event-highlights/",
+      "source_url": "https://www.misslobang.com/article/orchard-road-christmas-light-up-2026",
+      "cta": "행사 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Orchard Road Christmas lights & projection show (free)",
+        "reward": "Free Christmas lights, photo spots and a projection show",
+        "desc": "Christmas lights and a giant Merli photo spot line Orchard Road until 3 Jan. The projection show at Hilton Singapore Orchard runs 7–10pm nightly, and there's a street party on Christmas Eve.",
+        "condition": "Lights and shows are free for everyone. Kiztopia carnival cards are paid.",
+        "cta": "See highlights"
+      }
+    },
+    {
+      "id": "sg-capitaland-ps-moment-2611",
+      "cat": "shop",
+      "region": "sg",
+      "type": "cond",
+      "title": "플라자 싱가푸라 쇼핑하면 eCapitaVoucher 돌려받기",
+      "reward": "S$6 / S$10 / S$30 eCapitaVoucher",
+      "desc": "11월 30일까지 플라자 싱가푸라 참여 매장에서 일정 금액 이상 쓰면 CapitaStar 앱에서 바우처를 받아요. 식음료·취미 S$80, 패션·스포츠 S$120, 가구·전자제품 S$300 이상부터예요.",
+      "condition": "CapitaStar 회원이 앱에 연결한 Mastercard·DBS/POSB 등으로 결제해야 하고, 종류별 하루 1회·선착순이에요.",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "added": "2026-11-23",
+      "url": "https://www.capitaland.com/sg/en/shop/malls/discover/more-of-every-moment.html",
+      "cta": "이벤트 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Plaza Singapura: get eCapitaVouchers when you shop",
+        "reward": "S$6 / S$10 / S$30 eCapitaVoucher",
+        "desc": "Until 30 Nov, spend at participating Plaza Singapura stores and redeem eCapitaVouchers in the CapitaStar app. Minimum spend is S$80 for F&B and hobbies, S$120 for fashion and sports, S$300 for home and electronics.",
+        "condition": "CapitaStar members paying with a linked Mastercard, DBS/POSB or other eligible method. One per type per day, while redemptions last.",
+        "cta": "View promotion"
+      }
+    },
+    {
+      "id": "oz-jeju-mileage-2611",
+      "cat": "air",
+      "region": "kr",
+      "type": "cond",
+      "title": "아시아나 김포-제주 마일리지 좌석 최대 오픈",
+      "reward": "김포↔제주 일부 편 마일리지 좌석 최대 오픈",
+      "desc": "11월 30일까지 김포·제주 노선 일부 항공편(OZ8905·8955·8985, OZ8902·8966·8996)에 마일리지 좌석을 최대한 열어줘요. 예약과 탑승 모두 11월 30일까지예요.",
+      "condition": "아시아나 마일리지로 발권하고 세금·유류할증료는 따로 내야 하며, 만석인 편은 안 돼요.",
+      "start": "2026-11-09",
+      "end": "2026-11-30",
+      "added": "2026-11-23",
+      "url": "https://flyasiana.com/C/KR/KO/event/detail/CM202610290002530931",
+      "cta": "좌석 보기",
+      "abroad": false,
+      "en": {
+        "title": "Asiana: more award seats on Gimpo–Jeju",
+        "reward": "Maximum award seats on selected Gimpo–Jeju flights",
+        "desc": "Asiana is opening as many award seats as possible on selected Gimpo–Jeju flights (OZ8905/8955/8985, OZ8902/8966/8996). Booking and travel both end on 30 Nov.",
+        "condition": "Book with Asiana miles and pay taxes and fuel surcharges separately. Not available on full flights.",
+        "cta": "Check seats"
+      }
+    },
+    {
+      "id": "shinhansec-weekly-trade-2611",
+      "cat": "etc",
+      "region": "kr",
+      "type": "cond",
+      "title": "신한 SOL증권 국내주식 거래하면 매주 투자쿠폰 추첨",
+      "reward": "매주 1,439명 추첨, 최대 100만원 투자쿠폰",
+      "desc": "이벤트를 한 번 신청해두고 그 주에 국내주식이나 ETF·ETN을 거래하면 매주 자동으로 추첨돼요. 12월 24일까지 6주 동안 매주 다시 당첨될 수 있어요.",
+      "condition": "만 19세 이상 개인 고객이 마케팅 수신에 동의해야 하고, 퇴직연금·랩 계좌 거래는 빠져요.",
+      "start": "2026-11-16",
+      "end": "2026-12-24",
+      "added": "2026-11-23",
+      "url": "https://www.shinhansec.com/cms/contents/event/261116_weekly2611_pc.html",
+      "cta": "이벤트 보기",
+      "abroad": true,
+      "en": {
+        "title": "Shinhan SOL Securities: weekly coupon draw for stock trades",
+        "reward": "1,439 winners a week, investment coupons up to ₩1,000,000",
+        "desc": "Sign up once, then trade any Korean stock, ETF or ETN in a given week to enter that week's draw automatically. You can win every week for six weeks until 24 Dec.",
+        "condition": "Individual customers aged 19+ with marketing consent. Pension and wrap accounts don't count.",
+        "cta": "View promotion"
       }
     }
   ],
