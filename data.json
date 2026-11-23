@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-23T00:28:31+08:00",
+  "updated": "2026-11-24T00:29:18+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -548,6 +548,126 @@
         "desc": "Sign up once, then trade any Korean stock, ETF or ETN in a given week to enter that week's draw automatically. You can win every week for six weeks until 24 Dec.",
         "condition": "Individual customers aged 19+ with marketing consent. Pension and wrap accounts don't count.",
         "cta": "View promotion"
+      }
+    },
+    {
+      "id": "sg-vivocity-mario-holiday-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "비보시티 슈퍼마리오 크리스마스, 눈 쇼·스탬프 무료",
+      "reward": "눈 내리기 쇼, 캐릭터 기프트 태그 스탬프, 12/5·6·19·20 마리오카트 대회 무료 참가",
+      "desc": "비보시티에 10m 마리오 풍선과 테마 구역 6곳이 생겼고, 화~일 저녁 7시 30분·8시 30분에 눈 내리기 쇼를 해요. 몰 곳곳의 스탬프 기계에서 마리오 캐릭터 4종을 찍어 기프트 태그를 무료로 만들 수 있어요.",
+      "condition": "구경과 스탬프는 누구나 무료고, 12월 마리오·루이지 만남은 당일 S$100 이상 영수증이 있어야 해요.",
+      "start": "2026-11-13",
+      "end": "2026-12-27",
+      "added": "2026-11-24",
+      "url": "https://www.nintendo.com/sg/news/article/7aUtuHJmGqJsd5K3ELmGQZ",
+      "cta": "이벤트 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "VivoCity Super Mario Christmas: free snow shows and stamps",
+        "reward": "Snowfall shows, character gift-tag stamping, free Mario Kart challenge on 5, 6, 19, 20 Dec",
+        "desc": "VivoCity has a 10m Mario inflatable and six festive zones, with snowfall shows Tue–Sun at 7.30pm and 8.30pm. Stamp four Mario character designs at embossing stations around the mall to make a free gift tag.",
+        "condition": "Viewing and stamping are free for everyone. The December Mario & Luigi meet-and-greet needs a same-day receipt of S$100 or more.",
+        "cta": "View event"
+      }
+    },
+    {
+      "id": "sg-changi-pokemon-memory-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "cond",
+      "title": "창이공항에서 S$100 쓰면 포켓몬 메모리 게임 한 판",
+      "reward": "포켓몬 30주년 엘리트 트레이너 박스, 부스터 번들, 피규어, 매장 바우처 등",
+      "desc": "창이공항·주얼에서 영수증 한 장에 S$100 이상 쓰면 창이 앱에서 게임 1회를 받아 키오스크에서 같은 그림 맞추기를 해요. 맞춘 짝 수에 따라 포켓몬 카드 박스부터 매장 바우처까지 바로 받아요.",
+      "condition": "결제 전에 Changi Rewards 카드를 스캔해야 하고, 엘리트 트레이너 박스는 게임기마다 하루 첫 당첨자만 받아요.",
+      "start": "2026-11-03",
+      "end": "2027-01-03",
+      "added": "2026-11-24",
+      "url": "https://www.changiairport.com/id/en/happenings/promotions/pokemon-memory-challenge.html",
+      "cta": "이벤트 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Changi Airport: spend S$100, play the Pokémon Memory Challenge",
+        "reward": "Pokémon 30th Anniversary Elite Trainer Box, booster bundles, figures, shop vouchers and more",
+        "desc": "Spend S$100 or more in a single receipt at Changi Airport or Jewel to get one game in the Changi App, then play a matching game at a kiosk. Prizes depend on how many pairs you match, from Pokémon card boxes to shop vouchers.",
+        "condition": "Scan your Changi Rewards card before paying. Each game station gives an Elite Trainer Box only to its first winner of the day.",
+        "cta": "View promotion"
+      }
+    },
+    {
+      "id": "sg-krisflyer-fee-1201",
+      "cat": "air",
+      "region": "sg",
+      "type": "info",
+      "title": "KrisFlyer 오프라인 처리 수수료 12월 1일부터 두 배",
+      "desc": "12월 1일부터 콜센터나 카운터 같은 오프라인 창구에서 마일 항공권이나 회원 업무를 처리하면 수수료가 두 배로 올라요. 웹사이트나 앱에서 직접 처리하면 이 수수료를 피할 수 있어요.",
+      "points": [
+        "오프라인 처리 수수료: US$25 또는 2,500마일 → US$50 또는 5,000마일",
+        "PPS Club 회원과 보조 카드 회원은 면제",
+        "2027년 1월부터 마일스톤 리워드가 바뀌고, 12월 31일까지 쌓은 리워드는 기존 기준을 따라요"
+      ],
+      "end": "2026-12-01",
+      "added": "2026-11-24",
+      "url": "https://www.singaporeair.com/en_UK/ae/ppsclub-krisflyer/programme-updates-2027/",
+      "cta": "공지 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "KrisFlyer offline service fee doubles from 1 Dec",
+        "desc": "From 1 Dec, award bookings and membership services handled offline (call centre or counter) cost twice as much. Doing it yourself on the website or app avoids this fee.",
+        "points": [
+          "Offline service fee: US$25 or 2,500 miles → US$50 or 5,000 miles",
+          "Waived for PPS Club members and supplementary cardholders",
+          "Milestone rewards change from Jan 2027; rewards earned by 31 Dec keep the current structure"
+        ],
+        "cta": "Read notice"
+      }
+    },
+    {
+      "id": "tosspay-agoda-2611",
+      "cat": "toss",
+      "region": "kr",
+      "type": "cond",
+      "title": "토스페이로 아고다 결제하면 11% 자동 할인",
+      "reward": "아고다 11% 할인 (최대 US$100)",
+      "desc": "11월 30일까지 아고다에서 결제수단을 토스페이로 고르면 쿠폰 없이 11%가 자동으로 할인돼요. 연말·연초 여행 숙소를 미리 잡아둘 때 쓰기 좋아요.",
+      "condition": "토스 계정으로 토스페이 결제를 해야 하고, US$1 이상 결제부터 적용돼요.",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "added": "2026-11-24",
+      "url": "https://toss.im/tossfeed/article/tosspay-promotion",
+      "cta": "혜택 보기",
+      "abroad": true,
+      "en": {
+        "title": "Pay with Toss Pay on Agoda: 11% off automatically",
+        "reward": "11% off Agoda (up to US$100)",
+        "desc": "Until 30 Nov, choose Toss Pay at Agoda checkout and 11% comes off automatically, no coupon needed. Handy for booking year-end trips.",
+        "condition": "Requires paying with Toss Pay from a Toss account; applies from US$1.",
+        "cta": "View offer"
+      }
+    },
+    {
+      "id": "gohyang-donation-2026",
+      "cat": "gov",
+      "region": "kr",
+      "type": "cond",
+      "title": "고향사랑기부 10만 원, 올해 안에 하면 전액 돌려받아요",
+      "reward": "10만 원 전액 세액공제 + 기부액 30% 답례품 포인트",
+      "desc": "주소지가 아닌 지자체에 10만 원을 기부하면 연말정산에서 10만 원을 모두 세액공제받고, 기부액의 30%는 답례품을 고르는 포인트로 받아요. 올해 연말정산에 넣으려면 12월 31일까지 기부해야 해요.",
+      "condition": "한국에서 소득세를 내는 사람만 세액공제를 받을 수 있고, 본인 주소지 지자체에는 기부할 수 없어요.",
+      "end": "2026-12-31",
+      "added": "2026-11-24",
+      "url": "https://www.ilovegohyang.go.kr/",
+      "source_url": "https://www.gangnam.go.kr/board/cardnews/1218/view.do?mid=fm0306",
+      "cta": "기부하러 가기",
+      "abroad": false,
+      "en": {
+        "title": "Hometown Love Donation: give ₩100,000 this year, get it all back",
+        "reward": "Full ₩100,000 tax credit + 30% of the donation as gift points",
+        "desc": "Donate ₩100,000 to a local government other than where you live and get the full amount back as a year-end tax credit, plus 30% of the donation as points for local gifts. Donate by 31 Dec for it to count toward this year's tax settlement.",
+        "condition": "Only people paying Korean income tax get the tax credit, and you can't donate to your own home municipality.",
+        "cta": "Donate"
       }
     }
   ],
