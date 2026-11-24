@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-24T00:29:18+08:00",
+  "updated": "2026-11-25T00:28:27+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -668,6 +668,106 @@
         "desc": "Donate ₩100,000 to a local government other than where you live and get the full amount back as a year-end tax credit, plus 30% of the donation as points for local gifts. Donate by 31 Dec for it to count toward this year's tax settlement.",
         "condition": "Only people paying Korean income tax get the tax credit, and you can't donate to your own home municipality.",
         "cta": "Donate"
+      }
+    },
+    {
+      "id": "kal-oz-miles-expiry-2026",
+      "cat": "air",
+      "region": "kr",
+      "type": "info",
+      "title": "2016년에 쌓은 항공 마일리지, 12월 31일 소멸",
+      "desc": "대한항공·아시아나 마일리지는 유효기간이 10년이라 2016년에 탑승하거나 적립한 마일리지가 올해 12월 31일(한국 시각)에 사라져요. 앱에서 소멸 예정 마일리지를 확인하고 그 전에 써두세요.",
+      "points": [
+        "소멸된 마일리지는 돌려받을 수 없어요",
+        "아시아나 다이아몬드 이상 회원은 유효기간이 12년이에요",
+        "가족 합산은 승인까지 며칠 걸리니 미리 등록하세요",
+        "항공권이 부담되면 캐시앤마일즈나 제휴 상품권으로 소액도 쓸 수 있어요"
+      ],
+      "end": "2026-12-31",
+      "added": "2026-11-25",
+      "url": "https://flyasiana.com/C/KR/KO/contents/mileage-expiration-dates",
+      "source_url": "https://www.imaeil.com/page/view/2026101310091075828",
+      "cta": "유효기간 보기",
+      "abroad": true,
+      "en": {
+        "title": "Airline miles earned in 2016 expire on 31 Dec",
+        "desc": "Korean Air and Asiana miles are valid for 10 years, so miles from flights or earnings in 2016 expire on 31 Dec (Korea time). Check your expiring miles in the app and use them before then.",
+        "points": [
+          "Expired miles can't be restored",
+          "Asiana Diamond members and above get 12 years of validity",
+          "Family mileage pooling takes a few days to approve, so register early",
+          "If a ticket is too much, Cash & Miles or partner vouchers let you use small amounts"
+        ],
+        "cta": "See validity rules"
+      }
+    },
+    {
+      "id": "oz-intl-mileage-seats-2611",
+      "cat": "air",
+      "region": "kr",
+      "type": "cond",
+      "title": "아시아나 국제선 마일리지 좌석 최대 오픈",
+      "reward": "인천↔나리타·오사카·베이징·하노이·마닐라 일부 편 마일리지 좌석 최대 오픈",
+      "desc": "12월 10일까지 인천과 나리타·오사카·베이징·하노이·마닐라를 오가는 일부 항공편에 마일리지 좌석을 최대한 열어줘요. 올해 사라질 마일리지를 쓰기 좋은 기회예요.",
+      "condition": "아시아나 마일리지로 12월 10일까지 예약하고 탑승해야 하며, 세금·유류할증료는 따로 내고 만석인 편은 안 돼요.",
+      "start": "2026-09-30",
+      "end": "2026-12-10",
+      "added": "2026-11-25",
+      "url": "https://flyasiana.com/C/KR/KO/event/detail/CM202609080002530424",
+      "cta": "좌석 보기",
+      "abroad": true,
+      "en": {
+        "title": "Asiana: more award seats on international routes",
+        "reward": "Maximum award seats on selected Incheon flights to/from Narita, Osaka, Beijing, Hanoi and Manila",
+        "desc": "Until 10 Dec, Asiana is opening as many award seats as possible on selected flights between Incheon and Narita, Osaka, Beijing, Hanoi and Manila. A good way to use miles that expire this year.",
+        "condition": "Book and fly with Asiana miles by 10 Dec. Taxes and fuel surcharges are extra, and full flights are excluded.",
+        "cta": "Check seats"
+      }
+    },
+    {
+      "id": "kb-wkbl-quiz-2611",
+      "cat": "etc",
+      "region": "kr",
+      "type": "entry",
+      "title": "KB스타뱅킹 여자농구 퀴즈 풀고 굿즈 추첨",
+      "reward": "추첨으로 165명에게 KB스타즈 유니폼·후드·사인볼 등",
+      "desc": "KB스타뱅킹 앱에서 여자프로농구 대회 공식 이름을 맞히는 퀴즈에 응모하면 추첨으로 KB스타즈 굿즈를 줘요. 힌트는 '2천만이 선택한 KB스타뱅킹'이에요.",
+      "condition": "KB스타뱅킹에 가입하면 누구나 응모할 수 있고, 올해 말까지 진행해요.",
+      "end": "2026-12-31",
+      "added": "2026-11-25",
+      "url": "https://www.metroseoul.co.kr/article/20261101500136",
+      "cta": "자세히 보기",
+      "abroad": true,
+      "en": {
+        "title": "KB Star Banking women's basketball quiz draw",
+        "reward": "165 winners get KB Stars goods such as jerseys, hoodies and signed balls",
+        "desc": "Answer a quiz on the official name of the women's pro basketball league in the KB Star Banking app to enter a draw for KB Stars goods. Hint: \"2천만이 선택한 KB스타뱅킹\".",
+        "condition": "Anyone signed up to KB Star Banking can enter. Runs until the end of the year.",
+        "cta": "Learn more"
+      }
+    },
+    {
+      "id": "sg-jewel-christmas-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "주얼 창이 크리스마스, 저녁마다 인공 눈 쇼",
+      "reward": "16m 크리스마스 트리와 저녁 인공 눈 쇼 무료 관람",
+      "desc": "주얼 창이공항에 16m 유니클로 크리스마스 트리가 서고, Forest Valley에 저녁마다 인공 눈이 내려요. 월~목은 8시 5분·9시 5분, 금~일과 공휴일·전날은 10시 5분에 한 번 더 해요.",
+      "condition": "Forest Valley는 입장료가 없는 공간이라 누구나 볼 수 있고, Canopy Park 쪽 Starry Christmas는 입장권이 필요해요.",
+      "start": "2026-11-13",
+      "end": "2027-01-03",
+      "added": "2026-11-25",
+      "url": "https://www.jewelchangiairport.com/en/promotion/Christmas-at-Jewel-2026.html",
+      "source_url": "https://littlebigreddot.com/travel-christmas-at-jewel-changi-2026-uniqlo-tree-snow/",
+      "cta": "행사 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Christmas at Jewel: snowfall every evening",
+        "reward": "Free 16m Christmas tree and evening snowfall shows",
+        "desc": "Jewel Changi Airport has a 16m UNIQLO Christmas Tree, and snow falls in Forest Valley every evening. Mon–Thu at 8.05pm and 9.05pm, with an extra 10.05pm show Fri–Sun, public holidays and their eves.",
+        "condition": "Forest Valley is free to enter, so anyone can watch. Starry Christmas at Canopy Park needs a ticket.",
+        "cta": "View event"
       }
     }
   ],
