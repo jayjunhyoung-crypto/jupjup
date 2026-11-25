@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-25T00:28:27+08:00",
+  "updated": "2026-11-26T00:29:46+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -767,6 +767,103 @@
         "reward": "Free 16m Christmas tree and evening snowfall shows",
         "desc": "Jewel Changi Airport has a 16m UNIQLO Christmas Tree, and snow falls in Forest Valley every evening. Mon–Thu at 8.05pm and 9.05pm, with an extra 10.05pm show Fri–Sun, public holidays and their eves.",
         "condition": "Forest Valley is free to enter, so anyone can watch. Starry Christmas at Canopy Park needs a ticket.",
+        "cta": "View event"
+      }
+    },
+    {
+      "id": "npay-clicks-20261126",
+      "cat": "npay",
+      "region": "kr",
+      "type": "free",
+      "title": "오늘의 네이버페이 클릭 적립 모음 (11/26)",
+      "reward": "링크마다 소액 네이버페이 포인트",
+      "desc": "커뮤니티에 오늘 올라온 네이버페이 클릭 적립 링크 모음이에요. 네이버에 로그인한 채로 하나씩 누르면 돼요.",
+      "end": "2026-11-26",
+      "added": "2026-11-26",
+      "url": "https://eomisae.co.kr/ec/213010983",
+      "cta": "모음 글 보기",
+      "abroad": true,
+      "en": {
+        "title": "Today's Naver Pay click-reward roundup (26 Nov)",
+        "reward": "Small Naver Pay points per link",
+        "desc": "A community roundup of today's Naver Pay click-reward links. Stay logged in to Naver and tap them one by one.",
+        "cta": "Open roundup"
+      }
+    },
+    {
+      "id": "shinhan-supersol-thanks-2611",
+      "cat": "etc",
+      "region": "kr",
+      "type": "free",
+      "title": "신한 슈퍼SOL 슈퍼감사제, 매일 선물 뽑기",
+      "reward": "마이신한포인트 최대 2,026P + 매일 치킨·피자·커피 쿠폰 랜덤",
+      "desc": "슈퍼SOL 이벤트 화면에서 감사카드를 열면 마이신한포인트를 7~2,026P 중 랜덤으로 한 번 줘요. 12월 13일까지 매일 한 번 오늘의 선물을 뽑으면 치킨·피자·아이스크림·커피 쿠폰이나 포인트가 나와요.",
+      "condition": "만 14세 이상 슈퍼SOL 이용자면 누구나 되고, 노트북·폴드폰 경품 추첨 응모권은 지정 예금·체크카드 가입자에게 따로 줘요.",
+      "start": "2026-11-24",
+      "end": "2026-12-13",
+      "added": "2026-11-26",
+      "url": "https://www.businessplus.kr/news/articleView.html?idxno=120420",
+      "source_url": "https://www.betanews.net/article/view/beta202611240137",
+      "cta": "기사 보기",
+      "abroad": true,
+      "en": {
+        "title": "Shinhan SOL 'Super Thanks' festival: daily gift draws",
+        "reward": "Up to 2,026 My Shinhan Points + daily random chicken, pizza or coffee coupons",
+        "desc": "Open the thank-you card on the Shinhan SOL event screen for a one-time random 7–2,026 My Shinhan Points. Until 13 Dec, draw a daily gift for chicken, pizza, ice cream or coffee coupons, or points.",
+        "condition": "Open to SOL users aged 14+. Tickets for the laptop and Galaxy Fold prize draw go to holders of selected deposits or debit cards.",
+        "cta": "Read article"
+      }
+    },
+    {
+      "id": "youthpass-expire-2612",
+      "cat": "gov",
+      "region": "kr",
+      "type": "info",
+      "title": "청년문화예술패스 포인트 12월 31일 소멸",
+      "desc": "2006·2007년생이 받은 올해 청년문화예술패스 지원금은 12월 31일까지만 쓸 수 있어요. 남은 포인트로 공연·영화 예매나 책 구입을 미리 해두세요.",
+      "points": [
+        "사용처: NOL·YES24·티켓링크·멜론티켓 공연, CGV·메가박스·롯데시네마 영화, 서점ON·YES24 도서",
+        "12월 31일까지 예매를 취소하면 포인트가 다시 돌아와요",
+        "2027년부터는 만 19~34세로 넓어지고 스포츠도 쓸 수 있게 바뀌어요"
+      ],
+      "end": "2026-12-31",
+      "added": "2026-11-26",
+      "url": "https://www.korea.kr/multi/visualNewsView.do?newsId=148975643",
+      "source_url": "https://m.korea.kr/news/policyNewsView.do?newsId=148975528",
+      "cta": "안내 보기",
+      "abroad": false,
+      "en": {
+        "title": "Youth Culture & Arts Pass points expire 31 Dec",
+        "desc": "This year's Youth Culture & Arts Pass credit for those born in 2006–2007 can only be used until 31 Dec. Spend what's left on shows, films or books before then.",
+        "points": [
+          "Where to use: shows on NOL, YES24, TicketLink and Melon Ticket; films at CGV, Megabox and Lotte Cinema; books at 서점ON and YES24",
+          "Cancel a booking by 31 Dec and the points come back",
+          "From 2027 the pass covers ages 19–34 and adds sports"
+        ],
+        "cta": "Read notice"
+      }
+    },
+    {
+      "id": "sg-gardens-a-glow-2026",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "보타닉 가든 Gardens-A-Glow 크리스마스 조명 무료",
+      "reward": "장식 트리·조명 설치물·축제 전시 무료 관람",
+      "desc": "12월 5일부터 1월 3일까지 싱가포르 보타닉 가든 곳곳이 장식 트리와 조명 설치물, 축제 전시로 꾸며져요. 식물원은 매일 새벽 5시부터 자정까지 열고 입장료가 없어요.",
+      "condition": "구경은 누구나 무료고, 나무를 직접 꾸미려면 Garden City Fund에 S$800 이상 기부해야 해요.",
+      "start": "2026-12-05",
+      "end": "2027-01-03",
+      "added": "2026-11-26",
+      "url": "https://sbg.nparks.gov.sg/events/gardens-a-glow/",
+      "source_url": "https://sbg.nparks.gov.sg/visit/general-info/",
+      "cta": "행사 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Gardens-A-Glow at Singapore Botanic Gardens (free)",
+        "reward": "Free viewing of decorated trees, light installations and festive displays",
+        "desc": "From 5 Dec to 3 Jan, decorated trees, light installations and festive displays fill the Singapore Botanic Gardens. The Gardens are open 5am to midnight daily with free entry.",
+        "condition": "Free for everyone to visit. Decorating a tree yourself needs a donation of S$800 or more to the Garden City Fund.",
         "cta": "View event"
       }
     }
@@ -1568,6 +1665,41 @@
         ],
         "tip": "Worth it if you order delivery two or three times a month. Cancel anytime.",
         "cta": "Learn more"
+      }
+    },
+    {
+      "id": "sg-dbs-sailing",
+      "region": "sg",
+      "citizen_only": false,
+      "group": "free",
+      "icon": "⛵",
+      "title": "DBS Sailing at the Bay",
+      "tagline": "마리나 베이를 무료 요트로 한 바퀴",
+      "saving": "세일링 체험 S$0",
+      "cost": "무료 (예약 필요)",
+      "desc": "DBS가 여는 마리나 베이 세일링 체험으로, 누구나 무료로 탈 수 있어요. 한 회에 30~40분 정도 배를 타고 도심 스카이라인을 봐요.",
+      "how": [
+        "매달 시작 일주일 전쯤 공식 페이지에서 다음 달 회차 예약이 열려요",
+        "커스텀스 하우스 옆 폰툰(70 Collyer Quay)에 10분 일찍 도착",
+        "안내에 따라 배에 타기"
+      ],
+      "tip": "7세 초과 70세 미만만 탈 수 있고, 아이는 나이를 확인할 사진 신분증을 챙겨야 해요. 늦게 오면 탈 수 없어요.",
+      "url": "https://www.dbs.com/sailing/index.html",
+      "cta": "예약하러 가기",
+      "added": "2026-11-26",
+      "en": {
+        "title": "DBS Sailing at the Bay",
+        "tagline": "A free sail around Marina Bay",
+        "saving": "S$0 sailing session",
+        "cost": "Free (booking needed)",
+        "desc": "DBS runs free sailing sessions on Marina Bay, open to the public. Each one lasts about 30–40 minutes with skyline views.",
+        "how": [
+          "Bookings for next month open about a week before the month starts",
+          "Arrive 10 minutes early at the pontoon beside Customs House (70 Collyer Quay)",
+          "Board with the crew"
+        ],
+        "tip": "Riders must be above 7 and below 70; bring photo ID showing a child's age. Latecomers can't board.",
+        "cta": "Book a slot"
       }
     }
   ]
