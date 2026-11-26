@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-26T00:29:46+08:00",
+  "updated": "2026-11-27T00:28:07+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -574,29 +574,6 @@
       }
     },
     {
-      "id": "sg-changi-pokemon-memory-2611",
-      "cat": "sg",
-      "region": "sg",
-      "type": "cond",
-      "title": "창이공항에서 S$100 쓰면 포켓몬 메모리 게임 한 판",
-      "reward": "포켓몬 30주년 엘리트 트레이너 박스, 부스터 번들, 피규어, 매장 바우처 등",
-      "desc": "창이공항·주얼에서 영수증 한 장에 S$100 이상 쓰면 창이 앱에서 게임 1회를 받아 키오스크에서 같은 그림 맞추기를 해요. 맞춘 짝 수에 따라 포켓몬 카드 박스부터 매장 바우처까지 바로 받아요.",
-      "condition": "결제 전에 Changi Rewards 카드를 스캔해야 하고, 엘리트 트레이너 박스는 게임기마다 하루 첫 당첨자만 받아요.",
-      "start": "2026-11-03",
-      "end": "2027-01-03",
-      "added": "2026-11-24",
-      "url": "https://www.changiairport.com/id/en/happenings/promotions/pokemon-memory-challenge.html",
-      "cta": "이벤트 보기",
-      "citizen_only": false,
-      "en": {
-        "title": "Changi Airport: spend S$100, play the Pokémon Memory Challenge",
-        "reward": "Pokémon 30th Anniversary Elite Trainer Box, booster bundles, figures, shop vouchers and more",
-        "desc": "Spend S$100 or more in a single receipt at Changi Airport or Jewel to get one game in the Changi App, then play a matching game at a kiosk. Prizes depend on how many pairs you match, from Pokémon card boxes to shop vouchers.",
-        "condition": "Scan your Changi Rewards card before paying. Each game station gives an Elite Trainer Box only to its first winner of the day.",
-        "cta": "View promotion"
-      }
-    },
-    {
       "id": "sg-krisflyer-fee-1201",
       "cat": "air",
       "region": "sg",
@@ -771,26 +748,6 @@
       }
     },
     {
-      "id": "npay-clicks-20261126",
-      "cat": "npay",
-      "region": "kr",
-      "type": "free",
-      "title": "오늘의 네이버페이 클릭 적립 모음 (11/26)",
-      "reward": "링크마다 소액 네이버페이 포인트",
-      "desc": "커뮤니티에 오늘 올라온 네이버페이 클릭 적립 링크 모음이에요. 네이버에 로그인한 채로 하나씩 누르면 돼요.",
-      "end": "2026-11-26",
-      "added": "2026-11-26",
-      "url": "https://eomisae.co.kr/ec/213010983",
-      "cta": "모음 글 보기",
-      "abroad": true,
-      "en": {
-        "title": "Today's Naver Pay click-reward roundup (26 Nov)",
-        "reward": "Small Naver Pay points per link",
-        "desc": "A community roundup of today's Naver Pay click-reward links. Stay logged in to Naver and tap them one by one.",
-        "cta": "Open roundup"
-      }
-    },
-    {
       "id": "shinhan-supersol-thanks-2611",
       "cat": "etc",
       "region": "kr",
@@ -865,6 +822,122 @@
         "desc": "From 5 Dec to 3 Jan, decorated trees, light installations and festive displays fill the Singapore Botanic Gardens. The Gardens are open 5am to midnight daily with free entry.",
         "condition": "Free for everyone to visit. Decorating a tree yourself needs a donation of S$800 or more to the Garden City Fund.",
         "cta": "View event"
+      }
+    },
+    {
+      "id": "musinsa-mujinjang-openrun-2611",
+      "cat": "shop",
+      "region": "kr",
+      "type": "free",
+      "title": "무신사 블프 '오픈런 뽑기' 하루 두 번 무료",
+      "reward": "최대 80% 쿠폰, 무신사머니·적립금 최대 1만 원",
+      "desc": "무신사 무진장 겨울 블랙프라이데이 기간에 매일 오전 10시와 저녁 7시에 오픈런 뽑기를 할 수 있어요. 할인 쿠폰이나 무신사머니, 적립금이 나오고 아이디당 최대 21번까지 뽑을 수 있어요.",
+      "condition": "무신사 회원이어야 하고 마케팅·야간 푸시 수신에 동의해야 하며, 무신사머니는 12월 2일까지 가입해야 받아요.",
+      "start": "2026-11-22",
+      "end": "2026-12-02",
+      "added": "2026-11-27",
+      "url": "https://www.musinsa.com/content/1569521073297955688",
+      "cta": "안내 보기",
+      "abroad": true,
+      "en": {
+        "title": "Musinsa Black Friday 'Open-run draw', free twice a day",
+        "reward": "Coupons up to 80% off, up to ₩10,000 in Musinsa Money or reward points",
+        "desc": "During Musinsa's winter Black Friday sale you can do the Open-run draw every day at 10am and 7pm (KST). Prizes are discount coupons, Musinsa Money or reward points, with up to 21 draws per account.",
+        "condition": "Musinsa members only, with marketing and night-time push consent. Musinsa Money prizes need a Musinsa Money signup by 2 Dec.",
+        "cta": "Read details"
+      }
+    },
+    {
+      "id": "hanasec-taekwonv-checkin-2611",
+      "cat": "etc",
+      "region": "kr",
+      "type": "free",
+      "title": "하나증권V 태권브이 출석하고 주식 쿠폰 받기",
+      "reward": "5일 출석하면 국내주식 쿠폰 최대 1만 원 + 한정판 피규어 추첨",
+      "desc": "하나증권V 앱 이벤트 페이지에서 매일 출석하고 5일을 채우면 국내주식 매수 쿠폰을 최대 1만 원 받아요. 출석할 때마다 태권브이 50주년 한정판 피규어(190명) 추첨권도 쌓여요.",
+      "condition": "쿠폰으로 주식을 사려면 하나증권 계좌가 있어야 하고, 11월 19일 이후 처음 계좌를 만든 사람은 추첨권을 두 배로 받아요.",
+      "end": "2026-12-31",
+      "added": "2026-11-27",
+      "url": "https://www.newspim.com/news/view/20261126000161",
+      "source_url": "https://www.consumuch.com/news/articleView.html?idxno=79675",
+      "cta": "기사 보기",
+      "abroad": true,
+      "en": {
+        "title": "Hana Securities 'Taekwon V' check-in: earn a stock coupon",
+        "reward": "Domestic stock coupon up to ₩10,000 after 5 check-ins + limited figure draw",
+        "desc": "Check in daily on the event page in the Hana Securities V app; after 5 days you get a Korean stock purchase coupon worth up to ₩10,000. Each check-in also earns entries for a Taekwon V 50th anniversary limited figure (190 winners).",
+        "condition": "You need a Hana Securities account to use the coupon. Accounts opened for the first time after 19 Nov earn double draw entries.",
+        "cta": "Read article"
+      }
+    },
+    {
+      "id": "sg-cablecar-free-sentosa-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "센토사 케이블카(센토사 라인) 아침 무료 탑승",
+      "reward": "센토사 라인 케이블카 무료 탑승",
+      "desc": "12월 20일까지 매일 아침 8시 45분부터 11시까지 센토사 섬 안의 세 정거장(실로소 포인트, 임비아 룩아웃, 센서리스케이프)에서 표 없이 케이블카를 탈 수 있어요. 무료 탑승 줄은 오전 11시에 마감되니 일찍 가는 게 좋아요.",
+      "condition": "현지인·관광객 누구나 되고, 하버프론트에서 올라가는 마운트 페이버 라인은 무료가 아니에요.",
+      "start": "2026-11-21",
+      "end": "2026-12-20",
+      "added": "2026-11-27",
+      "url": "https://mountfaberleisure.com/attraction/singapore-cable-car/",
+      "source_url": "https://mustsharenews.com/sentosa-free-cable-car-rides/",
+      "cta": "안내 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Free morning rides on the Sentosa Line cable car",
+        "reward": "Free Sentosa Line cable car rides",
+        "desc": "Until 20 Dec, hop on the cable car without a ticket from 8.45am to 11am daily at the three Sentosa Line stations (Siloso Point, Imbiah Lookout, Sensoryscape). The queue for free rides closes at 11am, so go early.",
+        "condition": "Open to locals and tourists. The Mount Faber Line from HarbourFront is not free.",
+        "cta": "View details"
+      }
+    },
+    {
+      "id": "sg-garden-rhapsody-xmas-2026",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "가든스 바이 더 베이 가든 랩소디 크리스마스 스페셜 무료",
+      "reward": "슈퍼트리 크리스마스 조명·음악 쇼 무료 관람",
+      "desc": "11월 27일부터 1월 3일까지 슈퍼트리 그로브의 가든 랩소디가 크리스마스 노래로 바뀌어요. 매일 저녁 7시 45분과 8시 45분에 하고, 12월 11일까지와 12월 31일~1월 3일에는 9시 35분 회차도 있어요.",
+      "condition": "쇼는 누구나 무료고, 옆에서 열리는 크리스마스 원더랜드는 따로 표를 사야 해요.",
+      "start": "2026-11-27",
+      "end": "2027-01-03",
+      "added": "2026-11-27",
+      "url": "https://www.gardensbythebay.com.sg/en/whats-on/calendar-of-events/garden-rhapsody.html",
+      "cta": "공연 시간 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Garden Rhapsody Christmas Special at Gardens by the Bay (free)",
+        "reward": "Free Supertree Christmas light and music show",
+        "desc": "From 27 Nov to 3 Jan, Garden Rhapsody at the Supertree Grove switches to Christmas songs. Shows run daily at 7.45pm and 8.45pm, with an extra 9.35pm show until 11 Dec and from 31 Dec to 3 Jan.",
+        "condition": "The show is free for everyone. Christmas Wonderland next door needs a separate ticket.",
+        "cta": "See showtimes"
+      }
+    },
+    {
+      "id": "sg-esplanade-voices-2026",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "에스플라네이드 Voices 노래 축제 무료 공연",
+      "reward": "아카펠라·합창·싱어롱 무료 공연",
+      "desc": "12월 3일부터 6일까지 에스플라네이드에서 아카펠라, 클래식 성악, 오리지널곡, 만다린 팝 싱어롱 같은 무료 공연이 이어져요. 유료 콘서트 몇 개를 빼면 대부분 그냥 가서 보면 돼요.",
+      "condition": "Voices Lounge 두 공연(12월 3·4일)은 무료지만 미리 등록해야 해요.",
+      "start": "2026-12-03",
+      "end": "2026-12-06",
+      "added": "2026-11-27",
+      "url": "https://www.esplanade.com/voices",
+      "cta": "공연 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Voices festival at Esplanade: free shows",
+        "reward": "Free a cappella, choral and sing-along shows",
+        "desc": "From 3 to 6 Dec, Esplanade hosts free a cappella showcases, classical voice performances, original songs and a Mandopop sing-along. Apart from a few ticketed concerts, you can just walk in.",
+        "condition": "The two Voices Lounge sessions (3 and 4 Dec) are free but need registration.",
+        "cta": "View programme"
       }
     }
   ],
