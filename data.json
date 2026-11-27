@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-11-27T00:28:07+08:00",
+  "updated": "2026-11-28T00:33:06+08:00",
   "deals": [
     {
       "id": "kal-cashandmiles-2611",
@@ -528,29 +528,6 @@
       }
     },
     {
-      "id": "shinhansec-weekly-trade-2611",
-      "cat": "etc",
-      "region": "kr",
-      "type": "cond",
-      "title": "신한 SOL증권 국내주식 거래하면 매주 투자쿠폰 추첨",
-      "reward": "매주 1,439명 추첨, 최대 100만원 투자쿠폰",
-      "desc": "이벤트를 한 번 신청해두고 그 주에 국내주식이나 ETF·ETN을 거래하면 매주 자동으로 추첨돼요. 12월 24일까지 6주 동안 매주 다시 당첨될 수 있어요.",
-      "condition": "만 19세 이상 개인 고객이 마케팅 수신에 동의해야 하고, 퇴직연금·랩 계좌 거래는 빠져요.",
-      "start": "2026-11-16",
-      "end": "2026-12-24",
-      "added": "2026-11-23",
-      "url": "https://www.shinhansec.com/cms/contents/event/261116_weekly2611_pc.html",
-      "cta": "이벤트 보기",
-      "abroad": true,
-      "en": {
-        "title": "Shinhan SOL Securities: weekly coupon draw for stock trades",
-        "reward": "1,439 winners a week, investment coupons up to ₩1,000,000",
-        "desc": "Sign up once, then trade any Korean stock, ETF or ETN in a given week to enter that week's draw automatically. You can win every week for six weeks until 24 Dec.",
-        "condition": "Individual customers aged 19+ with marketing consent. Pension and wrap accounts don't count.",
-        "cta": "View promotion"
-      }
-    },
-    {
       "id": "sg-vivocity-mario-holiday-2611",
       "cat": "sg",
       "region": "sg",
@@ -622,29 +599,6 @@
         "desc": "Until 30 Nov, choose Toss Pay at Agoda checkout and 11% comes off automatically, no coupon needed. Handy for booking year-end trips.",
         "condition": "Requires paying with Toss Pay from a Toss account; applies from US$1.",
         "cta": "View offer"
-      }
-    },
-    {
-      "id": "gohyang-donation-2026",
-      "cat": "gov",
-      "region": "kr",
-      "type": "cond",
-      "title": "고향사랑기부 10만 원, 올해 안에 하면 전액 돌려받아요",
-      "reward": "10만 원 전액 세액공제 + 기부액 30% 답례품 포인트",
-      "desc": "주소지가 아닌 지자체에 10만 원을 기부하면 연말정산에서 10만 원을 모두 세액공제받고, 기부액의 30%는 답례품을 고르는 포인트로 받아요. 올해 연말정산에 넣으려면 12월 31일까지 기부해야 해요.",
-      "condition": "한국에서 소득세를 내는 사람만 세액공제를 받을 수 있고, 본인 주소지 지자체에는 기부할 수 없어요.",
-      "end": "2026-12-31",
-      "added": "2026-11-24",
-      "url": "https://www.ilovegohyang.go.kr/",
-      "source_url": "https://www.gangnam.go.kr/board/cardnews/1218/view.do?mid=fm0306",
-      "cta": "기부하러 가기",
-      "abroad": false,
-      "en": {
-        "title": "Hometown Love Donation: give ₩100,000 this year, get it all back",
-        "reward": "Full ₩100,000 tax credit + 30% of the donation as gift points",
-        "desc": "Donate ₩100,000 to a local government other than where you live and get the full amount back as a year-end tax credit, plus 30% of the donation as points for local gifts. Donate by 31 Dec for it to count toward this year's tax settlement.",
-        "condition": "Only people paying Korean income tax get the tax credit, and you can't donate to your own home municipality.",
-        "cta": "Donate"
       }
     },
     {
@@ -938,6 +892,53 @@
         "desc": "From 3 to 6 Dec, Esplanade hosts free a cappella showcases, classical voice performances, original songs and a Mandopop sing-along. Apart from a few ticketed concerts, you can just walk in.",
         "condition": "The two Voices Lounge sessions (3 and 4 Dec) are free but need registration.",
         "cta": "View programme"
+      }
+    },
+    {
+      "id": "ridi-megamarkdown-quiz-2611",
+      "cat": "shop",
+      "region": "kr",
+      "type": "free",
+      "title": "리디 메가 마크다운 라인업 퀴즈, 참여하면 포인트 랜덤 지급",
+      "reward": "리디포인트 최대 1,000P 랜덤 쿠폰 (1인 1장)",
+      "desc": "리디 연말 할인전 '메가 마크다운'에 나올 작품을 맞히는 퀴즈예요. 27문제 중 하나만 풀어 댓글로 정답을 남기면 참여자 모두 최대 1,000P 랜덤 포인트 쿠폰을 받아요.",
+      "condition": "리디 계정으로 '퀴즈번호 작품제목' 형식의 댓글을 남겨야 하고, 쿠폰은 12월 18일 이후 알림으로 와서 12월 20일까지 받고 10일 안에 써야 해요.",
+      "start": "2026-11-27",
+      "end": "2026-11-30",
+      "added": "2026-11-28",
+      "url": "https://ridibooks.com/event/100548",
+      "cta": "퀴즈 풀러 가기",
+      "abroad": true,
+      "en": {
+        "title": "RIDI Mega Markdown line-up quiz: join for random points",
+        "reward": "Random RIDI points coupon, up to 1,000P (one per person)",
+        "desc": "Guess the titles coming in RIDI's year-end 'Mega Markdown' sale. Solve just one of the 27 quizzes and leave your answer as a comment, and every participant gets a random points coupon worth up to 1,000P.",
+        "condition": "Comment as 'quiz number + title' while logged in to RIDI; the coupon arrives by notification after 18 Dec, must be claimed by 20 Dec and used within 10 days.",
+        "cta": "Take the quiz"
+      }
+    },
+    {
+      "id": "sg-changi-pokexciting-snow-2611",
+      "cat": "sg",
+      "region": "sg",
+      "type": "free",
+      "title": "창이공항 T3 포켓몬 무대, 저녁마다 무료 눈 쇼",
+      "reward": "Light & Snow Show 무료 관람, 포켓몬 포토존",
+      "desc": "창이공항 T3 퍼블릭 구역 2층 PokéXciting! 무대에서 저녁마다 조명과 인공 눈 쇼를 해요. 월~목은 7시 30분·8시 30분, 금~일은 9시 30분에 한 번 더 하고, 비행기를 안 타도 구매나 등록 없이 볼 수 있어요.",
+      "condition": "눈 쇼와 포토존은 무료지만, 포켓몬 기념품 교환(S$60 이상)과 메모리 게임(S$100 이상)은 구매가 필요해요.",
+      "start": "2026-11-09",
+      "end": "2027-01-03",
+      "added": "2026-11-28",
+      "url": "https://www.changiairport.com/in/en/happenings/events-directory/pokemon-30th-anniversary-pokexciting-stage.html",
+      "source_url": "https://www.changiairport.com/id/en/happenings/events-directory/changi-festive-village-2026.html",
+      "cta": "이벤트 보기",
+      "citizen_only": false,
+      "en": {
+        "title": "Changi T3 Pokémon stage: free nightly snow show",
+        "reward": "Free Light & Snow Show and Pokémon photo spots",
+        "desc": "The PokéXciting! Stage at Changi T3 (public area, Level 2) puts on a light and snow show every evening. Shows are at 7.30pm and 8.30pm Mon–Thu, with an extra 9.30pm show Fri–Sun, and anyone can watch without a flight, purchase or registration.",
+        "condition": "The snow show and photo spots are free; Pokémon premiums (S$60 spend) and the Memory Challenge (S$100 spend) need a purchase.",
+        "cta": "View event"
       }
     }
   ],
